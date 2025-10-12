@@ -1,0 +1,6 @@
+# Ignore files created by the compilation of the riscv-gnu-toolchain or modified inside it
+toolchain/
+riscv-gnu-toolchain/
+
+
+tools/bin2hex

@@ -10,18 +10,18 @@ NPROC=$(shell nproc)
 PROJECT_PATH=$(shell pwd)
 
 # Folders path
-TOOLCHAIN_DIR=$(PROJECT_PATH)/toolchain/bin
+TOOLCHAIN_DIR=$(PROJECT_PATH)/toolchain
 SOFTWARE_DIR=$(PROJECT_PATH)/quartus_project/sw
+SOURCE_DIR=$(SOFTWARE_DIR)/source_code
 COMPILER_SOURCE_DIR=$(PROJECT_PATH)/riscv-gnu-toolchain
+STAMPS_DIR=$(PROJECT_PATH)/.stamps
+
 
 # Target paths
 FINAL_MEMORY=$(SOFTWARE_DIR)/mem_init/sys_onchip_memory2_0.hex
-CC=$(TOOLCHAIN_DIR)/riscv64-unknown-elf-gcc
-ELFSIZE=$(TOOLCHAIN_DIR)/riscv64-unknown-elf-size
-OBJCOPY=$(TOOLCHAIN_DIR)/riscv64-unknown-elf-objcopy
 BIN2HEX=$(PROJECT_PATH)/tools/bin2hex
-
-
+COMPILATION_STAMP=$(STAMPS_DIR)/toolchain_built
+SRCS=$(wildcard $(SOURCE_DIR)/*.c) $(wildcard $(SOURCE_DIR)/*.h) $(wildcard $(SOURCE_DIR)/*.s)
 
 
 #---------general project targets---------
@@ -34,19 +34,19 @@ config:
 	./setup.sh
 
 # clean everything
-clean-all: clean dist-clean
+clean-all: clean-toolchain clean dist-clean 
 	rm -f $(BIN2HEX)
 
 
-.PHONY: all clean config dist-clean clean-all
+.PHONY: all clean config dist-clean clean-all clean-toolchain install
 
 
 
 #--------Memory generation target-------
 
 # Use compiled toolchain to generate program and memory from C source code
-$(FINAL_MEMORY): $(CC) $(BIN2HEX) | $(ELFSIZE) $(OBJCOPY)
-	$(MAKE) --directory $(SOFTWARE_DIR) --environment-override TOOLCHAIN_DIR=$(TOOLCHAIN_DIR) 
+$(FINAL_MEMORY): $(SRCS) | $(COMPILATION_STAMP) $(BIN2HEX)
+	$(MAKE) --directory $(SOFTWARE_DIR) --environment-override TOOLCHAIN_DIR=$(TOOLCHAIN_DIR)/bin 
 
 # Compile custom bin2hex utility
 $(BIN2HEX): $(BIN2HEX).c
@@ -61,12 +61,29 @@ clean:
 #--------RISCV-GNU-TOOLCHAIN targets---------
 
 # Compile gnu-riscv-toolchain tools for project
-$(CC):
+$(COMPILATION_STAMP):
+	mkdir -p $(@D)
 	cd $(COMPILER_SOURCE_DIR) && ./configure --prefix=$(TOOLCHAIN_DIR) --enable-multilib
 	$(MAKE) --directory $(COMPILER_SOURCE_DIR) --jobs $(NPROC)
-	$(MAKE) --directory $(COMPILER_SOURCE_DIR) install
+	touch $@
+
+# Delete all generated toolchain programs and stamp
+clean-toolchain:
+	@echo "If you clean toolchain files you'll have to rebuild them, which may take a long time."
+	@echo ""
+	@echo -n "Are you sure you want to do this? [y/N] " && read ans && ans=$${ans:-N} ; \
+	if [ "$$ans" = "y" ] || [ "$$ans" = "Y" ]; then \
+		echo "Cleaning toolchain..." && \
+		rm -rf $(TOOLCHAIN_DIR) && \
+		rm -f $(COMPILATION_STAMP) && \
+		mkdir -p $(TOOLCHAIN_DIR) && \
+		echo "Toolchain files cleaned." ; \
+	else \
+		echo "Cleaning aborted." ; \
+	fi
+
 
 # Clean gnu-riscv-toolchain files
-dist-clean:
-	$(MAKE) --directory $(COMPILER_SOURCE_DIR) dist-clean
+distclean:
+	$(MAKE) --directory $(COMPILER_SOURCE_DIR) clean
 
