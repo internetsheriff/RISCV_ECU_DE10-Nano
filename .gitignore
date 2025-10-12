@@ -1,6 +1,32 @@
-# Ignore files created by the compilation of the riscv-gnu-toolchain or modified inside it
-toolchain/
+
+#------------------------------
+# Ignore files from compilation
+#------------------------------
+
+# compiled toolchain files
+toolchain/*
+!toolchain/.gitkeep
+
+# stamps used by makefile
+.stamps/*
+!.stamps/.gitkeep
+
+# files from the original risc-gnu-toolchain
 riscv-gnu-toolchain/
 
-
+# compiles bin2hex converter
 tools/bin2hex
+
+
+
+
+#---------------------------------
+# Ignore Unnecessary Quartus Files
+#---------------------------------
+
+*.bak
+*.summary
+ 
+# licenses are computer dependent
+quartus_project/licenses/*  
+!quartus_project/licenses/.gitkeep

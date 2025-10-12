@@ -77,6 +77,7 @@ clean-toolchain:
 		rm -rf $(TOOLCHAIN_DIR) && \
 		rm -f $(COMPILATION_STAMP) && \
 		mkdir -p $(TOOLCHAIN_DIR) && \
+		touch $(TOOLCHAIN_DIR)/.gitkeep && \
 		echo "Toolchain files cleaned." ; \
 	else \
 		echo "Cleaning aborted." ; \
