@@ -80,7 +80,7 @@
          type = "String";
       }
    }
-   element pio_0
+   element pin_out
    {
       datum _sortIndex
       {
@@ -88,7 +88,7 @@
          type = "int";
       }
    }
-   element pio_0.s1
+   element pin_out.s1
    {
       datum _lockedAddress
       {
@@ -99,6 +99,14 @@
       {
          value = "1048576";
          type = "String";
+      }
+   }
+   element pio_in
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
       }
    }
    element pulpino_0
@@ -145,8 +153,13 @@
    type="reset"
    dir="start" />
  <interface
-   name="pio_0_external_connection"
-   internal="pio_0.external_connection"
+   name="pin_out_external_connection"
+   internal="pin_out.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_in_external_connection"
+   internal="pio_in.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -228,7 +241,7 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
- <module name="pio_0" kind="altera_avalon_pio" version="24.1" enabled="1">
+ <module name="pin_out" kind="altera_avalon_pio" version="24.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -240,7 +253,21 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="pio_in" kind="altera_avalon_pio" version="24.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
  </module>
  <module name="pulpino_0" kind="pulpino" version="1.0" enabled="1">
   <parameter name="AUTO_INTERRUPT_RECEIVER_INTERRUPTS_USED" value="1" />
@@ -276,9 +303,18 @@
    kind="avalon"
    version="24.1"
    start="pulpino_0.avalon_master_lsu"
-   end="pio_0.s1">
+   end="pin_out.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00100000" />
+  <parameter name="baseAddress" value="0x00200000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="24.1"
+   start="pulpino_0.avalon_master_lsu"
+   end="pio_in.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00200010" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -309,8 +345,9 @@
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="24.1" start="clk_0.clk" end="master_0.clk" />
- <connection kind="clock" version="24.1" start="clk_0.clk" end="pio_0.clk" />
+ <connection kind="clock" version="24.1" start="clk_0.clk" end="pin_out.clk" />
  <connection kind="clock" version="24.1" start="clk_0.clk" end="jtag_uart_0.clk" />
+ <connection kind="clock" version="24.1" start="clk_0.clk" end="pio_in.clk" />
  <connection
    kind="clock"
    version="24.1"
@@ -333,12 +370,21 @@
    version="24.1"
    start="clk_0.clk_reset"
    end="master_0.clk_reset" />
- <connection kind="reset" version="24.1" start="clk_0.clk_reset" end="pio_0.reset" />
+ <connection
+   kind="reset"
+   version="24.1"
+   start="clk_0.clk_reset"
+   end="pin_out.reset" />
  <connection
    kind="reset"
    version="24.1"
    start="clk_0.clk_reset"
    end="jtag_uart_0.reset" />
+ <connection
+   kind="reset"
+   version="24.1"
+   start="clk_0.clk_reset"
+   end="pio_in.reset" />
  <connection
    kind="reset"
    version="24.1"

@@ -6,12 +6,15 @@ reg clk50;
 reg reset_n;
 wire [3:0] keys;
 wire [9:0] led;
+wire [9:0] sw;
+
 assign keys[0] = reset_n;
 
 pulpino_qsys_test dut(
     .CLK_50(clk50),
-	 .KEY(keys),
-    .LEDR(led)
+	.KEY(keys),
+    .LEDR(led),
+    .SW(sw)
 );
 
 initial begin

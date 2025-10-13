@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 24.1 1077 linux 2025.10.13.12:07:00
+# ACDS 24.1 1077 linux 2025.10.13.13:51:32
 
 # ----------------------------------------
 # xcelium - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 24.1 1077 linux 2025.10.13.12:07:00
+# ACDS 24.1 1077 linux 2025.10.13.13:51:32
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="sys"
@@ -151,15 +151,15 @@ mkdir -p ./libraries/error_adapter_0/
 mkdir -p ./libraries/avalon_st_adapter/
 mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
-mkdir -p ./libraries/rsp_demux_002/
+mkdir -p ./libraries/rsp_demux_003/
 mkdir -p ./libraries/rsp_demux/
-mkdir -p ./libraries/cmd_mux_002/
+mkdir -p ./libraries/cmd_mux_003/
 mkdir -p ./libraries/cmd_mux/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
 mkdir -p ./libraries/pulpino_0_avalon_master_lsu_limiter/
+mkdir -p ./libraries/router_006/
 mkdir -p ./libraries/router_005/
-mkdir -p ./libraries/router_004/
 mkdir -p ./libraries/router_002/
 mkdir -p ./libraries/router_001/
 mkdir -p ./libraries/router/
@@ -180,7 +180,8 @@ mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_1/
 mkdir -p ./libraries/mm_interconnect_0/
 mkdir -p ./libraries/pulpino_0/
-mkdir -p ./libraries/pio_0/
+mkdir -p ./libraries/pio_in/
+mkdir -p ./libraries/pin_out/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/master_0/
 mkdir -p ./libraries/jtag_uart_0/
@@ -204,10 +205,10 @@ if [ $SKIP_COM -eq 0 ]; then
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv"                                -work rsp_mux_001                              -cdslib <<rsp_mux_001>>                             
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_mux.sv"                           -work rsp_mux                                  -cdslib <<rsp_mux>>                                 
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv"                                -work rsp_mux                                  -cdslib <<rsp_mux>>                                 
-  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_demux_002.sv"                     -work rsp_demux_002                            -cdslib <<rsp_demux_002>>                           
+  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_demux_003.sv"                     -work rsp_demux_003                            -cdslib <<rsp_demux_003>>                           
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_demux.sv"                         -work rsp_demux                                -cdslib <<rsp_demux>>                               
-  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_mux_002.sv"                       -work cmd_mux_002                              -cdslib <<cmd_mux_002>>                             
-  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux_002                              -cdslib <<cmd_mux_002>>                             
+  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_mux_003.sv"                       -work cmd_mux_003                              -cdslib <<cmd_mux_003>>                             
+  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux_003                              -cdslib <<cmd_mux_003>>                             
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_mux.sv"                           -work cmd_mux                                  -cdslib <<cmd_mux>>                                 
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux                                  -cdslib <<cmd_mux>>                                 
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_demux_001.sv"                     -work cmd_demux_001                            -cdslib <<cmd_demux_001>>                           
@@ -216,8 +217,8 @@ if [ $SKIP_COM -eq 0 ]; then
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv"                            -work pulpino_0_avalon_master_lsu_limiter      -cdslib <<pulpino_0_avalon_master_lsu_limiter>>     
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v"                                    -work pulpino_0_avalon_master_lsu_limiter      -cdslib <<pulpino_0_avalon_master_lsu_limiter>>     
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v"                           -work pulpino_0_avalon_master_lsu_limiter      -cdslib <<pulpino_0_avalon_master_lsu_limiter>>     
+  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_006.sv"                        -work router_006                               -cdslib <<router_006>>                              
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_005.sv"                        -work router_005                               -cdslib <<router_005>>                              
-  xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_004.sv"                        -work router_004                               -cdslib <<router_004>>                              
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_002.sv"                        -work router_002                               -cdslib <<router_002>>                              
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_001.sv"                        -work router_001                               -cdslib <<router_001>>                              
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router.sv"                            -work router                                   -cdslib <<router>>                                  
@@ -276,7 +277,8 @@ if [ $SKIP_COM -eq 0 ]; then
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv"                               -work pulpino_0                                -cdslib <<pulpino_0>>                               
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv"                              -work pulpino_0                                -cdslib <<pulpino_0>>                               
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv"                                                -work pulpino_0                                -cdslib <<pulpino_0>>                               
-  xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_pio_0.v"                                                -work pio_0                                    -cdslib <<pio_0>>                                   
+  xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_pio_in.v"                                               -work pio_in                                   -cdslib <<pio_in>>                                  
+  xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_pin_out.v"                                              -work pin_out                                  -cdslib <<pin_out>>                                 
   xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_onchip_memory2_0.v"                                     -work onchip_memory2_0                         -cdslib <<onchip_memory2_0>>                        
   xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_master_0.v"                                             -work master_0                                 -cdslib <<master_0>>                                
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv"                                 -work jtag_uart_0                              -cdslib <<jtag_uart_0>>                             
