@@ -5,7 +5,7 @@ volatile int *gpio_addr = (int*)0x100000;
 volatile int *jtag_uart_data = (int*)0x100010;
 volatile int *jtag_uart_ctrl = (int*)0x100014;
 
-const char msg[] = "Hello world!!!!\n";
+const char msg[] = "Hello Kitty :3\n";
 
 int main(int argc, char **argv)
 {

@@ -9,4 +9,6 @@
  </systemtable>
  <library expandedCategories="Project,Library" />
  <window width="1100" height="800" x="237" y="94" />
+ <hdlexample language="VERILOG" />
+ <generation simulation="VERILOG" />
 </preferences>

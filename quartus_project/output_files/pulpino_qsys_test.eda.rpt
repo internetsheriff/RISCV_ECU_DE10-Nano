@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pulpino_qsys_test
-Sun Oct 12 17:16:32 2025
+Sun Oct 12 22:12:08 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -37,10 +37,10 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Oct 12 17:16:32 2025 ;
+; EDA Netlist Writer Status ; Successful - Sun Oct 12 22:12:08 2025 ;
 ; Revision Name             ; pulpino_qsys_test                     ;
 ; Top-level Entity Name     ; pulpino_qsys_test                     ;
-; Family                    ; Cyclone IV E                          ;
+; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
 
@@ -81,19 +81,15 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Oct 12 17:16:29 2025
+    Info: Processing started: Sun Oct 12 22:12:06 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
-Warning (125092): Tcl Script File sys/simulation/sys.sip not found
-    Info (125063): set_global_assignment -name SIP_FILE sys/simulation/sys.sip
-Warning (125092): Tcl Script File sys/synthesis/sys.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (202000): An incorrect timescale is selected for the Verilog Output (.VO) file of this PLL design. It's required that the timescale should be 1 ps when simulating a PLL design in a third party EDA tool.
 Info (204019): Generated file pulpino_qsys_test.vo in folder "/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 627 megabytes
-    Info: Processing ended: Sun Oct 12 17:16:32 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 714 megabytes
+    Info: Processing ended: Sun Oct 12 22:12:08 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

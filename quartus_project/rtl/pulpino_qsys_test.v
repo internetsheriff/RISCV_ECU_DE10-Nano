@@ -1,22 +1,19 @@
 module pulpino_qsys_test(
-    input CLK,
-    input RESET_N,
-    output [7:0] LEDG
+    input CLK_50,
+    input [3:0] KEY,
+    output [9:0] LEDR
 );
 
-wire clk25;
 wire jtag_reset;
-wire [7:0] gpio;
+wire [9:0] gpio;
+wire [2:0] unused_keys;
 
-assign LEDG = gpio;
-
-pll_sys pll0 (
-    .inclk0(CLK),
-    .c0(clk25)
-);
+assign LEDR = gpio;
+assign jtag_reset = KEY[0];
+assign unused_keys = KEY[3:1];
 
 sys u0 (
-    .clk_clk                            (clk25),
+    .clk_clk                            (CLK_50),
     .reset_reset_n                      (RESET_N & ~jtag_reset),
     .master_0_master_reset_reset        (jtag_reset),
     .pulpino_0_config_testmode_i        (1'b0),

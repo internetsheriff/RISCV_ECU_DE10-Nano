@@ -21,8 +21,9 @@ LIBS =
 
 
 # FILES
-SRCS = $(wildcard $(SUBDIRECTORY)/*.c) $(wildcard $(SUBDIRECTORY)/*.s) crt0.boot.S
+SRCS = $(wildcard $(SUBDIRECTORY)/*.c) $(wildcard $(SUBDIRECTORY)/*.s) $(wildcard $(SUBDIRECTORY)/*.S)
 DEPS = $(wildcard $(SUBDIRECTORY)/*.h)
+ELF_INTERMEDIATE = ./bundle.elf
 MEM = $(MEM_DIR)/sys_onchip_memory2_0
 
 
@@ -31,13 +32,13 @@ all: $(MEM).hex
 
 
 
-bundle.elf: $(SRCS) $(DEPS)
+$(ELF_INTERMEDIATE): $(SRCS) | $(DEPS)
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
 	$(ELFSIZE) $@
 
 
 
-$(MEM).hex: compiled.elf 
+$(MEM).hex: $(ELF_INTERMEDIATE)
 	$(OBJCOPY) --change-addresses -0x8000 -O binary --gap-fill 0 $< $(MEM).bin
 	$(BIN2HEX) $(MEM).bin $(MEM).hex
 

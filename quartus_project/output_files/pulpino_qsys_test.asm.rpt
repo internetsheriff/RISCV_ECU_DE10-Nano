@@ -1,5 +1,5 @@
 Assembler report for pulpino_qsys_test
-Sun Oct 12 17:16:24 2025
+Sun Oct 12 22:31:01 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -39,19 +39,46 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Oct 12 17:16:24 2025 ;
+; Assembler Status      ; Successful - Sun Oct 12 22:31:01 2025 ;
 ; Revision Name         ; pulpino_qsys_test                     ;
 ; Top-level Entity Name ; pulpino_qsys_test                     ;
-; Family                ; Cyclone IV E                          ;
-; Device                ; EP4CE115F29C7                         ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CSEMA5F31C6                          ;
 +-----------------------+---------------------------------------+
 
 
-+----------------------------------+
-; Assembler Settings               ;
-+--------+---------+---------------+
-; Option ; Setting ; Default Value ;
-+--------+---------+---------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                            ;
++-----------------------------------------------------------------------------+----------------+----------------+
+; Option                                                                      ; Setting        ; Default Value  ;
++-----------------------------------------------------------------------------+----------------+----------------+
+; Use smart compilation                                                       ; Off            ; Off            ;
+; Enable parallel Assembler and Timing Analyzer during compilation            ; On             ; On             ;
+; Enable compact report table                                                 ; Off            ; Off            ;
+; Generate compressed bitstreams                                              ; On             ; On             ;
+; Compression mode                                                            ; Off            ; Off            ;
+; Clock source for configuration device                                       ; Internal       ; Internal       ;
+; Clock frequency of the configuration device                                 ; 10 MHZ         ; 10 MHz         ;
+; Divide clock frequency by                                                   ; 1              ; 1              ;
+; Auto user code                                                              ; On             ; On             ;
+; Configuration device                                                        ; Auto           ; Auto           ;
+; Voltage output format                                                       ; Auto discovery ; Auto discovery ;
+; Configuration device auto user code                                         ; Off            ; Off            ;
+; Generate Tabular Text File (.ttf) For Target Device                         ; Off            ; Off            ;
+; Generate Raw Binary File (.rbf) For Target Device                           ; Off            ; Off            ;
+; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device ; Off            ; Off            ;
+; Hexadecimal Output File start address                                       ; 0              ; 0              ;
+; Hexadecimal Output File count direction                                     ; Up             ; Up             ;
+; Release clears before tri-states                                            ; Off            ; Off            ;
+; Auto-restart configuration after error                                      ; On             ; On             ;
+; Enable OCT_DONE                                                             ; Off            ; Off            ;
+; Use Checkered Pattern as Uninitialized RAM Content                          ; Off            ; Off            ;
+; Enable autonomous PCIe HIP mode                                             ; Off            ; Off            ;
+; Generate Serial Vector Format File (.svf) for Target Device                 ; Off            ; Off            ;
+; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; Off            ; Off            ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; Off            ; Off            ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; On             ; On             ;
++-----------------------------------------------------------------------------+----------------+----------------+
 
 
 +------------------------------------------------+
@@ -78,8 +105,8 @@ on the Quartus Prime software download page.
 +----------------+--------------------------------+
 ; Option         ; Setting                        ;
 +----------------+--------------------------------+
-; JTAG usercode  ; 0x00A56D3B                     ;
-; Checksum       ; 0x00A56D3B                     ;
+; JTAG usercode  ; 0x01B54D7C                     ;
+; Checksum       ; 0x01B54D7C                     ;
 +----------------+--------------------------------+
 
 
@@ -89,19 +116,14 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sun Oct 12 17:16:21 2025
-Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
-Warning (125092): Tcl Script File sys/simulation/sys.sip not found
-    Info (125063): set_global_assignment -name SIP_FILE sys/simulation/sys.sip
-Warning (125092): Tcl Script File sys/synthesis/sys.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
+    Info: Processing started: Sun Oct 12 22:30:56 2025
+Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Sun Oct 12 17:16:24 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 545 megabytes
+    Info: Processing ended: Sun Oct 12 22:31:01 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

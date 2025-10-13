@@ -1,0 +1,32 @@
+transcript on
+if ![file isdirectory pulpino_qsys_test_iputf_libs] {
+	file mkdir pulpino_qsys_test_iputf_libs
+}
+
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+
+file copy -force /home/jvctr/0/POLIno_qsys/quartus_project/sw/mem_init/sys_onchip_memory2_0.hex ./
+
+
+
+vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/pulpino_qsys_test.v}
+vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv}
+vlib sys
+vmap sys sys
+
+vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L sys -voptargs="+acc"  tbench
+
+add wave *
+view structure
+view signals
+run 100 us

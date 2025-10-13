@@ -25,8 +25,11 @@ tools/bin2hex
 #---------------------------------
 
 *.bak
+*.jdi
+*.smsg
 *.summary
- 
+*.rpt 
+
 # licenses are computer dependent
 quartus_project/licenses/*  
 !quartus_project/licenses/.gitkeep

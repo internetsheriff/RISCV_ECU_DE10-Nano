@@ -1,9 +1,9 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="85dd9caed61f32c30ba3"/>
+    <hash md5_digest_80b="4096422e6d4027a3876d"/>
   </project>
   <file_info>
-    <file device="EP4CE115F29C7" path="pulpino_qsys_test.sof" usercode="0xFFFFFFFF"/>
+    <file device="5CSEMA5F31C6" path="pulpino_qsys_test.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info hub_ir_width="5" ir_width="3" node_addr_width="2" node_count="2"/>
   <node_info>
@@ -141,12 +141,6 @@
     </node>
   </node_info>
   <sld_infos>
-    <sld_info hpath="sys:u0" name="u0">
-      <assignment_values>
-        <assignment_value text="QSYS_NAME sys HAS_SOPCINFO 1 GENERATION_ID 1760300116"/>
-      </assignment_values>
-      <parameters/>
-    </sld_info>
     <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">
       <assignment_values>
         <assignment_value text="QSYS_NAME alt_sld_fab HAS_SOPCINFO 1"/>

@@ -4,13 +4,14 @@ module tbench();
 
 reg clk50;
 reg reset_n;
-
-wire [7:0] led;
+wire [3:0] keys;
+wire [9:0] led;
+assign keys[0] = reset_n;
 
 pulpino_qsys_test dut(
-    .CLK(clk50),
-    .RESET_N(reset_n),
-    .LEDG(led)
+    .CLK_50(clk50),
+	 .KEY(keys),
+    .LEDR(led)
 );
 
 initial begin

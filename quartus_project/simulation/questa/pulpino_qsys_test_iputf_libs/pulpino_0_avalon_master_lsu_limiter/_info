@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa
+valtera_avalon_sc_fifo
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1760319078
+!i10b 1
+!s100 @<enCm^HCbAEh:dIl70AK3
+Ig70ibRL1d`l:GL04[`YNZ1
+S1
+R0
+Z3 w1760317757
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
+!i122 6
+L0 21 895
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z6 !s108 1760319078.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v|-work|pulpino_0_avalon_master_lsu_limiter|
+!i113 0
+Z7 o-sv -work pulpino_0_avalon_master_lsu_limiter -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+valtera_avalon_st_pipeline_base
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v
+R1
+R2
+!i10b 1
+!s100 B`Yjz6P[R<;Yl[CKNl]`<2
+I9SDmlPNk1dV=>`zLNJ4_53
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v
+!i122 7
+L0 22 118
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v|-work|pulpino_0_avalon_master_lsu_limiter|
+!i113 0
+R7
+R8
+valtera_merlin_reorder_memory
+Z9 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv
+R1
+R2
+!i10b 1
+!s100 Fg7H2g8<53DhBfbZ][=k>2
+IDa<h>:U8IOILg1MX3j^mo2
+S1
+R0
+R3
+Z10 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv
+Z11 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv
+!i122 5
+L0 28 155
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z12 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv|
+Z13 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv|-work|pulpino_0_avalon_master_lsu_limiter|
+!i113 0
+R7
+R8
+valtera_merlin_traffic_limiter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv
+R1
+R2
+!i10b 1
+!s100 OR49VbMDTNI[MDi8?H5e20
+I33NKIAX8coTg`n8FY;AC^3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv
+!i122 4
+L0 49 737
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv|-work|pulpino_0_avalon_master_lsu_limiter|
+!i113 0
+R7
+R8
+vmemory_pointer_controller
+R9
+R1
+R2
+!i10b 1
+!s100 Jn57m6_oRI3hA`8PYgIa63
+ITnl?Qej[6i]cLlZPLX;cD3
+S1
+R0
+R3
+R10
+R11
+!i122 5
+L0 185 112
+R4
+R5
+r1
+!s85 0
+31
+R6
+R12
+R13
+!i113 0
+R7
+R8
