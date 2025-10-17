@@ -1,5 +1,5 @@
 Flow report for pulpino_qsys_test
-Thu Oct 16 14:23:02 2025
+Thu Oct 16 18:03:05 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Oct 16 14:23:02 2025           ;
+; Flow Status                     ; Successful - Thu Oct 16 18:03:05 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; pulpino_qsys_test                               ;
 ; Top-level Entity Name           ; pulpino_qsys_test                               ;
@@ -214,7 +214,12 @@ on the Quartus Prime software download page.
 ; Timing Analyzer      ; 00:00:10     ; 2.4                     ; 938 MB              ; 00:00:20                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 732 MB              ; 00:00:02                           ;
 ; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
-; Total                ; 00:01:57     ; --                      ; --                  ; 00:03:49                           ;
+; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
+; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
+; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
+; MIF/HEX Update       ; 00:00:04     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
+; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 816 MB              ; 00:00:05                           ;
+; Total                ; 00:02:21     ; --                      ; --                  ; 00:04:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -229,6 +234,11 @@ on the Quartus Prime software download page.
 ; Timing Analyzer      ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
 ; EDA Netlist Writer   ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
 ; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; MIF/HEX Update       ; manjaro          ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
 +----------------------+------------------+---------------+---------------+----------------+
 
 
@@ -240,6 +250,11 @@ quartus_fit --read_settings_files=off --write_settings_files=off pulpino_qsys_te
 quartus_asm --read_settings_files=off --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
 quartus_sta pulpino_qsys_test -c pulpino_qsys_test
 quartus_eda --read_settings_files=off --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
+quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
+quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
+quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
+quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
+quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
 quartus_cdb pulpino_qsys_test -c pulpino_qsys_test --update_mif
 
 

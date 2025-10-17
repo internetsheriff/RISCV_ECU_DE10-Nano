@@ -24,10 +24,13 @@ $(TB_COMPILE_STAMP): $(DESIGN_COMPILE_STAMP) $(TESTBENCH)
 	touch $@
 
 
-open-qsys: $(QSYS_FILE)
-
-$(QSYS_FILE): $(QSYS_SRC) 
+open-qsys:
 	qsys-edit $(QSYS_SRC)
+
+
+compile-qsys:
+$(QSYS_FILE): $(QSYS_SRC)
+	qsys-generate $(QSYS_SRC) --synthesis=VERILOG --simulation=VERILOG
 
 
 compile-quartus: $(END_SOF)
@@ -45,9 +48,9 @@ reload-memory: $(MEM_STAMP)
 
 $(MEM_STAMP): $(MEM).hex $(DESIGN_COMPILE_STAMP)
 	@cd $(Q_DIR) && \
-	if [ "$(ALTERNATIVE_MEM_RELOAD)" == "true" ]; then \
+	if [ "$$ALTERNATIVE_MEM_RELOAD" = "true" ]; then \
 		echo "Using alternative method for reloading memory" ; \
-		CACHED_FILE=$$(find ./db -name "$(MEM)*.hex") ; \
+		CACHED_FILE=$$(find ./db -name "$(MEM_NAME)*.hex" | head -n 1) ; \
 		echo "Overwriting $$CACHED_FILE with $(MEM).hex" ; \
 		cat $(MEM).hex > $$CACHED_FILE ; \
 	else \
@@ -119,4 +122,4 @@ clean-simulation:
 .PHONY: auto-testbench reload_memory compile-quartus open-qsys \
         timing-analysis check-timing reports power-analysis \
         verify-device quick-check help check-project-exists \
-        smart-compile synthesis fitting assembly
+        smart-compile synthesis fitting assembly compile-qsys

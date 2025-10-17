@@ -6,6 +6,7 @@
 #  generating the necessary memory file 
 # ============================================
 
+-include $(C_OBJS:.o=.d)
 
 generate-memory: $(MEM).hex
 
@@ -13,11 +14,12 @@ $(MEM).hex: $(MEM).bin
 	$(BIN2HEX) $(MEM).bin $(MEM).hex
 
 
-compile-source-code: $(OBJS) 
 
-$(OBJS): $(SRCS) $(DEPS)
-	cd $(SW_DIR) && \
-	$(CC) -c $(CFLAGS) -o $@ $<
+generate-binary: $(MEM).bin
+
+$(MEM).bin: $(ELF_INTERMEDIATE)
+	$(OBJCOPY) --change-addresses -0x00008000 -O binary --gap-fill 0 $(ELF_INTERMEDIATE) $(MEM).bin
+
 
 
 link-executable: $(ELF_INTERMEDIATE)
@@ -28,17 +30,25 @@ $(ELF_INTERMEDIATE): $(OBJS)
 	$(ELFSIZE) $@
 
 
+compile-source-code: $(OBJS) 
 
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c $(DEPS)
+	cd $(SW_DIR) && \
+	$(CC) -c $(CFLAGS) -o $@ $<
 
-generate-binary: $(MEM).bin
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.s $(DEPS)
+	cd $(SW_DIR) && \
+	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(MEM).bin: $(ELF_INTERMEDIATE)
-	$(OBJCOPY) --change-addresses -$(BOOT_ADDRESS) -O binary --gap-fill 0 $(ELF_INTERMEDIATE) $(MEM).bin
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.S $(DEPS)
+	cd $(SW_DIR) && \
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 
 clean-memory-files:
 	rm -f $(ELF_INTERMEDIATE) $(MEM_DIR)/*.hex $(MEM_DIR)/*.bin && \
-	rm $(MEM_STAMP)
+	rm -f $(MEM_STAMP)
+	rm -f $(ELF_INTERMEDIATE)
 
 
 

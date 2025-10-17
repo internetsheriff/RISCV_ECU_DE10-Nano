@@ -2,7 +2,11 @@
 #  ----------------TOOLCHAIN MAKEFILE------------------
 # =======================================================
 #  Fragment with rules to compile the gnu toolchain to
-#  work with RISC-V code
+#  work with RISC-V code.
+#
+#  To avoid changing the Makefile of a submodule, this 
+#  one is not made with fragments but with recursive
+#  make calls.
 # =======================================================
 
 

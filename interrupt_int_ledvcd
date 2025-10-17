@@ -1,0 +1,17 @@
+$date
+	Fri Oct 17 08:23:41 2025
+$end
+$version
+	Questa Intel Starter FPGA Edition Version 2024.3
+$end
+$timescale
+	1ps
+$end
+$scope module tbench $end
+$var reg 10 ! sw [9:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+b0 !
+#2020000
+b1111111111 !

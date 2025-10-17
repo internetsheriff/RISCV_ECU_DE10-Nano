@@ -12,7 +12,6 @@
 
 #define EXCEPTION_STACK_SIZE 72
 
-
 /* ========================================================= [ entry ] === */
   .section .text
 
@@ -20,9 +19,19 @@ default_exc_handler:
   jal x0, default_exc_handler
 
 reset_handler:
+  // reset IRQs
+  //li x5, 0x0000001C
+  //li x6, 0xFFFFFFFF
+  //sw x6, 0(x5)
+
+  // Enable IRQs
+  //li x6, 0x00000008
+  //csrs mstatus, x6
+
+
   /* set all registers to zero */
   mv  x1, x0
-  mv  x2, x0
+  mv  x2, x1
   mv  x3, x1
   mv  x4, x1
   mv  x5, x1
@@ -58,8 +67,7 @@ reset_handler:
 
 _start:
   .global _start
-  li x26, 0x8
-  csrs mstatus, x26
+  
   /* clear BSS */
   la x26, _bss_start
   la x27, _bss_end
@@ -88,9 +96,13 @@ main_entry:
   // external interrupts are handled by the same callback
   // until compiler supports IRQ routines
   .org 0x00
-  mret
+  jal x0, int0_handler
+
+
   .org 0x04
   jal x0, interrupt_test_handler
+
+
   .rept 29
   nop
   .endr
