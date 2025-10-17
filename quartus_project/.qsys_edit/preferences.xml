@@ -11,8 +11,7 @@
    <inputclock preferredWidth="30" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions/Bridges and Adaptors/Interrupt,Project,Library/Qsys Interconnect,Library/Processors and Peripherals,Library/Processors and Peripherals/Inter-Process Communication,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Processors and Peripherals/Peripherals,Library/Basic Functions/Simulation; Debug and Verification,Library/Qsys Interconnect/Interrupt,Library/Basic Functions,Library,Library/Basic Functions/Bridges and Adaptors" />
+ <library expandedCategories="Project,Library" />
  <window width="1100" height="800" x="237" y="94" />
  <hdlexample language="VERILOG" />
  <generation simulation="VERILOG" />

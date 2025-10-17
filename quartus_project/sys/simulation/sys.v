@@ -54,7 +54,7 @@ module sys (
 	wire  [31:0] mm_interconnect_1_jtag_uart_0_avalon_jtag_slave_writedata;    // mm_interconnect_1:jtag_uart_0_avalon_jtag_slave_writedata -> jtag_uart_0:av_writedata
 	wire         mm_interconnect_1_pio_out_s1_chipselect;                      // mm_interconnect_1:pio_out_s1_chipselect -> pio_out:chipselect
 	wire  [31:0] mm_interconnect_1_pio_out_s1_readdata;                        // pio_out:readdata -> mm_interconnect_1:pio_out_s1_readdata
-	wire   [2:0] mm_interconnect_1_pio_out_s1_address;                         // mm_interconnect_1:pio_out_s1_address -> pio_out:address
+	wire   [1:0] mm_interconnect_1_pio_out_s1_address;                         // mm_interconnect_1:pio_out_s1_address -> pio_out:address
 	wire         mm_interconnect_1_pio_out_s1_write;                           // mm_interconnect_1:pio_out_s1_write -> pio_out:write_n
 	wire  [31:0] mm_interconnect_1_pio_out_s1_writedata;                       // mm_interconnect_1:pio_out_s1_writedata -> pio_out:writedata
 	wire         mm_interconnect_1_pio_in_s1_chipselect;                       // mm_interconnect_1:pio_in_s1_chipselect -> pio_in:chipselect

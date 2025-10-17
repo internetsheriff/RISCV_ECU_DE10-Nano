@@ -47,7 +47,7 @@ module sys_mm_interconnect_1 (
 		input  wire [31:0] pio_in_s1_readdata,                               //                                           .readdata
 		output wire [31:0] pio_in_s1_writedata,                              //                                           .writedata
 		output wire        pio_in_s1_chipselect,                             //                                           .chipselect
-		output wire [2:0]  pio_out_s1_address,                               //                                 pio_out_s1.address
+		output wire [1:0]  pio_out_s1_address,                               //                                 pio_out_s1.address
 		output wire        pio_out_s1_write,                                 //                                           .write
 		input  wire [31:0] pio_out_s1_readdata,                              //                                           .readdata
 		output wire [31:0] pio_out_s1_writedata,                             //                                           .writedata
@@ -626,7 +626,7 @@ module sys_mm_interconnect_1 (
 	);
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (3),
+		.AV_ADDRESS_W                   (2),
 		.AV_DATA_W                      (32),
 		.UAV_DATA_W                     (32),
 		.AV_BURSTCOUNT_W                (1),

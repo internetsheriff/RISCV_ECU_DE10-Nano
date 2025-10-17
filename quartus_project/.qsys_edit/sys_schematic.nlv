@@ -2,32 +2,32 @@
 # 
 preplace inst sys.clk_0 -pg 1 -lvl 1 -y 330
 preplace inst sys.master_0.p2b_adapter -pg 1
-preplace inst sys.pio_in -pg 1 -lvl 3 -y 270
+preplace inst sys.pio_in -pg 1 -lvl 3 -y 250
 preplace inst sys.master_0.clk_rst -pg 1
 preplace inst sys -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst sys.pulpino_0 -pg 1 -lvl 2 -y 40
 preplace inst sys.master_0.fifo -pg 1
-preplace inst sys.onchip_memory2_0 -pg 1 -lvl 3 -y 150
+preplace inst sys.onchip_memory2_0 -pg 1 -lvl 3 -y 130
 preplace inst sys.master_0.timing_adt -pg 1
-preplace inst sys.jtag_uart_0 -pg 1 -lvl 3 -y 50
+preplace inst sys.jtag_uart_0 -pg 1 -lvl 3 -y 30
 preplace inst sys.master_0.b2p -pg 1
 preplace inst sys.master_0.jtag_phy_embedded_in_jtag_master -pg 1
-preplace inst sys.master_0 -pg 1 -lvl 2 -y 200
+preplace inst sys.master_0 -pg 1 -lvl 2 -y 260
 preplace inst sys.pio_out -pg 1 -lvl 3 -y 370
 preplace inst sys.master_0.transacto -pg 1
 preplace inst sys.master_0.p2b -pg 1
 preplace inst sys.master_0.b2p_adapter -pg 1
 preplace inst sys.master_0.clk_src -pg 1
-preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pio_in.external_connection,(SLAVE)sys.pio_in_external_connection) 1 0 3 NJ 320 NJ 330 NJ
-preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>sys</net_container>(SLAVE)pulpino_0.avalon_slave_debug,(MASTER)master_0.master,(SLAVE)pio_out.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(MASTER)pulpino_0.avalon_master_lsu,(SLAVE)onchip_memory2_0.s2,(SLAVE)pio_in.s1) 1 1 2 390 30 800
-preplace netloc POINT_TO_POINT<net_container>sys</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)pulpino_0.interrupt_receiver) 1 2 1 820
-preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)onchip_memory2_0.clk1,(SLAVE)pulpino_0.clk_sink,(SLAVE)pio_in.clk,(MASTER)clk_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)pio_out.clk,(SLAVE)master_0.clk) 1 1 2 410 350 840
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)sys.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pio_in.external_connection,(SLAVE)sys.pio_in_external_connection) 1 0 3 NJ 320 NJ 340 NJ
 preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.pulpino_0_config,(SLAVE)pulpino_0.config) 1 0 2 NJ 90 NJ
-preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>sys</net_container>(MASTER)clk_0.clk_reset,(SLAVE)jtag_uart_0.reset,(SLAVE)pio_in.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)master_0.clk_reset,(SLAVE)pulpino_0.reset_sink,(SLAVE)pio_out.reset) 1 1 2 390 280 820
+preplace netloc INTERCONNECT<net_container>sys</net_container>(MASTER)pulpino_0.avalon_master_lsu,(SLAVE)pio_out.s1,(SLAVE)pio_in.s1,(SLAVE)pulpino_0.avalon_slave_debug,(SLAVE)onchip_memory2_0.s2,(MASTER)master_0.master,(SLAVE)jtag_uart_0.avalon_jtag_slave) 1 1 2 450 150 820
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)clk_0.clk_in,(SLAVE)sys.clk) 1 0 1 NJ
 preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pio_out.external_connection,(SLAVE)sys.pio_out_external_connection) 1 0 3 NJ 400 NJ 400 NJ
-preplace netloc POINT_TO_POINT<net_container>sys</net_container>(SLAVE)onchip_memory2_0.s1,(MASTER)pulpino_0.avalon_master_instr) 1 2 1 780
-preplace netloc EXPORT<net_container>sys</net_container>(MASTER)master_0.master_reset,(MASTER)sys.master_0_master_reset) 1 2 2 NJ 260 NJ
-levelinfo -pg 1 0 180 1240
-levelinfo -hier sys 190 220 510 930 1080
+preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)master_0.clk_reset,(SLAVE)pio_in.reset,(SLAVE)pio_out.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)pulpino_0.reset_sink) 1 1 2 430 220 900
+preplace netloc POINT_TO_POINT<net_container>sys</net_container>(SLAVE)onchip_memory2_0.s1,(MASTER)pulpino_0.avalon_master_instr) 1 2 1 800
+preplace netloc EXPORT<net_container>sys</net_container>(MASTER)master_0.master_reset,(MASTER)sys.master_0_master_reset) 1 2 2 NJ 240 NJ
+preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)pio_in.irq,(MASTER)pulpino_0.interrupt_receiver) 1 2 1 880
+preplace netloc FAN_OUT<net_container>sys</net_container>(MASTER)clk_0.clk,(SLAVE)master_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)pio_in.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)pio_out.clk,(SLAVE)pulpino_0.clk_sink) 1 1 2 390 200 860
+levelinfo -pg 1 0 180 1280
+levelinfo -hier sys 190 220 530 970 1120

@@ -19,15 +19,6 @@ default_exc_handler:
   jal x0, default_exc_handler
 
 reset_handler:
-  // reset IRQs
-  //li x5, 0x0000001C
-  //li x6, 0xFFFFFFFF
-  //sw x6, 0(x5)
-
-  // Enable IRQs
-  //li x6, 0x00000008
-  //csrs mstatus, x6
-
 
   /* set all registers to zero */
   mv  x1, x0
@@ -95,13 +86,14 @@ main_entry:
 
   // external interrupts are handled by the same callback
   // until compiler supports IRQ routines
+  
+  // Aditional INT0
   .org 0x00
-  jal x0, int0_handler
+  jal x0, jtag_interrupt_handler
 
-
+  // Aditional INT1
   .org 0x04
   jal x0, interrupt_test_handler
-
 
   .rept 29
   nop

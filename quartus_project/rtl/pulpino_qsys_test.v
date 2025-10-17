@@ -26,19 +26,19 @@ assign reset_n = KEY[0] & ~jtag_reset ;
 
 // PIO_OUT setup
 wire [31:0] gpio_out;
-wire [21:0] unused_gpio_out;
+//wire [21:0] unused_gpio_out;
 
 assign LEDR [9:0] = gpio_out [9:0];
-assign unused_gpio_out[21:0] = gpio_out[31:10]; 
+//assign unused_gpio_out[21:0] = gpio_out[31:10]; 
 
 
 // PIO_IN setup
 wire [31:0] gpio_in;
-wire [18:0] unused_gpio_in;
+//wire [18:0] unused_gpio_in;
 
 assign gpio_in [3:0] = KEY [3:0];
 assign gpio_in [13:4] = SW [9:0];
-assign gpio_in [31:14] = unused_gpio_in [17:0]; 
+assign gpio_in [31:14] = 18'b0;
 
 
 

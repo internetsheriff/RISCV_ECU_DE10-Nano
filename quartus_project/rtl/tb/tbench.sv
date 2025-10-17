@@ -8,7 +8,7 @@ wire [3:0] keys;
 wire [9:0] led;
 reg [9:0] sw;
 
-assign keys[0] = reset_n;
+assign keys[3:1] = 3'b0;
 
 pulpino_qsys_test dut(
     .CLOCK_50(clk50),
@@ -24,15 +24,15 @@ initial begin
     sw = 10'b0000000000;
     
     
-    #20ns 
+    #10ns 
 
     // liga o core
     reset_n = 1'b1;
 
-    #2000ns
+    #19000ns
     sw = 10'b1111111111;
     
-    #4000ns
+    #1000ns
 
     // Fim
     $stop;

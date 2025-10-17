@@ -45,10 +45,10 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.S $(DEPS)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 
-clean-memory-files:
+clean-program-files:
 	rm -f $(ELF_INTERMEDIATE) $(MEM_DIR)/*.hex $(MEM_DIR)/*.bin && \
-	rm -f $(MEM_STAMP)
-	rm -f $(ELF_INTERMEDIATE)
+	rm -f $(MEM_STAMP) && \
+	rm -f $(SW_DIR)/*.o $(SW_DIR)/*.d 
 
 
 
