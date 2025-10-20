@@ -2,42 +2,38 @@
 
 
 typedef struct{
-    uint32_t data;
-    uint32_t direction;
-    uint32_t int_mask;
-    uint32_t edge_capture;
+    uint32_t DATA;
+    uint32_t DIRECTION;
+    uint32_t INT_MASK;
+    uint32_t EDGE_CAPTURE;
+    uint32_t OUT_SET;
+    uint32_t OUT_CLEAR;
 } pio_t;
 
-typedef union{
-    uint32_t raw;
-    struct {
-        unsigned int DATA   : 8;
-        unsigned int        : 7;
-        unsigned int RVALID : 1;
-        unsigned int RAVAIL : 16;
-    } bits;
-} jtag_uart_data_t;
-
-
-typedef union{
-    uint32_t raw;
-    struct {
-        unsigned int RE      : 1;
-        unsigned int WE      : 1;
-        unsigned int         : 6;
-        unsigned int RI      : 1;
-        unsigned int WI      : 1;
-        unsigned int AC      : 1;
-        unsigned int         : 5;
-        unsigned int WSPACE  : 16;
-     } bits;
-} jtag_uart_ctrl_t;
-
 typedef struct{
-    jtag_uart_data_t data;
-    jtag_uart_ctrl_t control;
+    uint32_t DATA;
+    uint32_t CONTROL;
 } jtag_uart_t;
 
 
+typedef struct {
+    uint32_t STATUS;
+    uint32_t CONTROL;
+    uint32_t PERIOD_L;
+    uint32_t PERIOD_H;
+    uint32_t SNAP_L;
+    uint32_t SNAP_H;
+} interval_timer32_t;
 
-#define JTAG_UART (*((volatile jtag_uart_t*) (JTAG_UART_BASE)))
+typedef struct {
+    uint32_t STATUS;
+    uint32_t CONTROL;
+    uint32_t PERIOD_0;
+    uint32_t PERIOD_1;
+    uint32_t PERIOD_2;
+    uint32_t PERIOD_3;
+    uint32_t SNAP_0;
+    uint32_t SNAP_1;
+} interval_timer64_t;
+
+
