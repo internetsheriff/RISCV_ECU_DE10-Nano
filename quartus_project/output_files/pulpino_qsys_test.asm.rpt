@@ -1,5 +1,5 @@
 Assembler report for pulpino_qsys_test
-Mon Oct 20 13:09:05 2025
+Wed Oct 22 19:04:37 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -39,7 +39,7 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct 20 13:09:05 2025 ;
+; Assembler Status      ; Successful - Wed Oct 22 19:04:37 2025 ;
 ; Revision Name         ; pulpino_qsys_test                     ;
 ; Top-level Entity Name ; tbench                                ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ on the Quartus Prime software download page.
 +----------------+--------------------------------+
 ; Option         ; Setting                        ;
 +----------------+--------------------------------+
-; JTAG usercode  ; 0x00B7D863                     ;
-; Checksum       ; 0x00B7D863                     ;
+; JTAG usercode  ; 0x00B801BE                     ;
+; Checksum       ; 0x00B801BE                     ;
 +----------------+--------------------------------+
 
 
@@ -89,14 +89,14 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Mon Oct 20 13:09:02 2025
+    Info: Processing started: Wed Oct 22 19:04:33 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Mon Oct 20 13:09:05 2025
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 521 megabytes
+    Info: Processing ended: Wed Oct 22 19:04:37 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

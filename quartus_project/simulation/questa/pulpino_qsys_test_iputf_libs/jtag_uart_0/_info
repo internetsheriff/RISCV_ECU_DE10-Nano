@@ -12,23 +12,23 @@ Z0 d/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa
 valtera_avalon_jtag_uart
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1760974309
+Z2 !s110 1761170709
 !i10b 1
 !s100 VmzlWO3FNngB7T4c4jIKV1
 I24ZdlYZ<[Q0]3gz2VL=7Q2
 S1
 R0
-Z3 w1760972576
+Z3 w1761161684
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
-!i122 78
+!i122 96
 L0 22 269
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z6 !s108 1760974309.000000
+Z6 !s108 1761170709.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv|
 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv|-work|jtag_uart_0|
 !i113 0
@@ -46,7 +46,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_log_module.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_log_module.sv
-!i122 79
+!i122 97
 L0 22 38
 R4
 R5
@@ -71,7 +71,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv
-!i122 80
+!i122 98
 L0 22 91
 R4
 R5
@@ -96,7 +96,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv
-!i122 81
+!i122 99
 L0 22 90
 R4
 R5
@@ -112,7 +112,7 @@ R8
 valtera_avalon_jtag_uart_sim_scfifo_r
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv
 R1
-R2
+Z9 !s110 1761170710
 !i10b 1
 !s100 M>A19TUho7Kf1OCTNfc[T3
 IdD[jH3j[jakHnlP;960OF1
@@ -121,7 +121,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv
-!i122 82
+!i122 100
 L0 22 73
 R4
 R5
@@ -137,7 +137,7 @@ R8
 valtera_avalon_jtag_uart_sim_scfifo_w
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv
 R1
-R2
+R9
 !i10b 1
 !s100 eS^dRo^N7^nQB[kc]MF6b2
 Ihl<WiMN2f^l>H9lBdi5NM3
@@ -146,14 +146,14 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv
-!i122 83
+!i122 101
 L0 22 95
 R4
 R5
 r1
 !s85 0
 31
-R6
+!s108 1761170710.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv|
 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv|-work|jtag_uart_0|
 !i113 0

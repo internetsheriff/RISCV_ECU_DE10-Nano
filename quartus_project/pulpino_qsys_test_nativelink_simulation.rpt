@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=pulpino_qsys_test_iputf_input --spd=/home/jvctr/0/POLIno_qsys/quartus_project/sys/sys.spd --spd=/home/jvctr/0/POLIno_qsys/quartus_project/sw/mem_init/meminit.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=pulpino_qsys_test_iputf_input --spd=/home/jvctr/0/POLIno_qsys/quartus_project/sys/sys.spd --spd=/home/jvctr/0/POLIno_qsys/quartus_project/sw/mem_init/meminit.spd --spd=/home/jvctr/0/POLIno_qsys/quartus_project/pll.spd 
 
 ========= EDA Simulation Settings =====================
 

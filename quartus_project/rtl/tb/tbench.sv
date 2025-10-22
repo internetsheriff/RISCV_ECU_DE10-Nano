@@ -1,43 +1,88 @@
 `timescale 1ns/10ps
 
-module tbench();
+module tbench(
+	//so empty :3
+);
+	
 
-reg clk50;
-reg reset_n;
-wire [3:0] keys;
-wire [9:0] led;
-reg [9:0] sw;
+//==================================================
+//                     SETUP
+//==================================================
 
-assign keys[3:1] = 3'b0;
+	// fixed during simulation
+	parameter BOOT_ADDR = 32'h00008000;
+	parameter clk_period = 10; // 25MHz
+	
+	wire test_mode;
+	wire fetch_enable;
+	wire clock_gating;
+	
+	assign test_mode = 1'b0;
+	assign fetch_enable = 1'b1;
+	assign clock_gating = 1'b0;
+	
+	
+	
+	// changing during the simulation
+	reg tb_clk;
+	reg jtag_reset;
+	reg reset_n;
+	reg [31:0] gpio_in;
+	wire [31:0] gpio_out;
+	
+	
 
-pulpino_qsys_test dut(
-    .CLOCK_50(clk50),
-	.KEY(keys),
-    .LEDR(led),
-    .SW(sw)
+
+// Instatiating core (no PLL)
+sys u0 (
+    .clk_clk                             (tb_clk),
+    .master_0_master_reset_reset         (jtag_reset),         
+    .pio_out_external_connection_export  (gpio_out),  
+    .pio_in_external_connection_export   (gpio_in),  
+    .pulpino_0_config_testmode_i         (test_mode),         
+    .pulpino_0_config_fetch_enable_i     (fetch_enable),
+    .pulpino_0_config_clock_gating_i     (clock_gating),     
+    .pulpino_0_config_boot_addr_i        (BOOT_ADDR),        
+    .reset_reset_n                       (reset_n)                        
 );
 
+
+
+//==================================================
+//                   SIMULATION
+//==================================================
+
 initial begin
-    // condicoes iniciais 
-    clk50 = 0;
-    reset_n = 1'b0;
-    sw = 10'b0000000000;
-    
-    #10ns 
 
-    // liga o core
-    reset_n = 1'b1;
+   // Initial Conditions
+   tb_clk = 0;
+   reset_n = 1'b0;
+   gpio_in = 32'b0000000000000000000000000001111; // [3:0] active low
+   
+	 
+	 
+  #50 //---------------------
 
-    #1ms
-    #500ns
+	
+	
+	// Turning on the core
+   reset_n = 1'b1;
 
-    // Fim
-    $stop;
+	
+	
+   #500 //---------------------
+
+	 
+	 
+   // End simulation
+   $stop;
 
 end
 
+
+// Clock Generation
 always begin
-        #10ns clk50 = ~clk50;
+        #(clk_period/2) tb_clk = ~tb_clk;
 end
 
 endmodule
