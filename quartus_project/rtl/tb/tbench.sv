@@ -25,8 +25,8 @@ module tbench(
 	// changing during the simulation
 	reg tb_clk;
 	reg jtag_reset;
-	reg key_reset;
-	reg [2:0] keys;
+	reg key_reset; //KEY[0]
+	reg [2:0] KEY_r; //remaining KEY[*]
 	reg [9:0] sw_in;
 	wire [9:0] ledr_out;
 	
@@ -35,10 +35,10 @@ module tbench(
 
 // Instatiating core
 pulpino_qsys_test dut (
-    .CLOCK_50                            (tb_clk),
-    .KEY                                 ({keys[2:0], key_reset}),
-    .SW                                  (sw_in),
-    .LEDR                                (ledr_out)
+	.CLOCK_50		(tb_clk),
+	.KEY				({KEY_r[2:0], key_reset}),
+	.SW					(sw_in),
+	.LEDR				(ledr_out)
 );
 
 
@@ -49,37 +49,40 @@ pulpino_qsys_test dut (
 
 initial begin
 
-   // Initial Conditions
-   tb_clk = 0;
-   key_reset = 1'b1;
-   keys = 3'b1;
-   sw_in = 10'b0;
+	// Initial Conditions
+	tb_clk = 0;
+	key_reset = 1'b1;
+	KEY_r = 3'b1;
+  sw_in = 10'b0;
 
    
 	 
 	 
-  #50 //---------------------
+  #100 //---------------------
 
 	
 	
 	// Turning on the core
-   key_reset = 1'b0;
+  key_reset = 1'b0;
 
 	
-	
-   #500 //---------------------
+	// Waiting for end of setup
+	#7000 //----------------
 
-	 
-	 
-   // End simulation
-   $stop;
+
+	// Waiting for interrupt
+	#7000//----------------------- 
+ 
+
+	// End simulation
+	$stop;
 
 end
 
 
 // Clock Generation
 always begin
-        #(clk_period/2) tb_clk = ~tb_clk;
+	#(clk_period/2) tb_clk = ~tb_clk;
 end
 
 endmodule

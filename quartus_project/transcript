@@ -1664,3 +1664,5 @@ run -all
 # ** Note: $stop    : /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv(75)
 #    Time: 550 ns  Iteration: 0  Instance: /tbench
 # Break in Module tbench at /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv line 75
+# End time: 13:34:55 on Oct 29,2025, Elapsed time: 0:44:05
+# Errors: 0, Warnings: 42
