@@ -51,7 +51,7 @@ initial begin
 
 	// Initial Conditions
 	tb_clk = 0;
-	key_reset = 1'b1;
+	key_reset = 1'b0;
 	KEY_r = 3'b1;
   sw_in = 10'b0;
 
@@ -63,7 +63,7 @@ initial begin
 	
 	
 	// Turning on the core
-  key_reset = 1'b0;
+  key_reset = 1'b1;
 
 	
 	// Waiting for end of setup

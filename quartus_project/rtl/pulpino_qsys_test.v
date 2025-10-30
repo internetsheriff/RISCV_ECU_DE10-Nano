@@ -26,10 +26,8 @@ assign clock_gating = 1'b0;
 wire clk25;
 wire jtag_reset;
 wire reset_n;
-wire reset;
 
-assign reset = KEY[0] & ~jtag_reset ;
-assign reset_n = ~reset;
+assign reset_n = KEY[0] & ~jtag_reset;
 
 
 
@@ -53,7 +51,7 @@ assign gpio_in [31:14] = 18'b0;
 // PLL Instantiation
 pll clock_conversion(
 	.refclk(CLOCK_50),
-	.rst(reset),
+	.rst(~reset_n),
 	.outclk_0(clk25)
 );
 

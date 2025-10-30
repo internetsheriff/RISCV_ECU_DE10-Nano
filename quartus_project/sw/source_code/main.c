@@ -30,15 +30,13 @@
 void enable_timer_interruption(void){
     REG(PIO_OUT) = 0x0A0;
 
-
     // Stop counter
     REG(TIMER+0x4) |= (1<<3);
-
 
     REG(PIO_OUT) = 0x0A1;
 
     // set time period
-    uint32_t period_full = 10 -1;
+    uint32_t period_full = 100000 - 1;
     REG(TIMER+0x8) =  (  period_full & 0xFFFF );
     REG(TIMER+0xC) =  (( period_full >> 16 ) & 0xFFFF );
 
@@ -114,26 +112,8 @@ int main(int argc, char **argv){
     enable_irq();
     REG(PIO_OUT) = 0x0D1;
     enable_timer_interruption();
-    REG(PIO_OUT) = 0x0D2;
+    REG(PIO_OUT) = 0x0FF;
 
-		// Counts cyclically
-    while (1){
-        REG(PIO_OUT) = 0x000;
-				REG(PIO_OUT) = 0x001;
-				REG(PIO_OUT) = 0x002;
-				REG(PIO_OUT) = 0x003;
-				REG(PIO_OUT) = 0x004;
-				REG(PIO_OUT) = 0x005;
-				REG(PIO_OUT) = 0x006;
-				REG(PIO_OUT) = 0x007;
-				REG(PIO_OUT) = 0x008;
-				REG(PIO_OUT) = 0x009;
-				REG(PIO_OUT) = 0x00A;
-				REG(PIO_OUT) = 0x00B;
-				REG(PIO_OUT) = 0x00C;
-				REG(PIO_OUT) = 0x00D;
-				REG(PIO_OUT) = 0x00E;
-				REG(PIO_OUT) = 0x00F;
-    }
+    while (1){}
     return 0;
 }

@@ -74,8 +74,10 @@ OBJCOPY = $(TOOLCHAIN_DIR)/bin/riscv64-unknown-elf-objcopy
 LINKER_SCRIPT=$(SW_DIR)/link.riscv.ld
 
 # Compilation Flags
-CFLAGS = -Os $(TARGET_ARCH) -fdata-sections -ffunction-sections -fshort-enums -fgnu89-inline -Wall -MMD -MP
-LDFLAGS = $(TARGET_ARCH) -Wl,--gc-sections --specs=nano.specs -nostartfiles
+CFLAGS = -Os $(TARGET_ARCH) -fdata-sections -ffunction-sections -fshort-enums -fgnu89-inline -Wall -I$(SRC_DIR)
+LDFLAGS = $(TARGET_ARCH) -Wl,--gc-sections --specs=nano.specs -nostartfiles -L$(SW_DIR)
+DEPFLAGS = -MMD -MP
+
 
 # Memory file prefix
 MEM_NAME=sys_onchip_memory2_0
@@ -99,7 +101,8 @@ TOOLCHAIN_COMPILATION_STAMP=$(STAMPS_DIR)/toolchain_built
 TB_COMPILE_STAMP=$(STAMPS_DIR)/testbench_compiled
 
 # Memory Reloading
-MEM_STAMP= $(STAMPS_DIR)/memory_stamp
+MEM_STAMP=$(STAMPS_DIR)/memory_stamp
+RELOAD_STAMP=$(STAMPS_DIR)/reload_memory_stamp
 
 # Complete Compilation 
 DESIGN_COMPILE_STAMP = $(STAMPS_DIR)/quartus_compiled

@@ -9,25 +9,24 @@
 compile-quartus: $(DESIGN_COMPILE_STAMP)
 
 
-rtl-sim-gui: $(MEM_STAMP) $(TB_COMPILE_STAMP)
+rtl-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	vsim -do $(rtl_sim_file)
 
-gate-sim-gui: $(MEM_STAMP) $(TB_COMPILE_STAMP)
+gate-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	vsim -do $(gate_sim_file)
 
-rtl-sim: $(MEM_STAMP) $(TB_COMPILE_STAMP)
+rtl-sim: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	vsim -c -do "source $(rtl_sim_file); quit"
 
-gate-sim: $(MEM_STAMP) $(TB_COMPILE_STAMP)
+gate-sim: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	vsim -c -do "source $(gate_sim_file); quit"
 
 quartus-gui: 
 	quartus --64bit $(Q_DIR)/$(PROJECT_NAME).qpf
-
 
 compile-testbench: $(TB_COMPILE_STAMP)
 
@@ -42,7 +41,6 @@ compile-qsys:
 $(QSYS_FILE): $(QSYS_SRC)
 	qsys-generate $(QSYS_SRC) --synthesis=VERILOG --simulation=VERILOG
 
-
 compile-quartus: $(END_SOF)
 
 $(END_SOF): $(DESIGN_COMPILE_STAMP)
@@ -51,19 +49,21 @@ $(DESIGN_COMPILE_STAMP): $(VERILOG_SOURCES) $(QSYS_FILE) $(END_QSF) $(SDC_FILES)
 	cd $(Q_DIR) && quartus_sh --flow compile $(PROJECT_NAME)
 	touch $(DESIGN_COMPILE_STAMP)
 
+reload-memory: $(RELOAD_STAMP)
 
-reload-memory: $(MEM_STAMP)
-
-$(MEM_STAMP): $(MEM).hex $(DESIGN_COMPILE_STAMP)
+$(RELOAD_STAMP): $(MEM_STAMP) $(DESIGN_COMPILE_STAMP)
 	@cd $(Q_DIR) && \
 	if [ "$$ALTERNATIVE_MEM_RELOAD" = "true" ]; then \
 		echo "Using alternative method for reloading memory" ; \
+		QUARTUS_PROJECT_FILE=$$(find ./sys/synthesis/submodules/ -name "$(MEM_NAME)*.hex" | head -n 1) ; \
 		CACHED_FILE=$$(find ./db -name "$(MEM_NAME)*.hex" | head -n 1) ; \
 		echo "Overwriting $$CACHED_FILE with $(MEM).hex" ; \
 		cat $(MEM).hex > $$CACHED_FILE ; \
-	else \
+		cat $(MEM).hex > $$QUARTUS_PROJECT_FILE ; \
+else \
 		quartus_cdb $(PROJECT_NAME) -c $(PROJECT_NAME) --update_mif ; \
 	fi && \
+	quartus_asm $(PROJECT_NAME) -c $(PROJECT_NAME) ; \
 	touch $@
 		
 
@@ -112,6 +112,8 @@ list-devices:
 	jtagconfig
 	quartus_pgm --auto
 
+$(MEM_STAMP): $(MEM).hex
+	touch $@
 
 clean-synthesis:
 	rm -rf $(Q_DIR)/db
@@ -124,7 +126,7 @@ clean-simulation:
 	rm -rf $(QUESTA_DIR)/work $(QUESTA_DIR)/*.wlf $(QUESTA_DIR)/transcript
 
 clean-hardware-stamps:
-	rm -f $(DESIGN_COMPILE_STAMP) $(MEM_STAMP) $(TB_COMPILE_STAMP) $(SYNTHESIS_STAMP) $(FITTING_STAMP) $(ASSEMBLY_STAMP)
+	rm -f $(DESIGN_COMPILE_STAMP) $(MEM_STAMP) $(RELOAD_STAMP) $(TB_COMPILE_STAMP) $(SYNTHESIS_STAMP) $(FITTING_STAMP) $(ASSEMBLY_STAMP)
 
 .PHONY: rtl-sim gate-sim rtl-sim-gui gate-sim-gui quartus-gui \
         timing-analysis compile-qsys reload-memory \
