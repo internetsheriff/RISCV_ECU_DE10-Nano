@@ -95,6 +95,7 @@ main_entry:
   .org 0x04
   jal x0, null_handler
 
+	// INT2 being tested
   .org 0x08
   jal x0, interrupt_test_handler
   
