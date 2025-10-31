@@ -14,24 +14,24 @@ quartus-gui:
 
 rtl-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
-	vsim -do $(rtl_sim_file)
+	vsim -do "source $(rtl_sim_file); run -all"
 
 
 gate-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	quartus_eda --simulation --tool=questa_oem --format=verilog $(PROJECT_NAME) -c $(PROJECT_NAME) && \
-	vsim -do $(gate_sim_file)
+		vsim -do "source $(gate_sim_file); run -all"
 
 
 rtl-sim: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
-	vsim -c -do "source $(rtl_sim_file);"
+	vsim -c -do "source $(rtl_sim_file); run -all"
 
 
 gate-sim: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 	cd $(Q_DIR) && \
 	quartus_eda --simulation --tool=questa_oem --format=verilog $(PROJECT_NAME) -c $(PROJECT_NAME) && \
-	vsim -c -do "source $(gate_sim_file);"
+	vsim -c -do "source $(gate_sim_file); run -all"
 
 
 

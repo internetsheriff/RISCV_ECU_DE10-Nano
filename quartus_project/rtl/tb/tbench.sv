@@ -71,7 +71,7 @@ initial begin
 
 
 	// Waiting for interrupt
-	#7000//----------------------- 
+	#1ms//----------------------- 
  
 
 	// End simulation

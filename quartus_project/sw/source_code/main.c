@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "acess_structs.h"
+#include "debbuging.h"
 #include <stdint.h>
 
 // Cast address to uint_32 register
@@ -14,22 +15,6 @@
 #define EVENT_UNIT_BASE                   ( 0X00004000 + SOC_PERIPHERALS_BASE )
 #define IRP                               ( 0x00000000 + EVENT_UNIT_BASE )
 #define ICP                               ( 0x0000000C + EVENT_UNIT_BASE )
-
-/* ========= Simple math for timer frequency ============ 
-	Timer frequency is around the same as the input clock (after PLL),
-	the PLL output is configured for 25MHz, that is 40ns.
-
-	To get to 1ms we have (1/40)x(10^-3)/(10^-9), that is 2,5 x 10^4
-	or, 25000 timer cycles per milisecond
-*/
-#define timer_conversion_factor							25000
-/* 
-	Since the counter only counts to N-1 and not to N itself we need to subtract 1,
-	let's handle this with a macro.
-*/
-#define MS2CYCLES(n)												(((n)*(timer_conversion_factor))-1)
-// =====================================================
-
 
 /* 
   ======= Comments about Debbuging with LEDs =======
@@ -53,30 +38,30 @@
 	Debugging LED format: 0x0A-
 */
 void setup_timer_interruption(void){
-	REG(PIO_OUT) = 0x0A0;
+	DEBUG(0x0A0);
 
 	// Stop counter
 	REG(TIMER+0x4) |= (1<<3);
-	REG(PIO_OUT) = 0x0A1;
+	DEBUG(0x0A1);
 
 
 	// set time period
-	uint32_t period_full = 10-1 ; // MS2CYCLES(50000);
+	uint32_t period_full = MS2CYCLES(1);
 	REG(TIMER+0x8) =  (  period_full & 0xFFFF );
 	REG(TIMER+0xC) =  (( period_full >> 16 ) & 0xFFFF );
-	REG(PIO_OUT) = 0x0A2;
+	DEBUG(0x0A2);
 
 
 	// Clear old timer interrupts
 	REG(TIMER) &= ~(1);
-	REG(PIO_OUT) = 0x0A3;
+	DEBUG(0x0A3);
 
 
 	// Activate counting in repeating mode
-	// (START = 1 ; CONT = 1 ; ITO =1) => 5
-	uint32_t cleaned_value = REG(TIMER+0x4) & (~ 5);
+	// (START = 1 ; CONT = 0 ; ITO =1) => 3
+	uint32_t cleaned_value = REG(TIMER+0x4) & (~ 3);
 	REG(TIMER+0x4) = cleaned_value | 5;
-	REG(PIO_OUT) = 0x0A4;
+	DEBUG(0x0A4);
 }
 
 
@@ -90,17 +75,17 @@ void setup_timer_interruption(void){
 	Debugging LED format: 0x0A-
 */
 void enable_irq(void){
-	REG(PIO_OUT) = 0x0B0;
+	DEBUG(0x0B0);
 
 
 	// Clear enabled interruptions
-	REG(ICP)     = 0xFFFFFFFF;
-	REG(PIO_OUT) = 0x0B1;
+	REG(ICP) = 0xFFFFFFFF;
+	DEBUG(0x0B1);
 
 
 	// Set IRP mask for interrupt 2
 	REG(IRP)     = (1<< 2);
-	REG(PIO_OUT) = 0x0B2;
+	DEBUG(0x0B2);
 
 
 	// Set mstatus to 8
@@ -108,7 +93,7 @@ void enable_irq(void){
 			"li x6, 0x00000008\n"
 			"csrs mstatus, x6"
 	);
-	REG(PIO_OUT) = 0x0B3;
+	DEBUG(0x0B3);
 }
 
 
@@ -143,25 +128,26 @@ void __attribute__((interrupt)) jtag_interrupt_handler(void){
 	(Leading 2 and 3 turns LEDR[9] on, so it's easy to see in waveform)
 */
 void __attribute__((interrupt)) interrupt_test_handler(void){
-	REG(PIO_OUT) = 0x200;
+	DEBUG(0x200);
 	
 	// clears interrupt on the interrupt constroler
 	REG(ICP) = (1 << 2);
-	REG(PIO_OUT) = 0x201;
+	DEBUG(0x201);
 	
 	// clears timeout bit in the timer
 	REG(TIMER) |= ~1;
-	REG(PIO_OUT) = 0x202;
+	DEBUG(0x202);
+	REG(PIO_OUT) = 0x2FF;
 }
 
 
 int main(int argc, char **argv){
 	// Setup process 
-	REG(PIO_OUT) = 0x0D0;
+	DEBUG(0x0D0);
 	enable_irq();
-	REG(PIO_OUT) = 0x0D1;
+	DEBUG(0x0D1);
 	setup_timer_interruption();
-	REG(PIO_OUT) = 0x0FF;
+	DEBUG(0x0FF);
 	
 	// infinite loop
 	while (1){}
