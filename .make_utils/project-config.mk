@@ -39,8 +39,5 @@ LIBS =
 # DO NOT USE TRAILING WHITESPACE 'true '
 ALTERNATIVE_MEM_RELOAD=true
 
-
-
-
 # TODO: Move to a centralized fragment for addresses
 BASE_ADDRESS=0x00008000
