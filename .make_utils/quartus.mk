@@ -10,10 +10,7 @@ quartus-gui:
 	quartus --64bit $(Q_DIR)/$(PROJECT_NAME).qpf
 
 
-
-
 rtl-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
-	cd $(Q_DIR) && \
 	vsim -do "source $(rtl_sim_file); run -all"
 
 
@@ -24,7 +21,6 @@ gate-sim-gui: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
 
 
 rtl-sim: $(RELOAD_STAMP) $(TB_COMPILE_STAMP)
-	cd $(Q_DIR) && \
 	vsim -c -do "source $(rtl_sim_file); run -all"
 
 

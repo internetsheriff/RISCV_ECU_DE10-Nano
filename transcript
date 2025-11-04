@@ -1,0 +1,1113 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# source /home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test_run_msim_rtl_verilog.do
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv -work error_adapter_0 
+# -- Compiling module sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_avalon_st_adapter.v -work avalon_st_adapter 
+# -- Compiling module sys_mm_interconnect_1_avalon_st_adapter
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_avalon_st_adapter
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_mux_001.sv -work rsp_mux_001 
+# -- Compiling module sys_mm_interconnect_1_rsp_mux_001
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_rsp_mux_001
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv -work rsp_mux_001 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_mux.sv -work rsp_mux 
+# -- Compiling module sys_mm_interconnect_1_rsp_mux
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_rsp_mux
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv -work rsp_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_demux_004.sv -work rsp_demux_004 
+# -- Compiling module sys_mm_interconnect_1_rsp_demux_004
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_rsp_demux_004
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_rsp_demux.sv -work rsp_demux 
+# -- Compiling module sys_mm_interconnect_1_rsp_demux
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_rsp_demux
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_mux_004.sv -work cmd_mux_004 
+# -- Compiling module sys_mm_interconnect_1_cmd_mux_004
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_cmd_mux_004
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv -work cmd_mux_004 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_mux.sv -work cmd_mux 
+# -- Compiling module sys_mm_interconnect_1_cmd_mux
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_cmd_mux
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_arbitrator.sv -work cmd_mux 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_demux_001.sv -work cmd_demux_001 
+# -- Compiling module sys_mm_interconnect_1_cmd_demux_001
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_cmd_demux_001
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_cmd_demux.sv -work cmd_demux 
+# -- Compiling module sys_mm_interconnect_1_cmd_demux
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_cmd_demux
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv -work pulpino_0_avalon_master_lsu_limiter 
+# -- Compiling module altera_merlin_traffic_limiter
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_traffic_limiter.sv(361): (vlog-13528) Extra Parentheses after time system function.
+# 
+# Top level modules:
+# 	altera_merlin_traffic_limiter
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_reorder_memory.sv -work pulpino_0_avalon_master_lsu_limiter 
+# -- Compiling module altera_merlin_reorder_memory
+# -- Compiling module memory_pointer_controller
+# 
+# Top level modules:
+# 	altera_merlin_reorder_memory
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v -work pulpino_0_avalon_master_lsu_limiter 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v -work pulpino_0_avalon_master_lsu_limiter 
+# -- Compiling module altera_avalon_st_pipeline_base
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_base
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_007.sv -work router_007 
+# -- Compiling module sys_mm_interconnect_1_router_007_default_decode
+# -- Compiling module sys_mm_interconnect_1_router_007
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_router_007
+# End time: 14:03:41 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:41 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_006.sv -work router_006 
+# -- Compiling module sys_mm_interconnect_1_router_006_default_decode
+# -- Compiling module sys_mm_interconnect_1_router_006
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_router_006
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_002.sv -work router_002 
+# -- Compiling module sys_mm_interconnect_1_router_002_default_decode
+# -- Compiling module sys_mm_interconnect_1_router_002
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_router_002
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_001.sv -work router_001 
+# -- Compiling module sys_mm_interconnect_1_router_001_default_decode
+# -- Compiling module sys_mm_interconnect_1_router_001
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_router_001
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router.sv -work router 
+# -- Compiling module sys_mm_interconnect_1_router_default_decode
+# -- Compiling module sys_mm_interconnect_1_router
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1_router
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv -work jtag_uart_0_avalon_jtag_slave_agent 
+# -- Compiling module altera_merlin_slave_agent
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv -work jtag_uart_0_avalon_jtag_slave_agent 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_master_agent.sv -work pulpino_0_avalon_master_lsu_agent 
+# -- Compiling module altera_merlin_master_agent
+# 
+# Top level modules:
+# 	altera_merlin_master_agent
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_translator.sv -work onchip_memory2_0_s1_translator 
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_master_translator.sv -work pulpino_0_avalon_master_instr_translator 
+# -- Compiling module altera_merlin_master_translator
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_master_translator.sv(536): (vlog-13528) Extra Parentheses after time system function.
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_master_0_p2b_adapter.sv -work p2b_adapter 
+# -- Compiling module sys_master_0_p2b_adapter
+# 
+# Top level modules:
+# 	sys_master_0_p2b_adapter
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_master_0_b2p_adapter.sv -work b2p_adapter 
+# -- Compiling module sys_master_0_b2p_adapter
+# 
+# Top level modules:
+# 	sys_master_0_b2p_adapter
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_packets_to_master.v -work transacto 
+# -- Compiling module altera_avalon_packets_to_master
+# -- Compiling module packets_to_fifo
+# -- Compiling module fifo_buffer_single_clock_fifo
+# -- Compiling module fifo_buffer_scfifo_with_controls
+# -- Compiling module fifo_buffer
+# -- Compiling module fifo_to_packet
+# -- Compiling module packets_to_master
+# 
+# Top level modules:
+# 	altera_avalon_packets_to_master
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_packets_to_bytes.v -work p2b 
+# -- Compiling module altera_avalon_st_packets_to_bytes
+# 
+# Top level modules:
+# 	altera_avalon_st_packets_to_bytes
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_bytes_to_packets.v -work b2p 
+# -- Compiling module altera_avalon_st_bytes_to_packets
+# 
+# Top level modules:
+# 	altera_avalon_st_bytes_to_packets
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v -work fifo 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_master_0_timing_adt.sv -work timing_adt 
+# -- Compiling module sys_master_0_timing_adt
+# 
+# Top level modules:
+# 	sys_master_0_timing_adt
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_jtag_interface.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_jtag_interface
+# 
+# Top level modules:
+# 	altera_avalon_st_jtag_interface
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_jtag_dc_streaming.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_jtag_control_signal_crosser
+# -- Compiling module altera_jtag_src_crosser
+# -- Compiling module altera_jtag_dc_streaming
+# 
+# Top level modules:
+# 	altera_jtag_dc_streaming
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_jtag_sld_node.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_jtag_sld_node
+# 
+# Top level modules:
+# 	altera_jtag_sld_node
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_jtag_streaming.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_jtag_streaming
+# 
+# Top level modules:
+# 	altera_jtag_streaming
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_clock_crosser.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_clock_crosser
+# 
+# Top level modules:
+# 	altera_avalon_st_clock_crosser
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_std_synchronizer_nocut.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_std_synchronizer_nocut
+# 
+# Top level modules:
+# 	altera_std_synchronizer_nocut
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_base.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_pipeline_base
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_base
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_idle_remover.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_idle_remover
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_remover
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_idle_inserter.v -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_idle_inserter
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_inserter
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_st_pipeline_stage.sv -work jtag_phy_embedded_in_jtag_master 
+# -- Compiling module altera_avalon_st_pipeline_stage
+# 
+# Top level modules:
+# 	altera_avalon_st_pipeline_stage
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v -work rst_controller 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 14:03:42 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:42 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v -work rst_controller 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_irq_mapper.sv -work irq_mapper 
+# -- Compiling module sys_irq_mapper
+# 
+# Top level modules:
+# 	sys_irq_mapper
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1.v -work mm_interconnect_1 
+# -- Compiling module sys_mm_interconnect_1
+# 
+# Top level modules:
+# 	sys_mm_interconnect_1
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_0.v -work mm_interconnect_0 
+# -- Compiling module sys_mm_interconnect_0
+# 
+# Top level modules:
+# 	sys_mm_interconnect_0
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v -work timer_0 
+# -- Compiling module sys_timer_0
+# 
+# Top level modules:
+# 	sys_timer_0
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/adbg_config.sv -work pulpino_0 
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv -work pulpino_0 
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv -work pulpino_0 
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv -work pulpino_0 
+# -- Compiling interface APB_BUS
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/axi_bus.sv -work pulpino_0 
+# -- Compiling interface AXI_BUS
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv -work pulpino_0 
+# -- Compiling interface DEBUG_BUS
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv -work pulpino_0 
+# -- Compiling module cluster_clock_gating
+# 
+# Top level modules:
+# 	cluster_clock_gating
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv -work pulpino_0 
+# -- Compiling module cluster_clock_inverter
+# 
+# Top level modules:
+# 	cluster_clock_inverter
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv -work pulpino_0 
+# -- Compiling module cluster_clock_mux2
+# 
+# Top level modules:
+# 	cluster_clock_mux2
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv -work pulpino_0 
+# -- Compiling package zeroriscy_defines
+# 
+# Top level modules:
+# 	--none--
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv -work pulpino_0 
+# -- Compiling package zeroriscy_alu_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_alu
+# 
+# Top level modules:
+# 	zeroriscy_alu
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv -work pulpino_0 
+# -- Compiling package zeroriscy_compressed_decoder_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_compressed_decoder
+# 
+# Top level modules:
+# 	zeroriscy_compressed_decoder
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv -work pulpino_0 
+# -- Compiling package zeroriscy_controller_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_controller
+# 
+# Top level modules:
+# 	zeroriscy_controller
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv -work pulpino_0 
+# -- Compiling package zeroriscy_core_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_core
+# 
+# Top level modules:
+# 	zeroriscy_core
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv -work pulpino_0 
+# -- Compiling package zeroriscy_cs_registers_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_cs_registers
+# 
+# Top level modules:
+# 	zeroriscy_cs_registers
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv -work pulpino_0 
+# -- Compiling package zeroriscy_debug_unit_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_debug_unit
+# 
+# Top level modules:
+# 	zeroriscy_debug_unit
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv -work pulpino_0 
+# -- Compiling package zeroriscy_decoder_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_decoder
+# 
+# Top level modules:
+# 	zeroriscy_decoder
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv -work pulpino_0 
+# -- Compiling package zeroriscy_ex_block_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_ex_block
+# 
+# Top level modules:
+# 	zeroriscy_ex_block
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv -work pulpino_0 
+# -- Compiling module zeroriscy_fetch_fifo
+# 
+# Top level modules:
+# 	zeroriscy_fetch_fifo
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv -work pulpino_0 
+# -- Compiling package zeroriscy_id_stage_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_id_stage
+# 
+# Top level modules:
+# 	zeroriscy_id_stage
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:43 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv -work pulpino_0 
+# -- Compiling package zeroriscy_if_stage_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_if_stage
+# 
+# Top level modules:
+# 	zeroriscy_if_stage
+# End time: 14:03:43 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv -work pulpino_0 
+# -- Compiling package zeroriscy_int_controller_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_int_controller
+# 
+# Top level modules:
+# 	zeroriscy_int_controller
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv -work pulpino_0 
+# -- Compiling module zeroriscy_load_store_unit
+# 
+# Top level modules:
+# 	zeroriscy_load_store_unit
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv -work pulpino_0 
+# -- Compiling package zeroriscy_multdiv_fast_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_multdiv_fast
+# 
+# Top level modules:
+# 	zeroriscy_multdiv_fast
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv -work pulpino_0 
+# -- Compiling package zeroriscy_multdiv_slow_sv_unit
+# -- Importing package zeroriscy_defines
+# -- Compiling module zeroriscy_multdiv_slow
+# 
+# Top level modules:
+# 	zeroriscy_multdiv_slow
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv -work pulpino_0 
+# -- Compiling module zeroriscy_prefetch_buffer
+# 
+# Top level modules:
+# 	zeroriscy_prefetch_buffer
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv -work pulpino_0 
+# -- Compiling module zeroriscy_register_file
+# 
+# Top level modules:
+# 	zeroriscy_register_file
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv -work pulpino_0 
+# -- Compiling interface AXI_BUS
+# -- Compiling module core_top
+# 
+# Top level modules:
+# 	core_top
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_pio_out.v -work pio_out 
+# -- Compiling module sys_pio_out
+# 
+# Top level modules:
+# 	sys_pio_out
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_pio_in.v -work pio_in 
+# -- Compiling module sys_pio_in
+# 
+# Top level modules:
+# 	sys_pio_in
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_onchip_memory2_0.v -work onchip_memory2_0 
+# -- Compiling module sys_onchip_memory2_0
+# 
+# Top level modules:
+# 	sys_onchip_memory2_0
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_master_0.v -work master_0 
+# -- Compiling module sys_master_0
+# 
+# Top level modules:
+# 	sys_master_0
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_log_module.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart_log_module
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart_log_module
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart_scfifo_r
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart_scfifo_r
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart_scfifo_w
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart_scfifo_w
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart_sim_scfifo_r
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart_sim_scfifo_r
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv -work jtag_uart_0 
+# -- Compiling module altera_avalon_jtag_uart_sim_scfifo_w
+# 
+# Top level modules:
+# 	altera_avalon_jtag_uart_sim_scfifo_w
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v 
+# -- Compiling module sys
+# 
+# Top level modules:
+# 	sys
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project" /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo 
+# -- Compiling module ppl
+# 
+# Top level modules:
+# 	ppl
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation" /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v 
+# -- Compiling module sys
+# 
+# Top level modules:
+# 	sys
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl" /home/jvctr/0/POLIno_qsys/quartus_project/rtl/pulpino_qsys_test.v 
+# -- Compiling module pulpino_qsys_test
+# 
+# Top level modules:
+# 	pulpino_qsys_test
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work ppl "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/ppl" /home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v 
+# -- Compiling module ppl_0002
+# 
+# Top level modules:
+# 	ppl_0002
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb" /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv 
+# -- Compiling module tbench
+# 
+# Top level modules:
+# 	tbench
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 14:03:44 on Nov 04,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb" /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv 
+# -- Compiling module tbench
+# 
+# Top level modules:
+# 	tbench
+# End time: 14:03:44 on Nov 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L ppl -L sys -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_004 -L rsp_demux -L cmd_mux_004 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_007 -L router_006 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -voptargs=""+acc"" tbench 
+# Start time: 14:03:44 on Nov 04,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2685) [TFMPC] - Too few port connections for 'the_altsyncram'.  Expected 23, found 14.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'aclr1'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'aclr0'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'clocken3'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'clocken2'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'clocken1'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'clock1'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'rden_b'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v(81): (vopt-2718) [TFMPC] - Missing connection for port 'rden_a'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "zeroriscy_int_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "dps_extra_kick(fast)".
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/rtl/pulpino_qsys_test.v(52): (vopt-2685) [TFMPC] - Too few port connections for 'clock_conversion'.  Expected 4, found 3.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/rtl/pulpino_qsys_test.v(52): (vopt-2718) [TFMPC] - Missing connection for port 'locked'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "zeroriscy_prefetch_buffer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "packets_to_master(fast)".
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v(105): (vopt-2685) [TFMPC] - Too few port connections for 'jtag_phy_embedded_in_jtag_master'.  Expected 40, found 39.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v(105): (vopt-2718) [TFMPC] - Missing connection for port 'debug_reset'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2685) [TFMPC] - Too few port connections for 'ppl_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'zdbfbclk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'fboutclk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo(46): (vopt-2718) [TFMPC] - Missing connection for port 'refclk1'.
+# ** Note: (vopt-143) Recognized 2 FSMs in module "altera_jtag_streaming(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "zeroriscy_debug_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "zeroriscy_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "zeroriscy_load_store_unit(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "zeroriscy_multdiv_fast(fast)".
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv(361): (vopt-13528) Extra Parentheses after time system function.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv(536): (vopt-13528) Extra Parentheses after time system function.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv(536): (vopt-13528) Extra Parentheses after time system function.
+# ** Warning: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv(536): (vopt-13528) Extra Parentheses after time system function.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=41.
+# Loading sv_std.std
+# Loading work.tbench(fast)
+# Loading work.pulpino_qsys_test(fast)
+# Loading work.ppl(fast)
+# Loading altera_lnsim_ver.altera_lnsim_functions(fast)
+# Loading altera_lnsim_ver.altera_pll(fast)
+# Loading altera_lnsim_ver.dps_extra_kick(fast)
+# Loading altera_lnsim_ver.dprio_init(fast)
+# Loading altera_lnsim_ver.altera_generic_pll_functions(fast)
+# Loading altera_lnsim_ver.generic_pll(fast)
+# Loading work.sys(fast)
+# Loading sys.altera_avalon_jtag_uart(fast)
+# Loading sys.altera_avalon_jtag_uart_scfifo_w(fast)
+# Loading jtag_uart_0.altera_avalon_jtag_uart_sim_scfifo_w(fast)
+# Loading jtag_uart_0.altera_avalon_jtag_uart_log_module(fast)
+# Loading sys.altera_avalon_jtag_uart_scfifo_r(fast)
+# Loading jtag_uart_0.altera_avalon_jtag_uart_sim_scfifo_r(fast)
+# Loading sys.sys_master_0(fast)
+# Loading sys.altera_avalon_st_jtag_interface(fast)
+# Loading sys.altera_jtag_sld_node(fast)
+# Loading sys.altera_jtag_dc_streaming(fast)
+# Loading altera_mf_ver.altera_std_synchronizer(fast)
+# Loading sys.altera_jtag_streaming(fast)
+# Loading altera_mf_ver.altera_std_synchronizer(fast__1)
+# Loading sys.altera_avalon_st_idle_remover(fast)
+# Loading sys.altera_avalon_st_idle_inserter(fast)
+# Loading sys.altera_avalon_st_clock_crosser(fast)
+# Loading sys.altera_avalon_st_pipeline_base(fast)
+# Loading sys.altera_std_synchronizer_nocut(fast)
+# Loading sys.altera_std_synchronizer_nocut(fast__1)
+# Loading sys.altera_jtag_src_crosser(fast)
+# Loading sys.altera_jtag_control_signal_crosser(fast)
+# Loading sys.sys_master_0_timing_adt(fast)
+# Loading sys.altera_avalon_sc_fifo(fast)
+# Loading sys.altera_avalon_st_bytes_to_packets(fast)
+# Loading sys.altera_avalon_st_packets_to_bytes(fast)
+# Loading sys.altera_avalon_packets_to_master(fast)
+# Loading sys.packets_to_master(fast)
+# Loading sys.sys_master_0_b2p_adapter(fast)
+# Loading sys.sys_master_0_p2b_adapter(fast)
+# Loading sys.altera_reset_controller(fast)
+# Loading sys.altera_reset_synchronizer(fast)
+# Loading sys.altera_reset_synchronizer(fast__1)
+# Loading sys.sys_onchip_memory2_0(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading sys.sys_pio_in(fast)
+# Loading sys.sys_pio_out(fast)
+# Loading sys.core_top(fast)
+# Loading sys.zeroriscy_defines(fast)
+# Loading sys.zeroriscy_core_sv_unit(fast)
+# Loading sys.zeroriscy_core(fast)
+# Loading sys.cluster_clock_gating(fast)
+# Loading sys.zeroriscy_if_stage_sv_unit(fast)
+# Loading sys.zeroriscy_if_stage(fast)
+# Loading sys.zeroriscy_prefetch_buffer(fast)
+# Loading sys.zeroriscy_fetch_fifo(fast)
+# Loading sys.zeroriscy_compressed_decoder_sv_unit(fast)
+# Loading sys.zeroriscy_compressed_decoder(fast)
+# Loading sys.zeroriscy_id_stage_sv_unit(fast)
+# Loading sys.zeroriscy_id_stage(fast)
+# Loading sys.zeroriscy_register_file(fast)
+# Loading sys.zeroriscy_decoder_sv_unit(fast)
+# Loading sys.zeroriscy_decoder(fast)
+# Loading sys.zeroriscy_controller_sv_unit(fast)
+# Loading sys.zeroriscy_controller(fast)
+# Loading sys.zeroriscy_int_controller_sv_unit(fast)
+# Loading sys.zeroriscy_int_controller(fast)
+# Loading sys.zeroriscy_ex_block_sv_unit(fast)
+# Loading sys.zeroriscy_ex_block(fast)
+# Loading sys.zeroriscy_alu_sv_unit(fast)
+# Loading sys.zeroriscy_alu(fast)
+# Loading sys.zeroriscy_multdiv_fast_sv_unit(fast)
+# Loading sys.zeroriscy_multdiv_fast(fast)
+# Loading sys.zeroriscy_load_store_unit(fast)
+# Loading sys.zeroriscy_cs_registers_sv_unit(fast)
+# Loading sys.zeroriscy_cs_registers(fast)
+# Loading sys.zeroriscy_debug_unit_sv_unit(fast)
+# Loading sys.zeroriscy_debug_unit(fast)
+# Loading sys.sys_timer_0(fast)
+# Loading sys.sys_mm_interconnect_0(fast)
+# Loading sys.altera_merlin_master_translator(fast)
+# Loading sys.altera_merlin_slave_translator(fast)
+# Loading sys.sys_mm_interconnect_1(fast)
+# Loading sys.altera_merlin_master_translator(fast__1)
+# Loading sys.altera_merlin_master_translator(fast__2)
+# Loading sys.altera_merlin_slave_translator(fast__1)
+# Loading sys.altera_merlin_slave_translator(fast__2)
+# Loading sys.altera_merlin_slave_translator(fast__3)
+# Loading sys.altera_merlin_slave_translator(fast__4)
+# Loading sys.altera_merlin_master_agent(fast)
+# Loading sys.altera_merlin_master_agent(fast__1)
+# Loading sys.altera_merlin_slave_agent(fast)
+# Loading sys.altera_merlin_burst_uncompressor(fast)
+# Loading sys.altera_avalon_sc_fifo(fast__1)
+# Loading sys.sys_mm_interconnect_1_router(fast)
+# Loading sys.sys_mm_interconnect_1_router_default_decode(fast)
+# Loading sys.sys_mm_interconnect_1_router_001(fast)
+# Loading sys.sys_mm_interconnect_1_router_001_default_decode(fast)
+# Loading sys.sys_mm_interconnect_1_router_002(fast)
+# Loading sys.sys_mm_interconnect_1_router_002_default_decode(fast)
+# Loading sys.sys_mm_interconnect_1_router_006(fast)
+# Loading sys.sys_mm_interconnect_1_router_006_default_decode(fast)
+# Loading sys.sys_mm_interconnect_1_router_007(fast)
+# Loading sys.sys_mm_interconnect_1_router_007_default_decode(fast)
+# Loading sys.altera_merlin_traffic_limiter(fast)
+# Loading sys.sys_mm_interconnect_1_cmd_demux(fast)
+# Loading sys.sys_mm_interconnect_1_cmd_demux_001(fast)
+# Loading sys.sys_mm_interconnect_1_cmd_mux(fast)
+# Loading sys.sys_mm_interconnect_1_cmd_mux_004(fast)
+# Loading sys.altera_merlin_arbitrator(fast)
+# Loading sys.altera_merlin_arb_adder(fast)
+# Loading sys.sys_mm_interconnect_1_rsp_demux(fast)
+# Loading sys.sys_mm_interconnect_1_rsp_demux_004(fast)
+# Loading sys.sys_mm_interconnect_1_rsp_mux(fast)
+# Loading sys.altera_merlin_arbitrator(fast__1)
+# Loading sys.altera_merlin_arb_adder(fast__1)
+# Loading sys.sys_mm_interconnect_1_rsp_mux_001(fast)
+# Loading sys.altera_merlin_arbitrator(fast__2)
+# Loading sys.sys_mm_interconnect_1_avalon_st_adapter(fast)
+# Loading sys.sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0(fast)
+# Loading sys.sys_irq_mapper(fast)
+# Loading sys.altera_reset_controller(fast__1)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'ir_out'. The port definition is at: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v(18).
+#    Time: 0 ps  Iteration: 0  Instance: /tbench/dut/u0/master_0/jtag_phy_embedded_in_jtag_master/genblk1/node File: /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v Line: 87
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (tbench.dut.clock_conversion.ppl_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = tbench.dut.clock_conversion.ppl_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 25 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 20000.000000
+# Info: output_clock_low_period = 20000.000000
+#  run -all
+# ** Note: $stop    : /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv(78)
+#    Time: 1007100 ns  Iteration: 0  Instance: /tbench
+# Break in Module tbench at /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv line 78
+# End time: 14:03:58 on Nov 04,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 42

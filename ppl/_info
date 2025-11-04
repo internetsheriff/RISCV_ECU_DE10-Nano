@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jvctr/0/POLIno_qsys
+vppl_0002
+2/home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1762275824
+!i10b 1
+!s100 9038[LhlKm[kmdhf^<Hed2
+I4MBaD24RdBSEPU2PLL9PP0
+S1
+R0
+w1762192948
+8/home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v
+!i122 4
+L0 2 85
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1762275824.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v|
+!s90 -reportprogress|300|-sv|-work|ppl|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/ppl|/home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v|
+!i113 0
+o-sv -work ppl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work ppl +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/ppl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

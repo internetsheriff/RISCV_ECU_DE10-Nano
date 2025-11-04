@@ -185,18 +185,19 @@ vlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/al
 vlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv"                    -work jtag_uart_0                             
 vlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v"                                                                                                               
 
+vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project {/home/jvctr/0/POLIno_qsys/quartus_project/ppl_sim/ppl.vo}
 vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation {/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v}
 vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/pulpino_qsys_test.v}
-vlib pll
-vmap pll pll
-vlog -sv -work pll +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/pll {/home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v}
+vlib ppl
+vmap ppl ppl
+vlog -sv -work ppl +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/ppl {/home/jvctr/0/POLIno_qsys/quartus_project/ppl/ppl_0002.v}
 vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv}
 vlib sys
 vmap sys sys
 
 vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb {/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv}
-vlog -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project {/home/jvctr/0/POLIno_qsys/quartus_project/pll.v}
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L pll -L sys -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_004 -L rsp_demux -L cmd_mux_004 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_007 -L router_006 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -voptargs="+acc"  tbench
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L ppl -L sys -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_004 -L rsp_demux -L cmd_mux_004 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_007 -L router_006 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -voptargs="+acc"  tbench
 
 add wave *
 view structure

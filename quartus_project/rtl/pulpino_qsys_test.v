@@ -49,7 +49,7 @@ assign gpio_in [31:14] = 18'b0;
 //============ Component Instantiation ============
 
 // PLL Instantiation
-pll clock_conversion(
+ppl clock_conversion(
 	.refclk(CLOCK_50),
 	.rst(~reset_n),
 	.outclk_0(clk25)

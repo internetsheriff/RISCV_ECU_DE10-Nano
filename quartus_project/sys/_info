@@ -1,10 +1,2603 @@
 m255
 K4
 z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/jvctr/0/POLIno_qsys/quartus_project
+Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
+valtera_avalon_jtag_uart
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart.sv
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1762270180
+!i10b 1
+!s100 VmzlWO3FNngB7T4c4jIKV1
+I`^85lImfg`lLWE7cLQ?mK2
+S1
+R0
+Z3 w1762191699
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart.sv
+!i122 127
+L0 22 269
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z6 !s108 1762270180.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart.sv|
+!i113 0
+Z7 o-sv -work sys -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -sv -work sys +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0
+valtera_avalon_jtag_uart_scfifo_r
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_r.sv
+R1
+R2
+!i10b 1
+!s100 mk4GOGc3?S8W0Nc1XM_ie3
+IaI>B<3DYVE39g1Oh4=hF`1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_r.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_r.sv
+!i122 128
+L0 22 91
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_r.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_r.sv|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_jtag_uart_scfifo_w
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_w.sv
+R1
+R2
+!i10b 1
+!s100 B2hPl>i5^RL=NXPeX=iC:3
+Ie[aIRSX]_^3SfH@NiHc6i1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_w.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_w.sv
+!i122 129
+L0 22 90
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_w.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_jtag_uart_scfifo_w.sv|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_packets_to_master
+Z10 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_packets_to_master.v
+R1
+Z11 !s110 1762270178
+!i10b 1
+!s100 IjoIfe;[bT8M<23C>dL^`2
+I^Ki8m3hFH4=ZlKEVhO_mZ3
+S1
+R0
+R3
+Z12 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_packets_to_master.v
+Z13 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_packets_to_master.v
+!i122 81
+L0 22 119
+R4
+R5
+r1
+!s85 0
+31
+Z14 !s108 1762270178.000000
+Z15 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_packets_to_master.v|
+Z16 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_packets_to_master.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_sc_fifo
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_sc_fifo.v
+R1
+Z17 !s110 1762270179
+!i10b 1
+!s100 @<enCm^HCbAEh:dIl70AK3
+I1mVe0OTQg_H`G^T]XNU<V0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_sc_fifo.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_sc_fifo.v
+!i122 104
+L0 21 895
+R4
+R5
+r1
+!s85 0
+31
+Z18 !s108 1762270179.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_sc_fifo.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_bytes_to_packets
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+R1
+R11
+!i10b 1
+!s100 4F1N4en96^ee`J48mH=Vn1
+Ih6n7o>ZSTULVj[JKU@=X32
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+!i122 83
+L0 19 192
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_bytes_to_packets.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_bytes_to_packets.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_clock_crosser
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_clock_crosser.v
+R1
+R11
+!i10b 1
+!s100 4CQ15:T^9YIAR[A@kE:WZ1
+IzLRz2D@f3OhfS?7=en<Ge3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_clock_crosser.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_clock_crosser.v
+!i122 88
+L0 22 120
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_clock_crosser.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_clock_crosser.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_idle_inserter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_inserter.v
+R1
+R11
+!i10b 1
+!s100 @lej^<c;@WaHDDB@c8JnK0
+IA?:FPi4VK?bl9IkzXV`M<3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_inserter.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_inserter.v
+!i122 91
+L0 19 54
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_inserter.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_inserter.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_idle_remover
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_remover.v
+R1
+R11
+!i10b 1
+!s100 o32@FP61`FjhNOF7hEA:N2
+I6V8m>V_?M];m3JbSgeP]K2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_remover.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_remover.v
+!i122 90
+L0 19 52
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_remover.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_idle_remover.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_jtag_interface
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v
+R1
+R11
+!i10b 1
+!s100 ^RSZ4NoEP6MMioY;bO8_P1
+I]19][@?J=VQ`;W2[B]4W<1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v
+!i122 84
+L0 20 205
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_jtag_interface.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_packets_to_bytes
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+R1
+R11
+!i10b 1
+!s100 :SEQi;]<86RD_X>LKJVm;3
+IhDmW[9UH9g;?QES905nfI3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+!i122 82
+L0 19 235
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_packets_to_bytes.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_packets_to_bytes.v|
+!i113 0
+R7
+R8
+R9
+valtera_avalon_st_pipeline_base
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+R1
+R17
+!i10b 1
+!s100 B`Yjz6P[R<;Yl[CKNl]`<2
+III8keD>j;[U?fZX9;@TeA2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+!i122 105
+L0 22 118
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v|
+!i113 0
+R7
+R8
+R9
+valtera_jtag_control_signal_crosser
+Z19 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_dc_streaming.v
+R1
+R11
+!i10b 1
+!s100 jCS4E<YCCmh48ioDn_1;90
+IdOXQQ>>=[mfggL`A6GTZG0
+S1
+R0
+R3
+Z20 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_dc_streaming.v
+Z21 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_dc_streaming.v
+!i122 85
+L0 30 40
+R4
+R5
+r1
+!s85 0
+31
+R14
+Z22 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_dc_streaming.v|
+Z23 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_dc_streaming.v|
+!i113 0
+R7
+R8
+R9
+valtera_jtag_dc_streaming
+R19
+R1
+R11
+!i10b 1
+!s100 `O@LAaN6Sj4AFBQzEW9B>0
+IlkdKER]zJG=URA42^oD053
+S1
+R0
+R3
+R20
+R21
+!i122 85
+L0 135 127
+R4
+R5
+r1
+!s85 0
+31
+R14
+R22
+R23
+!i113 0
+R7
+R8
+R9
+valtera_jtag_sld_node
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v
+R1
+R11
+!i10b 1
+!s100 nVJdmmOQ^gznZ]hiQP?@Z3
+Iib`2kdei>2oQozf8c7ac>2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v
+!i122 86
+L0 17 245
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_sld_node.v|
+!i113 0
+R7
+R8
+R9
+valtera_jtag_src_crosser
+R19
+R1
+R11
+!i10b 1
+!s100 DFJCi334aODjgkX=;V9B_2
+IM?N80<<=a]Z_m8Lkd9hQ@2
+S1
+R0
+R3
+R20
+R21
+!i122 85
+L0 72 62
+R4
+R5
+r1
+!s85 0
+31
+R14
+R22
+R23
+!i113 0
+R7
+R8
+R9
+valtera_jtag_streaming
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_streaming.v
+R1
+R11
+!i10b 1
+!s100 H`iRlGQZ7COfBSI@jGl042
+I6GWF1eHNcNlN;:8iO[bY83
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_streaming.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_streaming.v
+!i122 87
+L0 18 617
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_streaming.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_jtag_streaming.v|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_arb_adder
+Z24 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+R1
+R11
+!i10b 1
+!s100 Cl8VSH5Y96M;_8kb9eOi[0
+I6VOn1WgoLQN1GoB7]n0:22
+S1
+R0
+R3
+Z25 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Z26 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+!i122 95
+L0 228 45
+R4
+R5
+r1
+!s85 0
+31
+R14
+Z27 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z28 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_arbitrator.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_arbitrator
+R24
+R1
+R11
+!i10b 1
+!s100 `YAD1b22kAEW8zWHi:;FN1
+Iklc9GZ=K`V?eMlMcHoon?2
+S1
+R0
+R3
+R25
+R26
+!i122 95
+L0 103 121
+R4
+R5
+r1
+!s85 0
+31
+R14
+R27
+R28
+!i113 0
+R7
+R8
+R9
+valtera_merlin_burst_uncompressor
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+R1
+R17
+!i10b 1
+!s100 i1bZWNRMIH?]A3dHeHSfg2
+I5T>WJPV1JJI=^3h2L_dBA0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+!i122 112
+L0 40 256
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_master_agent
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_agent.sv
+R1
+R17
+!i10b 1
+!s100 jbQWhNil3iVoh;UbTzI6F2
+I4Em<hh0dV1=Z]3]IH<H^X3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_agent.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_agent.sv
+!i122 113
+L0 28 276
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_agent.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_agent.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_master_translator
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv
+R1
+R17
+!i10b 1
+!s100 ILNR8;P]HQSDPaTGV[M=>0
+IARc42::3L<dDz1;dIz44>0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv
+!i122 115
+L0 32 525
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_master_translator.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_slave_agent
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_agent.sv
+R1
+R17
+!i10b 1
+!s100 `Jk3V=>3M_hG;9XA<JLiI3
+IZ>_2^?JZAJ;OXGc:Scfgi1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_agent.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_agent.sv
+!i122 111
+L0 34 588
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_agent.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_agent.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_slave_translator
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_translator.sv
+R1
+R17
+!i10b 1
+!s100 l31VlRegYee1a?4ON5z6A2
+ImD1L0_4P831]JlmJ]YhfT1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_translator.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_translator.sv
+!i122 114
+L0 35 448
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_translator.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_slave_translator.sv|
+!i113 0
+R7
+R8
+R9
+valtera_merlin_traffic_limiter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv
+R1
+R17
+!i10b 1
+!s100 OR49VbMDTNI[MDi8?H5e20
+IE[kKP1N<8aH_SmHYin^=k3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv
+!i122 103
+L0 49 737
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_merlin_traffic_limiter.sv|
+!i113 0
+R7
+R8
+R9
+valtera_reset_controller
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_controller.v
+R1
+!s110 1762270177
+!i10b 1
+!s100 cHnHS3UnZcJ0G=P=4565<0
+ImBa1>]hb@bjPWk>UQPU3Z2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_controller.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_controller.v
+!i122 71
+L0 42 278
+R4
+R5
+r1
+!s85 0
+31
+Z29 !s108 1762270177.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_controller.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_controller.v|
+!i113 0
+R7
+R8
+R9
+valtera_reset_synchronizer
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_synchronizer.v
+R1
+R11
+!i10b 1
+!s100 m=LRo[59A<;TB?00ndBUk3
+I3PXSL5gfLoiaoYGga2V5Q0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_synchronizer.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_synchronizer.v
+!i122 72
+L0 24 63
+R4
+R5
+r1
+!s85 0
+31
+R29
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 0
+R7
+R8
+R9
+valtera_std_synchronizer_nocut
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_std_synchronizer_nocut.v
+R1
+R11
+!i10b 1
+!s100 DjQWnUIefE8>?SdEhNX:V1
+I1QzanV=bILX76:iWS=Xif3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_std_synchronizer_nocut.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_std_synchronizer_nocut.v
+!i122 89
+L0 44 149
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_std_synchronizer_nocut.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/altera_std_synchronizer_nocut.v|
+!i113 0
+R7
+R8
+R9
+YAXI_BUS
+Z30 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv
+R1
+R2
+!i10b 1
+!s100 1G?nG>iTkndL@92bJ=LT?2
+IXaNmY?a>UP[bK1dV;IeES3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/axi_bus.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/axi_bus.sv
+!i122 141
+Z31 L0 23 0
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/adbg_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/axi_bus.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv|
+Z32 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv|
+!i113 0
+R7
+R8
+R9
+n@a@x@i_@b@u@s
+vcluster_clock_gating
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/cluster_clock_gating.sv
+R1
+R17
+!i10b 1
+!s100 S<jh;QQAiX:Aohl3;AOlg0
+I@6cQMX=NlA<N=WUBG9:G31
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/cluster_clock_gating.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/cluster_clock_gating.sv
+!i122 117
+L0 13 24
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/cluster_clock_gating.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/cluster_clock_gating.sv|
+!i113 0
+R7
+R8
+R9
+vcore_top
+R30
+R1
+R2
+!i10b 1
+!s100 TMT;j`67k9BHgUTFHjoJS0
+I7gT96UJ=o1c<eoFeKmJX?0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv
+!i122 141
+L0 17 302
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z33 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/adbg_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/axi_bus.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/core_top.sv|
+R32
+!i113 0
+R7
+R8
+R9
+vfifo_buffer
+R10
+R1
+R11
+!i10b 1
+!s100 M<0PmGJ6>OfR@;oz0o3Q43
+IGIEBYI[=FnT1i=eO=N<dJ1
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 627 65
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vfifo_buffer_scfifo_with_controls
+R10
+R1
+R11
+!i10b 1
+!s100 ZdgPC2ZMSzMUcaDB;dSHh2
+IM3zXgTi2^dRBOM`^^TL[^1
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 573 49
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vfifo_buffer_single_clock_fifo
+R10
+R1
+R11
+!i10b 1
+!s100 SoXWn4RQHPE@VLmnBPca;2
+IKjUUeE^?5l[ke8j=k]zTC1
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 512 54
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vfifo_to_packet
+R10
+R1
+R11
+!i10b 1
+!s100 YcaS6IWfCiKIoj?Ik;^:N0
+I4`IGBPYEcC<iW1`In6CB]1
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 697 150
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vpackets_to_fifo
+R10
+R1
+R11
+!i10b 1
+!s100 :NZXKg9@X1;`4OUZlMFfJ2
+IP^=eAK349SjOkmcPb7O;83
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 142 362
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vpackets_to_master
+R10
+R1
+R11
+!i10b 1
+!s100 cVEJI1do58mA[X?6lAGI21
+I_9gE7az>6m@Akohz:iJC52
+S1
+R0
+R3
+R12
+R13
+!i122 81
+L0 851 390
+R4
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R7
+R8
+R9
+vsys_irq_mapper
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_irq_mapper.sv
+R1
+R11
+!i10b 1
+!s100 2V;KYmB>WCYUCLl_LZn0D3
+IUh:2;ZLo>P4@`@jj[QJKZ3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_irq_mapper.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_irq_mapper.sv
+!i122 92
+L0 31 31
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_irq_mapper.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_irq_mapper.sv|
+!i113 0
+R7
+R8
+R9
+vsys_master_0
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v
+R1
+R11
+!i10b 1
+!s100 8enHIddD>7HIcf5jzQc321
+IHFOkoMZ74WYO59WPIgUN50
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v
+!i122 80
+L0 9 346
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0.v|
+!i113 0
+R7
+R8
+R9
+vsys_master_0_b2p_adapter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_b2p_adapter.sv
+R1
+R2
+!i10b 1
+!s100 aa<icZJh5D;?:dK=0N3Kl1
+IE=Q?2LU>S>[SQQEP6JXDd3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_b2p_adapter.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_b2p_adapter.sv
+!i122 125
+L0 55 45
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_b2p_adapter.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_b2p_adapter.sv|
+!i113 0
+R7
+R8
+R9
+vsys_master_0_p2b_adapter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_p2b_adapter.sv
+R1
+R2
+!i10b 1
+!s100 2ZLWl3_3;Z@[74iZJAmR=0
+IGSchAIzf^<U?6nIilzEZb1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_p2b_adapter.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_p2b_adapter.sv
+!i122 124
+L0 55 41
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_p2b_adapter.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_p2b_adapter.sv|
+!i113 0
+R7
+R8
+R9
+vsys_master_0_timing_adt
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_timing_adt.sv
+R1
+R2
+!i10b 1
+!s100 `=i1GMVN27Y<[Y;WWRk?D2
+ICHSR4aFG@LaeD?dCRMMEZ2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_timing_adt.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_timing_adt.sv
+!i122 126
+L0 60 51
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_timing_adt.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_master_0_timing_adt.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_0
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_0.v
+R1
+R11
+!i10b 1
+!s100 o=7XTmm_If=5^SmiOz^A_0
+IIThT4lo=lHh13fTJAKU>K3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_0.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_0.v
+!i122 75
+L0 9 154
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_0.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_0.v|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1.v
+R1
+R11
+!i10b 1
+!s100 251AzUinlVnzSccg;UBOM2
+IAJV1mhRazYn692[JAF9Yn0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1.v
+!i122 73
+L0 9 2660
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1.v|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_avalon_st_adapter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter.v
+R1
+R11
+!i10b 1
+!s100 ;kQgdk7LK`5j?B?Jmf5QM0
+ISYESeCk95eCXJ>Z>dU4WH2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter.v
+!i122 74
+L0 9 194
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter.v|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv
+R1
+R11
+!i10b 1
+!s100 g6ac_L_5O@[3cAZj0g99g1
+IGl?BI;DZ6DkFecXj54OWP2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv
+!i122 93
+L0 66 41
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_cmd_demux
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux.sv
+R1
+R17
+!i10b 1
+!s100 fon><l8><`iJ5n3@;15@n2
+I_hZ16IGC4h<9;[W_K@[Hm2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux.sv
+!i122 102
+L0 43 117
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_cmd_demux_001
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux_001.sv
+R1
+R17
+!i10b 1
+!s100 9Z=eH9EZb;dLV?]nz>JY_0
+I4Z[6oom5HA8Hf@UBJ_B;e1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux_001.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux_001.sv
+!i122 101
+Z34 L0 43 72
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux_001.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_demux_001.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_cmd_mux
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux.sv
+R1
+R17
+!i10b 1
+!s100 U@aT>SkcdS>4`f0`iUoci1
+I2M[>o4g;l?c]e_8QhGT0f0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux.sv
+!i122 100
+L0 51 44
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_cmd_mux_004
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux_004.sv
+R1
+R17
+!i10b 1
+!s100 N5LzhOBDIJaA@FR3SF3A12
+IAP^3NaX=Z8o3>nZ^W5al:3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux_004.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux_004.sv
+!i122 99
+L0 51 270
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux_004.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_cmd_mux_004.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router
+Z35 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router.sv
+R1
+R17
+!i10b 1
+!s100 A=:5zJ4m[JmUAcGP4UnGR1
+Il_B:R0`VFRhJ4lb6GfU]22
+S1
+R0
+R3
+Z36 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router.sv
+Z37 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router.sv
+!i122 110
+L0 84 163
+R4
+R5
+r1
+!s85 0
+31
+R18
+Z38 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router.sv|
+Z39 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_001
+Z40 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_001.sv
+R1
+R17
+!i10b 1
+!s100 9J?zS2J36PiMaL:DIZ8Wa0
+IZ]_[N?WSWR8lS1:2`PMlX1
+S1
+R0
+R3
+Z41 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_001.sv
+Z42 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_001.sv
+!i122 109
+L0 84 142
+R4
+R5
+r1
+!s85 0
+31
+R18
+Z43 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_001.sv|
+Z44 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_001.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_001_default_decode
+R40
+R1
+R17
+!i10b 1
+!s100 K7cc<m@dk:DU@5^Gni7XN2
+INl;80PE^[Ilgbdh4:VoUU1
+S1
+R0
+R3
+R41
+R42
+!i122 109
+Z45 L0 45 37
+R4
+R5
+r1
+!s85 0
+31
+R18
+R43
+R44
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_002
+Z46 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_002.sv
+R1
+R17
+!i10b 1
+!s100 ffiL5[8=[fA2S78IT:25:0
+Ifh]2TX1PLVA5]`F[jAnzU1
+S1
+R0
+R3
+Z47 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_002.sv
+Z48 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_002.sv
+!i122 108
+Z49 L0 84 130
+R4
+R5
+r1
+!s85 0
+31
+R18
+Z50 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_002.sv|
+Z51 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_002.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_002_default_decode
+R46
+R1
+R17
+!i10b 1
+!s100 k7n`d;J@X5zmo7I34m6zL2
+IML`kc:cDGaQa<cP_Z22EP0
+S1
+R0
+R3
+R47
+R48
+!i122 108
+R45
+R4
+R5
+r1
+!s85 0
+31
+R18
+R50
+R51
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_006
+Z52 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_006.sv
+R1
+R17
+!i10b 1
+!s100 ?Je9cIV5Pz2J3@<`T0z^h0
+Imn[P2hg^^=oIF>PUg8z5C2
+S1
+R0
+R3
+Z53 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_006.sv
+Z54 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_006.sv
+!i122 107
+L0 84 134
+R4
+R5
+r1
+!s85 0
+31
+R18
+Z55 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_006.sv|
+Z56 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_006.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_006_default_decode
+R52
+R1
+R17
+!i10b 1
+!s100 Plh>_<Ll1DC7il1IJ6;XG0
+IEB7KGmM?8CoDDaVIc<4UG3
+S1
+R0
+R3
+R53
+R54
+!i122 107
+R45
+R4
+R5
+r1
+!s85 0
+31
+R18
+R55
+R56
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_007
+Z57 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_007.sv
+R1
+R17
+!i10b 1
+!s100 NbTA4E7SHkYXMhfLR@ibO2
+I66eGk8ehf4`FfYQ1I;CIF3
+S1
+R0
+R3
+Z58 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_007.sv
+Z59 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_007.sv
+!i122 106
+R49
+R4
+R5
+r1
+!s85 0
+31
+R18
+Z60 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_007.sv|
+Z61 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_router_007.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_007_default_decode
+R57
+R1
+R17
+!i10b 1
+!s100 5M_mM[diZ^=_D<PkEFD?[2
+I12`j8^lUdDN^C5[KmRb`f0
+S1
+R0
+R3
+R58
+R59
+!i122 106
+R45
+R4
+R5
+r1
+!s85 0
+31
+R18
+R60
+R61
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_router_default_decode
+R35
+R1
+R17
+!i10b 1
+!s100 hR>46R65T6lcK93a<W?Ki0
+I1AMM=Pkc?AMN166PbNc8=3
+S1
+R0
+R3
+R36
+R37
+!i122 110
+R45
+R4
+R5
+r1
+!s85 0
+31
+R18
+R38
+R39
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_rsp_demux
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux.sv
+R1
+R17
+!i10b 1
+!s100 ZmZzTD?1>^mXYGKG8BZ=g3
+Iklg9K_`o0b=g9T;hc1zm`0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux.sv
+!i122 98
+L0 43 57
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_rsp_demux_004
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux_004.sv
+R1
+R17
+!i10b 1
+!s100 651mIV`eBiU2;f<g1Q6i>2
+IAnR<g7RX>CR5Mf`6K`3410
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux_004.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux_004.sv
+!i122 97
+R34
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux_004.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_demux_004.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_rsp_mux
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux.sv
+R1
+R17
+!i10b 1
+!s100 i9I48E@zWQScZYBX=cPZC2
+I94=c@4Sf1YHidMJ=:?0GE3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux.sv
+!i122 96
+L0 51 353
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux.sv|
+!i113 0
+R7
+R8
+R9
+vsys_mm_interconnect_1_rsp_mux_001
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux_001.sv
+R1
+R11
+!i10b 1
+!s100 JnkkUd`@_8eoW]kDcSXPl1
+I6VU[YGB59eIVI8EZ12gCH3
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux_001.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux_001.sv
+!i122 94
+L0 51 293
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux_001.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_mm_interconnect_1_rsp_mux_001.sv|
+!i113 0
+R7
+R8
+R9
+vsys_onchip_memory2_0
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v
+R1
+R11
+!i10b 1
+!s100 SMZ[MVS6VnJ`^lRQ2hfz51
+IO7GSUn6FfQdcJzXLi_0f60
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v
+!i122 79
+L0 21 104
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_onchip_memory2_0.v|
+!i113 0
+R7
+R8
+R9
+vsys_pio_in
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_in.v
+R1
+R11
+!i10b 1
+!s100 GO;U`<;A=Pg_zfodCD_LJ2
+IhV_NK`2S9^:o^0XXa3ALY1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_in.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_in.v
+!i122 78
+L0 21 470
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_in.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_in.v|
+!i113 0
+R7
+R8
+R9
+vsys_pio_out
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_out.v
+R1
+R11
+!i10b 1
+!s100 I^L<eYiO6]FLABjF095hh0
+IR<3Gcg0lHCAN;jV]b<zG52
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_out.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_out.v
+!i122 77
+L0 21 46
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_out.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_pio_out.v|
+!i113 0
+R7
+R8
+R9
+vsys_timer_0
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_timer_0.v
+R1
+R11
+!i10b 1
+!s100 LbR><X:KaTg@58S0PVm710
+I529WUlHO9XXc=]^O6mZ>F1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_timer_0.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_timer_0.v
+!i122 76
+L0 21 190
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_timer_0.v|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/sys_timer_0.v|
+!i113 0
+R7
+R8
+R9
+vzeroriscy_alu
+Z62 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_alu.sv
+R1
+Z63 DXx4 work 17 zeroriscy_defines 0 22 JI<WR81aP;;XnJkCUU1eR1
+DXx4 work 21 zeroriscy_alu_sv_unit 0 22 X[mXzCLoY=zJCRiS<WmYH1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 l?GgaShVdRP0?=>NFnY6O0
+I@m_eh0Sh7=kf1T842<M>M3
+!s105 zeroriscy_alu_sv_unit
+S1
+R0
+R3
+Z64 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_alu.sv
+Z65 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_alu.sv
+!i122 130
+L0 30 252
+R5
+31
+R6
+Z66 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_alu.sv|
+Z67 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_alu.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_alu_sv_unit
+R62
+R1
+R63
+R2
+VX[mXzCLoY=zJCRiS<WmYH1
+r1
+!s85 0
+!i10b 1
+!s100 KFcccikVTfQRT6fL[PaZ32
+IX[mXzCLoY=zJCRiS<WmYH1
+!i103 1
+S1
+R0
+R3
+R64
+R65
+Z68 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv
+!i122 130
+L0 28 0
+R5
+31
+R6
+R66
+R67
+!i113 0
+R7
+R8
+R9
+vzeroriscy_compressed_decoder
+Z69 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_compressed_decoder.sv
+R1
+R63
+DXx4 work 36 zeroriscy_compressed_decoder_sv_unit 0 22 54N5G?Tl35>1B;]=H[8HX1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 FWUiM=jmNzX@l6f<@f;F[0
+IW_FJaaL>m3S<I5eKP2X>F0
+!s105 zeroriscy_compressed_decoder_sv_unit
+S1
+R0
+R3
+Z70 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_compressed_decoder.sv
+Z71 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_compressed_decoder.sv
+!i122 131
+L0 27 208
+R5
+31
+R6
+Z72 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_compressed_decoder.sv|
+Z73 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_compressed_decoder.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_compressed_decoder_sv_unit
+R69
+R1
+R63
+R2
+V54N5G?Tl35>1B;]=H[8HX1
+r1
+!s85 0
+!i10b 1
+!s100 8]:e<]k5G@z>BFU;TMW4:2
+I54N5G?Tl35>1B;]=H[8HX1
+!i103 1
+S1
+R0
+R3
+R70
+R71
+!i122 131
+L0 25 0
+R5
+31
+R6
+R72
+R73
+!i113 0
+R7
+R8
+R9
+vzeroriscy_controller
+Z74 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_controller.sv
+R1
+R63
+DXx4 work 28 zeroriscy_controller_sv_unit 0 22 jbz6S9>1:CI5PR>7meWo^3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 b_g`BiFYJ8AMbhBE]glYO3
+Ih?DhOfD=aRXPe7WSl0P[50
+!s105 zeroriscy_controller_sv_unit
+S1
+R0
+R3
+Z75 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_controller.sv
+Z76 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_controller.sv
+!i122 132
+L0 33 486
+R5
+31
+R6
+Z77 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_controller.sv|
+Z78 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_controller.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_controller_sv_unit
+R74
+R1
+R63
+R2
+Vjbz6S9>1:CI5PR>7meWo^3
+r1
+!s85 0
+!i10b 1
+!s100 @EzKPIfd<baSVJKGLlTW_2
+Ijbz6S9>1:CI5PR>7meWo^3
+!i103 1
+S1
+R0
+R3
+R75
+R76
+R68
+!i122 132
+Z79 L0 30 0
+R5
+31
+R6
+R77
+R78
+!i113 0
+R7
+R8
+R9
+vzeroriscy_core
+Z80 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_core.sv
+R1
+R63
+DXx4 work 22 zeroriscy_core_sv_unit 0 22 IFk8O>Y30QC7Y;^RCP_Ua1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 84F<>dI<0`[5?>Zi]<l2L1
+I`aga7l3<ZFz;J_[aD^3L73
+!s105 zeroriscy_core_sv_unit
+S1
+R0
+R3
+Z81 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_core.sv
+Z82 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_core.sv
+!i122 133
+L0 33 702
+R5
+31
+R6
+Z83 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_core.sv|
+Z84 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_core.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_core_sv_unit
+R80
+R1
+R63
+R2
+VIFk8O>Y30QC7Y;^RCP_Ua1
+r1
+!s85 0
+!i10b 1
+!s100 mm2F>P<0=5:hU;4jPKj>83
+IIFk8O>Y30QC7Y;^RCP_Ua1
+!i103 1
+S1
+R0
+R3
+R81
+R82
+R68
+!i122 133
+Z85 L0 31 0
+R5
+31
+R6
+R83
+R84
+!i113 0
+R7
+R8
+R9
+vzeroriscy_cs_registers
+Z86 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_cs_registers.sv
+R1
+R63
+DXx4 work 30 zeroriscy_cs_registers_sv_unit 0 22 8MN=DL96Q2]Gk<dn;9ZUB2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 19N6`c=a9SNXE;NC[F7Kd3
+Ik7^KLzS2hZIAkdQjYfL_m0
+!s105 zeroriscy_cs_registers_sv_unit
+S1
+R0
+R3
+Z87 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_cs_registers.sv
+Z88 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_cs_registers.sv
+!i122 134
+L0 37 441
+R5
+31
+R6
+Z89 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_cs_registers.sv|
+Z90 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_cs_registers.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_cs_registers_sv_unit
+R86
+R1
+R63
+R2
+V8MN=DL96Q2]Gk<dn;9ZUB2
+r1
+!s85 0
+!i10b 1
+!s100 F<YTNF<:OK6za]4i:@Fhl0
+I8MN=DL96Q2]Gk<dn;9ZUB2
+!i103 1
+S1
+R0
+R3
+R87
+R88
+R68
+!i122 134
+L0 29 0
+R5
+31
+R6
+R89
+R90
+!i113 0
+R7
+R8
+R9
+vzeroriscy_debug_unit
+Z91 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_debug_unit.sv
+R1
+R63
+DXx4 work 28 zeroriscy_debug_unit_sv_unit 0 22 VcYS^G3d6gFlYAYHj2UHF3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 4Uc;adA0U873YW1K5R_IA3
+IY8o34BjD<@YaY[HB4[LN53
+!s105 zeroriscy_debug_unit_sv_unit
+S1
+R0
+R3
+Z92 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_debug_unit.sv
+Z93 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_debug_unit.sv
+!i122 135
+L0 29 460
+R5
+31
+R6
+Z94 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_debug_unit.sv|
+Z95 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_debug_unit.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_debug_unit_sv_unit
+R91
+R1
+R63
+R2
+VVcYS^G3d6gFlYAYHj2UHF3
+r1
+!s85 0
+!i10b 1
+!s100 SJHSnZWPOL:VnV_gaRzoL3
+IVcYS^G3d6gFlYAYHj2UHF3
+!i103 1
+S1
+R0
+R3
+R92
+R93
+R68
+!i122 135
+L0 27 0
+R5
+31
+R6
+R94
+R95
+!i113 0
+R7
+R8
+R9
+vzeroriscy_decoder
+Z96 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_decoder.sv
+R1
+R63
+DXx4 work 25 zeroriscy_decoder_sv_unit 0 22 m>cQbgH06`9VnV]fPX@I@3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 51CDbiTTm6RONYmV_1S4B3
+I0NAcDfLek<1R6`aHaD?=g0
+!s105 zeroriscy_decoder_sv_unit
+S1
+R0
+R3
+Z97 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_decoder.sv
+Z98 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_decoder.sv
+!i122 136
+L0 33 551
+R5
+31
+R6
+Z99 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_decoder.sv|
+Z100 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_decoder.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_decoder_sv_unit
+R96
+R1
+R63
+R2
+Vm>cQbgH06`9VnV]fPX@I@3
+r1
+!s85 0
+!i10b 1
+!s100 >d=hf3W2K6b6bXj@Xz?iF0
+Im>cQbgH06`9VnV]fPX@I@3
+!i103 1
+S1
+R0
+R3
+R97
+R98
+R68
+!i122 136
+R85
+R5
+31
+R6
+R99
+R100
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_defines
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_defines.sv
+R1
+R17
+!i10b 1
+!s100 B`^l7_ESM?ezJ2^B9>Bd22
+IJI<WR81aP;;XnJkCUU1eR1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_defines.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_defines.sv
+!i122 118
+L0 26 0
+VJI<WR81aP;;XnJkCUU1eR1
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_defines.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_defines.sv|
+!i113 0
+R7
+R8
+R9
+vzeroriscy_ex_block
+Z101 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_ex_block.sv
+R1
+R63
+DXx4 work 26 zeroriscy_ex_block_sv_unit 0 22 FEjZSc54[ZRmB>EG@:Q][0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 HFeKjgi5B1DM@LNeGI<0W1
+Ijm[>72B5bPf>N08?Cn:M:1
+!s105 zeroriscy_ex_block_sv_unit
+S1
+R0
+R3
+Z102 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_ex_block.sv
+Z103 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_ex_block.sv
+!i122 137
+L0 33 156
+R5
+31
+R6
+Z104 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_ex_block.sv|
+Z105 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_ex_block.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_ex_block_sv_unit
+R101
+R1
+R63
+R2
+VFEjZSc54[ZRmB>EG@:Q][0
+r1
+!s85 0
+!i10b 1
+!s100 [IhB;[CUeBU]?[WVlWMGX2
+IFEjZSc54[ZRmB>EG@:Q][0
+!i103 1
+S1
+R0
+R3
+R102
+R103
+R68
+!i122 137
+R85
+R5
+31
+R6
+R104
+R105
+!i113 0
+R7
+R8
+R9
+vzeroriscy_fetch_fifo
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_fetch_fifo.sv
+R1
+R17
+!i10b 1
+!s100 24?lGVk^8L426KbHSMOk00
+Igbn@0ZGo<^?XQzeGFY>0z1
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_fetch_fifo.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_fetch_fifo.sv
+!i122 119
+L0 26 205
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_fetch_fifo.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_fetch_fifo.sv|
+!i113 0
+R7
+R8
+R9
+vzeroriscy_id_stage
+Z106 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_id_stage.sv
+R1
+R63
+DXx4 work 26 zeroriscy_id_stage_sv_unit 0 22 LJaghITQneSS?Lo^kJ2121
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 G5M=zXW:ST=eR`4?dmNof1
+IGNhoUOh3JO9_DW>iS?enz2
+!s105 zeroriscy_id_stage_sv_unit
+S1
+R0
+R3
+Z107 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_id_stage.sv
+Z108 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_id_stage.sv
+!i122 138
+L0 40 750
+R5
+31
+R6
+Z109 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_id_stage.sv|
+Z110 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_id_stage.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_id_stage_sv_unit
+R106
+R1
+R63
+R2
+VLJaghITQneSS?Lo^kJ2121
+r1
+!s85 0
+!i10b 1
+!s100 jCl<68TIQVRC^dO3NaM8=2
+ILJaghITQneSS?Lo^kJ2121
+!i103 1
+S1
+R0
+R3
+R107
+R108
+R68
+!i122 138
+R85
+R5
+31
+R6
+R109
+R110
+!i113 0
+R7
+R8
+R9
+vzeroriscy_if_stage
+Z111 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_if_stage.sv
+R1
+R63
+DXx4 work 26 zeroriscy_if_stage_sv_unit 0 22 FbBOmPlz7:7Q4B3nbbV9j1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 0eiLDhbDAVk4Uc]mWHG@90
+I1<jje>;VdUC?fOYcSDZOR2
+!s105 zeroriscy_if_stage_sv_unit
+S1
+R0
+R3
+Z112 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_if_stage.sv
+Z113 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_if_stage.sv
+!i122 139
+L0 32 246
+R5
+31
+R6
+Z114 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_if_stage.sv|
+Z115 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_if_stage.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_if_stage_sv_unit
+R111
+R1
+R63
+R2
+VFbBOmPlz7:7Q4B3nbbV9j1
+r1
+!s85 0
+!i10b 1
+!s100 5;_UzMdVF=fFeE:C]IVa`3
+IFbBOmPlz7:7Q4B3nbbV9j1
+!i103 1
+S1
+R0
+R3
+R112
+R113
+R68
+!i122 139
+R79
+R5
+31
+R6
+R114
+R115
+!i113 0
+R7
+R8
+R9
+vzeroriscy_int_controller
+Z116 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_int_controller.sv
+R1
+R63
+DXx4 work 32 zeroriscy_int_controller_sv_unit 0 22 d[B_zZ:<lDnNB`kGzQ;KY3
+R17
+R4
+r1
+!s85 0
+!i10b 1
+!s100 7>CA:DEYSnJ1RCCeGFL<F3
+IPgGaR[ghW^zDI`7;_3DH>1
+!s105 zeroriscy_int_controller_sv_unit
+S1
+R0
+R3
+Z117 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_int_controller.sv
+Z118 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_int_controller.sv
+!i122 120
+L0 26 83
+R5
+31
+R18
+Z119 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_int_controller.sv|
+Z120 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_int_controller.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_int_controller_sv_unit
+R116
+R1
+R63
+R17
+Vd[B_zZ:<lDnNB`kGzQ;KY3
+r1
+!s85 0
+!i10b 1
+!s100 _F_FD6OcZ2NZTb_mR4Tcc2
+Id[B_zZ:<lDnNB`kGzQ;KY3
+!i103 1
+S1
+R0
+R3
+R117
+R118
+!i122 120
+L0 24 0
+R5
+31
+R18
+R119
+R120
+!i113 0
+R7
+R8
+R9
+vzeroriscy_load_store_unit
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_load_store_unit.sv
+R1
+R17
+!i10b 1
+!s100 GP=kn;]g3eVTPh[m4]@`K3
+IaziZj7<Pi6Uo8KKgJFJBm2
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_load_store_unit.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_load_store_unit.sv
+!i122 121
+L0 30 470
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_load_store_unit.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_load_store_unit.sv|
+!i113 0
+R7
+R8
+R9
+vzeroriscy_multdiv_fast
+Z121 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_multdiv_fast.sv
+R1
+R63
+DXx4 work 30 zeroriscy_multdiv_fast_sv_unit 0 22 l`RW3CV[NiL7]j5`SHIjz0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 G2_OiYK[:g2BnQ76S?jKg0
+I7n^ANUj<gB:5gj>kTEBSE0
+!s105 zeroriscy_multdiv_fast_sv_unit
+S1
+R0
+R3
+Z122 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_multdiv_fast.sv
+Z123 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_multdiv_fast.sv
+!i122 140
+L0 28 312
+R5
+31
+R6
+Z124 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_multdiv_fast.sv|
+Z125 !s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_multdiv_fast.sv|
+!i113 0
+R7
+R8
+R9
+Xzeroriscy_multdiv_fast_sv_unit
+R121
+R1
+R63
+R2
+Vl`RW3CV[NiL7]j5`SHIjz0
+r1
+!s85 0
+!i10b 1
+!s100 m2b4_mQ[lno7=JoG8NH6G2
+Il`RW3CV[NiL7]j5`SHIjz0
+!i103 1
+S1
+R0
+R3
+R122
+R123
+!i122 140
+R31
+R5
+31
+R6
+R124
+R125
+!i113 0
+R7
+R8
+R9
+vzeroriscy_prefetch_buffer
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_prefetch_buffer.sv
+R1
+R17
+!i10b 1
+!s100 i0e0akei`=hine7Snfi[o1
+IiVT@G82dW_MU;A5@YI<e22
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_prefetch_buffer.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_prefetch_buffer.sv
+!i122 122
+L0 23 230
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_prefetch_buffer.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_prefetch_buffer.sv|
+!i113 0
+R7
+R8
+R9
+vzeroriscy_register_file
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_register_file_ff.sv
+R1
+R2
+!i10b 1
+!s100 j3fU]kKU:g:<aDiY9Rk@^3
+I8ANK;c7VGFDE8ZB3T^B2S0
+S1
+R0
+R3
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_register_file_ff.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_register_file_ff.sv
+!i122 123
+L0 29 75
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_register_file_ff.sv|
+!s90 -sv|-work|sys|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules|/home/jvctr/0/POLIno_qsys/quartus_project/sys/synthesis/submodules/zeroriscy_register_file_ff.sv|
+!i113 0
+R7
+R8
+R9

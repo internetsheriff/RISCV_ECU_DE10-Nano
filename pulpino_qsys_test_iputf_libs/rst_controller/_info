@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jvctr/0/POLIno_qsys
+valtera_reset_controller
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
+!s110 1762275822
+!i10b 1
+!s100 gEiOZd1;;=B0SiCd?HUG`0
+IWQBDDIQAGU^eZMS@H`oGB2
+R0
+Z1 w1762191699
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
+!i122 12
+L0 42 278
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z4 !s108 1762275822.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
+!i113 0
+Z5 o-work rst_controller -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+valtera_reset_synchronizer
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v
+!s110 1762275823
+!i10b 1
+!s100 ^S;S68hO:GV8JFJ^DhmfL2
+ICYXaKP:RYm1a?0BWQE1jm0
+R0
+R1
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v
+!i122 13
+L0 24 63
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v|-work|rst_controller|
+!i113 0
+R5
+R6

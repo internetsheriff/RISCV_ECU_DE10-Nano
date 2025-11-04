@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 24.1 1077 linux 2025.10.29.07:56:43
+# ACDS 24.1 1077 linux 2025.11.04.13:25:01
 
 # ----------------------------------------
 # xcelium - auto-generated simulation script
@@ -21,7 +21,6 @@
 # This script provides commands to simulate the following IP detected in
 # your Quartus project:
 #     sys
-#     pll
 # 
 # Altera recommends that you source this Quartus-generated IP simulation
 # script from your own customized top-level script, and avoid editing this
@@ -97,10 +96,21 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# ACDS 24.1 1077 linux 2025.10.29.07:56:43
+# If sys is one of several IP cores in your
+# Quartus project, you can generate a simulation script
+# suitable for inclusion in your top-level simulation
+# script by running the following command line:
+# 
+# ip-setup-simulation --quartus-project=<quartus project>
+# 
+# ip-setup-simulation will discover the Altera IP
+# within the Quartus project, and generate a unified
+# script which supports all the Altera IP within the design.
+# ----------------------------------------
+# ACDS 24.1 1077 linux 2025.11.04.13:25:01
 # ----------------------------------------
 # initialize variables
-TOP_LEVEL_NAME="pll"
+TOP_LEVEL_NAME="sys"
 QSYS_SIMDIR="./../"
 QUARTUS_INSTALL_DIR="/opt/intelFPGA/24.1/quartus/"
 SKIP_FILE_COPY=0
@@ -280,13 +290,12 @@ if [ $SKIP_COM -eq 0 ]; then
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv"                    -work jtag_uart_0                              -cdslib <<jtag_uart_0>>                             
   xmvlog -sv "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv"                    -work jtag_uart_0                              -cdslib <<jtag_uart_0>>                             
   xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v"                                                                                                                                                                    
-  xmvlog     "/home/jvctr/0/POLIno_qsys/quartus_project/pll_sim/pll.vo"                                                                                                                                                                          
 fi
 
 # ----------------------------------------
 # elaborate top level design
 if [ $SKIP_ELAB -eq 0 ]; then
-  xmelab -update -access +w+r+c -namemap_mixgen +DISABLEGENCHK -relax $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS $TOP_LEVEL_NAME
+  xmelab -update -access +w+r+c -namemap_mixgen +DISABLEGENCHK $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS $TOP_LEVEL_NAME
 fi
 
 # ----------------------------------------

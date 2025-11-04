@@ -1,0 +1,6 @@
+BEGIN 1:zeroriscy_core:fast:sys
+    core_id_i :  1:zeroriscy_controller:fast:sys
+END 
+BEGIN 1:zeroriscy_id_stage:fast:sys
+    pc_id_i :  1:zeroriscy_controller:fast:sys
+END 

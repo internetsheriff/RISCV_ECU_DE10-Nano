@@ -12,25 +12,25 @@ Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
 valtera_merlin_burst_uncompressor
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1761753048
+Z2 !s110 1762270175
 !i10b 1
 !s100 i1bZWNRMIH?]A3dHeHSfg2
 Ie3hgBO[FACmE@k6z81Z@N0
 S1
 R0
-Z3 w1761679187
+Z3 w1762191699
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv
-!i122 59
+!i122 63
 L0 40 256
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z6 !s108 1761753048.000000
+Z6 !s108 1762270175.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv|
-!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv|-work|jtag_uart_0_avalon_jtag_slave_agent|
+!s90 -sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_burst_uncompressor.sv|-work|jtag_uart_0_avalon_jtag_slave_agent|
 !i113 0
 Z7 o-sv -work jtag_uart_0_avalon_jtag_slave_agent -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z8 tCvgOpt 0
@@ -46,7 +46,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv
-!i122 58
+!i122 62
 L0 34 588
 R4
 R5
@@ -55,7 +55,7 @@ r1
 31
 R6
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv|
-!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv|-work|jtag_uart_0_avalon_jtag_slave_agent|
+!s90 -sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_merlin_slave_agent.sv|-work|jtag_uart_0_avalon_jtag_slave_agent|
 !i113 0
 R7
 R8

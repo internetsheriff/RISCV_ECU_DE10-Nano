@@ -321,17 +321,18 @@ set_location_assignment PIN_F13 -to VGA_R[7]
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
 set_global_assignment -name EDA_TEST_BENCH_FILE rtl/tb/tbench.sv -section_id tbench -hdl_version SystemVerilog_2005
+
+set_global_assignment -name QIP_FILE ppl.qip
 set_global_assignment -name VERILOG_FILE sys/simulation/sys.v
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tb/tbench.sv
 set_global_assignment -name QSYS_FILE sys.qsys
 set_global_assignment -name SDC_FILE pulpino_qsys_test.sdc
 set_global_assignment -name SIP_FILE sys/simulation/sys.sip
 set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
+set_global_assignment -name QIP_FILE ppl.qip
 set_global_assignment -name QIP_FILE sw/mem_init/meminit.qip
 set_global_assignment -name SIP_FILE sw/mem_init/meminit.sip
 set_global_assignment -name VERILOG_FILE rtl/pulpino_qsys_test.v
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name SIP_FILE pll.sip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
