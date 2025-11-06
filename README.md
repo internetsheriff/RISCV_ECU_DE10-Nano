@@ -1,10 +1,12 @@
 # POLIno Qsys Project
 
+Development of a PULPino-based processor. Right now the processor is unespecialized and can be adapted to other uses, more akin to a development plataform, but the goal is to specialize it into a fuel injection ECU.
+
 ## Overview
 
 This project integrates the [PULPino (zero-riscy)](https://github.com/pulp-platform/pulpino) RISC-V core into an Intel/Altera FPGA using the Platform Designer (Qsys). The project is configured for a Terasic DE1-SoC board, but it can also be simulated using QuestaSim.
 
-The project is structured to automate the build process as much as possible using a modular `Makefile` system. It includes both the hardware design (FPGA bitstream) and the software (a "Hello World" application) that runs on the RISC-V core.
+The project is structured to automate the build process as much as possible using a modular `Makefile` system. It includes both the hardware source design in verilog an Altera formats and the software that runs on the RISC-V core.
 
 ## Prerequisites
 
