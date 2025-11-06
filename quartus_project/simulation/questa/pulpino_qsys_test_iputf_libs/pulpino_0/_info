@@ -1,0 +1,1038 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa
+YAPB_BUS
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1762443413
+!i10b 1
+!s100 XPQcoG`b=AOlK3M99jSeb2
+I[2<F`eDbVV]?=2JXze^_H3
+S1
+R0
+Z2 w1762442319
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv
+!i122 725
+L0 73 0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z5 !s108 1762443413.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/apb_bus.sv|-work|pulpino_0|
+!i113 0
+Z6 o-sv -work pulpino_0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@a@p@b_@b@u@s
+YAXI_BUS
+Z8 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv
+R1
+Z9 !s110 1762443414
+!i10b 1
+!s100 1G?nG>iTkndL@92bJ=LT?2
+I6z_?MoIM[D2C_enRI7Y:43
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/axi_bus.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/axi_bus.sv
+!i122 749
+Z10 L0 23 0
+R3
+R4
+r1
+!s85 0
+31
+Z11 !s108 1762443414.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/adbg_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/axi_bus.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv|
+Z12 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+n@a@x@i_@b@u@s
+vcluster_clock_gating
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv
+R1
+R9
+!i10b 1
+!s100 S<jh;QQAiX:Aohl3;AOlg0
+I=UYTdNU6dXa1O49G^^;bD2
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv
+!i122 728
+L0 13 24
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_gating.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vcluster_clock_inverter
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv
+R1
+R9
+!i10b 1
+!s100 V<d3ic;KW_PZnaeQnT?iF0
+ImR6aV^9GnKNMZ]mQbM3E_2
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv
+!i122 729
+L0 11 9
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_inverter.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vcluster_clock_mux2
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv
+R1
+R9
+!i10b 1
+!s100 L`jbz;HDBMU1CMK8z3Zc83
+I3:7m[U:<ka0dBQb3<8a^A0
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv
+!i122 730
+L0 11 17
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/cluster_clock_mux2.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vcore_top
+R8
+R1
+R9
+!i10b 1
+!s100 TMT;j`67k9BHgUTFHjoJS0
+INz`=98BM[ka726g^b^UAj3
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv
+!i122 749
+L0 17 302
+R3
+R4
+r1
+!s85 0
+31
+R11
+Z13 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/adbg_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/axi_bus.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/core_top.sv|
+R12
+!i113 0
+R6
+R7
+YDEBUG_BUS
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv
+R1
+R9
+!i10b 1
+!s100 G35<k1eA8C5DVBMNlGKAV3
+Ij0G<CCHd>c>D9`o5NDbR10
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv
+!i122 727
+L0 16 0
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/debug_bus.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+n@d@e@b@u@g_@b@u@s
+vzeroriscy_alu
+Z14 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv
+R1
+Z15 DXx4 work 17 zeroriscy_defines 0 22 hZkd>UPTA`PS`>D[[0S8I1
+DXx4 work 21 zeroriscy_alu_sv_unit 0 22 dQOVQ?XMU?3A6RLlMfllm2
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 l?GgaShVdRP0?=>NFnY6O0
+IRd4Mdfz?BeUiD<Je6gjCO2
+!s105 zeroriscy_alu_sv_unit
+S1
+R0
+R2
+Z16 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv
+Z17 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv
+!i122 732
+L0 30 252
+R4
+31
+R11
+Z18 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv|
+Z19 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_alu.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_alu_sv_unit
+R14
+R1
+R15
+R9
+VdQOVQ?XMU?3A6RLlMfllm2
+r1
+!s85 0
+!i10b 1
+!s100 KFcccikVTfQRT6fL[PaZ32
+IdQOVQ?XMU?3A6RLlMfllm2
+!i103 1
+S1
+R0
+R2
+R16
+R17
+Z20 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv
+!i122 732
+L0 28 0
+R4
+31
+R11
+R18
+R19
+!i113 0
+R6
+R7
+vzeroriscy_compressed_decoder
+Z21 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv
+R1
+R15
+DXx4 work 36 zeroriscy_compressed_decoder_sv_unit 0 22 bgZUmK4R0[g`I9Jaj013M3
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 FWUiM=jmNzX@l6f<@f;F[0
+IXePjd><UHM;RI3n05RHH`1
+!s105 zeroriscy_compressed_decoder_sv_unit
+S1
+R0
+R2
+Z22 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv
+Z23 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv
+!i122 733
+L0 27 208
+R4
+31
+R11
+Z24 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv|
+Z25 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_compressed_decoder.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_compressed_decoder_sv_unit
+R21
+R1
+R15
+R9
+VbgZUmK4R0[g`I9Jaj013M3
+r1
+!s85 0
+!i10b 1
+!s100 8]:e<]k5G@z>BFU;TMW4:2
+IbgZUmK4R0[g`I9Jaj013M3
+!i103 1
+S1
+R0
+R2
+R22
+R23
+!i122 733
+L0 25 0
+R4
+31
+R11
+R24
+R25
+!i113 0
+R6
+R7
+vzeroriscy_controller
+Z26 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv
+R1
+R15
+DXx4 work 28 zeroriscy_controller_sv_unit 0 22 eToe?8T:KIUROG8A1G0l[2
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 b_g`BiFYJ8AMbhBE]glYO3
+I>2ZNChHA^e9`B:Q2Cm58i3
+!s105 zeroriscy_controller_sv_unit
+S1
+R0
+R2
+Z27 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv
+Z28 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv
+!i122 734
+L0 33 486
+R4
+31
+R11
+Z29 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv|
+Z30 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_controller.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_controller_sv_unit
+R26
+R1
+R15
+R9
+VeToe?8T:KIUROG8A1G0l[2
+r1
+!s85 0
+!i10b 1
+!s100 @EzKPIfd<baSVJKGLlTW_2
+IeToe?8T:KIUROG8A1G0l[2
+!i103 1
+S1
+R0
+R2
+R27
+R28
+R20
+!i122 734
+Z31 L0 30 0
+R4
+31
+R11
+R29
+R30
+!i113 0
+R6
+R7
+vzeroriscy_core
+Z32 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv
+R1
+R15
+DXx4 work 22 zeroriscy_core_sv_unit 0 22 3Rc;dVzChQBW64_POM`;l1
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 84F<>dI<0`[5?>Zi]<l2L1
+IARo4=ARn1zi3@ljKeokfM2
+!s105 zeroriscy_core_sv_unit
+S1
+R0
+R2
+Z33 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv
+Z34 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv
+!i122 735
+L0 33 702
+R4
+31
+R11
+Z35 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv|
+Z36 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_core.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_core_sv_unit
+R32
+R1
+R15
+R9
+V3Rc;dVzChQBW64_POM`;l1
+r1
+!s85 0
+!i10b 1
+!s100 mm2F>P<0=5:hU;4jPKj>83
+I3Rc;dVzChQBW64_POM`;l1
+!i103 1
+S1
+R0
+R2
+R33
+R34
+R20
+!i122 735
+Z37 L0 31 0
+R4
+31
+R11
+R35
+R36
+!i113 0
+R6
+R7
+vzeroriscy_cs_registers
+Z38 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv
+R1
+R15
+DXx4 work 30 zeroriscy_cs_registers_sv_unit 0 22 PCS`UI]lI;U9bM_@hVoc20
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 19N6`c=a9SNXE;NC[F7Kd3
+Ic9;fjgRXR0jOJ:h2QYf?@0
+!s105 zeroriscy_cs_registers_sv_unit
+S1
+R0
+R2
+Z39 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv
+Z40 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv
+!i122 736
+L0 37 441
+R4
+31
+R11
+Z41 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv|
+Z42 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_cs_registers.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_cs_registers_sv_unit
+R38
+R1
+R15
+R9
+VPCS`UI]lI;U9bM_@hVoc20
+r1
+!s85 0
+!i10b 1
+!s100 F<YTNF<:OK6za]4i:@Fhl0
+IPCS`UI]lI;U9bM_@hVoc20
+!i103 1
+S1
+R0
+R2
+R39
+R40
+R20
+!i122 736
+L0 29 0
+R4
+31
+R11
+R41
+R42
+!i113 0
+R6
+R7
+vzeroriscy_debug_unit
+Z43 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv
+R1
+R15
+DXx4 work 28 zeroriscy_debug_unit_sv_unit 0 22 VFZF84efhl55^=f>XLL9]0
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 4Uc;adA0U873YW1K5R_IA3
+Io80dUQY@4VjJ:;]?008aF1
+!s105 zeroriscy_debug_unit_sv_unit
+S1
+R0
+R2
+Z44 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv
+Z45 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv
+!i122 737
+L0 29 460
+R4
+31
+R11
+Z46 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv|
+Z47 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_debug_unit.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_debug_unit_sv_unit
+R43
+R1
+R15
+R9
+VVFZF84efhl55^=f>XLL9]0
+r1
+!s85 0
+!i10b 1
+!s100 SJHSnZWPOL:VnV_gaRzoL3
+IVFZF84efhl55^=f>XLL9]0
+!i103 1
+S1
+R0
+R2
+R44
+R45
+R20
+!i122 737
+L0 27 0
+R4
+31
+R11
+R46
+R47
+!i113 0
+R6
+R7
+vzeroriscy_decoder
+Z48 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv
+R1
+R15
+DXx4 work 25 zeroriscy_decoder_sv_unit 0 22 Scon`fB17OZb5Z@HF5m4X2
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 51CDbiTTm6RONYmV_1S4B3
+I=8]FI7DfzQhT3ECA6Z:a43
+!s105 zeroriscy_decoder_sv_unit
+S1
+R0
+R2
+Z49 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv
+Z50 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv
+!i122 738
+L0 33 551
+R4
+31
+R11
+Z51 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv|
+Z52 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_decoder.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_decoder_sv_unit
+R48
+R1
+R15
+R9
+VScon`fB17OZb5Z@HF5m4X2
+r1
+!s85 0
+!i10b 1
+!s100 >d=hf3W2K6b6bXj@Xz?iF0
+IScon`fB17OZb5Z@HF5m4X2
+!i103 1
+S1
+R0
+R2
+R49
+R50
+R20
+!i122 738
+R37
+R4
+31
+R11
+R51
+R52
+!i113 0
+R6
+R7
+Xzeroriscy_defines
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv
+R1
+R9
+!i10b 1
+!s100 B`^l7_ESM?ezJ2^B9>Bd22
+IhZkd>UPTA`PS`>D[[0S8I1
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv
+!i122 731
+L0 26 0
+VhZkd>UPTA`PS`>D[[0S8I1
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_defines.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vzeroriscy_ex_block
+Z53 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv
+R1
+R15
+DXx4 work 26 zeroriscy_ex_block_sv_unit 0 22 C8Jn5E4edJb2bR33a;PU21
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 HFeKjgi5B1DM@LNeGI<0W1
+IIf`nW?`TZVYTLiVDj04>23
+!s105 zeroriscy_ex_block_sv_unit
+S1
+R0
+R2
+Z54 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv
+Z55 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv
+!i122 739
+L0 33 156
+R4
+31
+R11
+Z56 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv|
+Z57 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_ex_block.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_ex_block_sv_unit
+R53
+R1
+R15
+R9
+VC8Jn5E4edJb2bR33a;PU21
+r1
+!s85 0
+!i10b 1
+!s100 [IhB;[CUeBU]?[WVlWMGX2
+IC8Jn5E4edJb2bR33a;PU21
+!i103 1
+S1
+R0
+R2
+R54
+R55
+R20
+!i122 739
+R37
+R4
+31
+R11
+R56
+R57
+!i113 0
+R6
+R7
+vzeroriscy_fetch_fifo
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv
+R1
+R9
+!i10b 1
+!s100 24?lGVk^8L426KbHSMOk00
+IPaek=AeoS?G5O6f5eT`_33
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv
+!i122 740
+L0 26 205
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_fetch_fifo.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vzeroriscy_id_stage
+Z58 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv
+R1
+R15
+DXx4 work 26 zeroriscy_id_stage_sv_unit 0 22 GiP>^bXQMU2;<e9l2QT0W0
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 G5M=zXW:ST=eR`4?dmNof1
+I6om<8kVEe6UAA`3[5Q0>B1
+!s105 zeroriscy_id_stage_sv_unit
+S1
+R0
+R2
+Z59 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv
+Z60 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv
+!i122 741
+L0 40 750
+R4
+31
+R11
+Z61 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv|
+Z62 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_id_stage.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_id_stage_sv_unit
+R58
+R1
+R15
+R9
+VGiP>^bXQMU2;<e9l2QT0W0
+r1
+!s85 0
+!i10b 1
+!s100 jCl<68TIQVRC^dO3NaM8=2
+IGiP>^bXQMU2;<e9l2QT0W0
+!i103 1
+S1
+R0
+R2
+R59
+R60
+R20
+!i122 741
+R37
+R4
+31
+R11
+R61
+R62
+!i113 0
+R6
+R7
+vzeroriscy_if_stage
+Z63 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv
+R1
+R15
+DXx4 work 26 zeroriscy_if_stage_sv_unit 0 22 WoDnh`9dW=HF:475FH@_`0
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 0eiLDhbDAVk4Uc]mWHG@90
+IXQJV:X]g0LCDASHSi27QR3
+!s105 zeroriscy_if_stage_sv_unit
+S1
+R0
+R2
+Z64 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv
+Z65 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv
+!i122 742
+L0 32 246
+R4
+31
+R11
+Z66 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv|
+Z67 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_if_stage.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_if_stage_sv_unit
+R63
+R1
+R15
+R9
+VWoDnh`9dW=HF:475FH@_`0
+r1
+!s85 0
+!i10b 1
+!s100 5;_UzMdVF=fFeE:C]IVa`3
+IWoDnh`9dW=HF:475FH@_`0
+!i103 1
+S1
+R0
+R2
+R64
+R65
+R20
+!i122 742
+R31
+R4
+31
+R11
+R66
+R67
+!i113 0
+R6
+R7
+vzeroriscy_int_controller
+Z68 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv
+R1
+R15
+DXx4 work 32 zeroriscy_int_controller_sv_unit 0 22 =gW@SVbd]P9GROQKUhh1J1
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 7>CA:DEYSnJ1RCCeGFL<F3
+IIiDjldz=h:CZoKn?>Wk7T0
+!s105 zeroriscy_int_controller_sv_unit
+S1
+R0
+R2
+Z69 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv
+Z70 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv
+!i122 743
+L0 26 83
+R4
+31
+R11
+Z71 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv|
+Z72 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_int_controller.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_int_controller_sv_unit
+R68
+R1
+R15
+R9
+V=gW@SVbd]P9GROQKUhh1J1
+r1
+!s85 0
+!i10b 1
+!s100 _F_FD6OcZ2NZTb_mR4Tcc2
+I=gW@SVbd]P9GROQKUhh1J1
+!i103 1
+S1
+R0
+R2
+R69
+R70
+!i122 743
+L0 24 0
+R4
+31
+R11
+R71
+R72
+!i113 0
+R6
+R7
+vzeroriscy_load_store_unit
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv
+R1
+R9
+!i10b 1
+!s100 GP=kn;]g3eVTPh[m4]@`K3
+IlG6<L0Q@>^c3e]9d23@3k0
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv
+!i122 744
+L0 30 470
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_load_store_unit.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vzeroriscy_multdiv_fast
+Z73 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv
+R1
+R15
+DXx4 work 30 zeroriscy_multdiv_fast_sv_unit 0 22 WZc_EHNXSJallADM0dF403
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 G2_OiYK[:g2BnQ76S?jKg0
+Imjb]]^LL=MMTR]AYeaaAP2
+!s105 zeroriscy_multdiv_fast_sv_unit
+S1
+R0
+R2
+Z74 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv
+Z75 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv
+!i122 745
+L0 28 312
+R4
+31
+R11
+Z76 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv|
+Z77 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_fast.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_multdiv_fast_sv_unit
+R73
+R1
+R15
+R9
+VWZc_EHNXSJallADM0dF403
+r1
+!s85 0
+!i10b 1
+!s100 m2b4_mQ[lno7=JoG8NH6G2
+IWZc_EHNXSJallADM0dF403
+!i103 1
+S1
+R0
+R2
+R74
+R75
+!i122 745
+R10
+R4
+31
+R11
+R76
+R77
+!i113 0
+R6
+R7
+vzeroriscy_multdiv_slow
+Z78 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv
+R1
+R15
+DXx4 work 30 zeroriscy_multdiv_slow_sv_unit 0 22 M^^E33CgEJCgo`_]lSFaZ2
+R9
+R3
+r1
+!s85 0
+!i10b 1
+!s100 ;EjP0S<b1zW[E3z_SKW0L0
+I?eCWNAdn:6FoTmg5AH[T;2
+!s105 zeroriscy_multdiv_slow_sv_unit
+S1
+R0
+R2
+Z79 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv
+Z80 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv
+!i122 746
+L0 26 275
+R4
+31
+R11
+Z81 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv|
+Z82 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_multdiv_slow.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+Xzeroriscy_multdiv_slow_sv_unit
+R78
+R1
+R15
+R9
+VM^^E33CgEJCgo`_]lSFaZ2
+r1
+!s85 0
+!i10b 1
+!s100 ^LUkimM8[bjAaoL4NFOMT3
+IM^^E33CgEJCgo`_]lSFaZ2
+!i103 1
+S1
+R0
+R2
+R79
+R80
+!i122 746
+R10
+R4
+31
+R11
+R81
+R82
+!i113 0
+R6
+R7
+vzeroriscy_prefetch_buffer
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv
+R1
+R9
+!i10b 1
+!s100 i0e0akei`=hine7Snfi[o1
+IZUQ1JBdFQOz0dH8Sj<22e1
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv
+!i122 747
+L0 23 230
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_prefetch_buffer.sv|-work|pulpino_0|
+!i113 0
+R6
+R7
+vzeroriscy_register_file
+2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv
+R1
+R9
+!i10b 1
+!s100 j3fU]kKU:g:<aDiY9Rk@^3
+I4U8o?Z^dUMEeQeiSo00Rm1
+S1
+R0
+R2
+8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv
+!i122 748
+L0 29 75
+R3
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_config.sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv|
+!s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/zeroriscy_register_file_ff.sv|-work|pulpino_0|
+!i113 0
+R6
+R7

@@ -1,0 +1,40 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst sys.clk_0 -pg 1 -lvl 1 -y 330
+preplace inst sys.GPIO_EXTRA -pg 1 -lvl 3 -y 710
+preplace inst sys.master_0.p2b_adapter -pg 1
+preplace inst sys.pio_in -pg 1 -lvl 3 -y 250
+preplace inst sys.master_0.clk_rst -pg 1
+preplace inst sys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst sys.timer_0 -pg 1 -lvl 3 -y 490
+preplace inst sys.pulpino_0 -pg 1 -lvl 2 -y 40
+preplace inst sys.master_0.fifo -pg 1
+preplace inst sys.onchip_memory2_0 -pg 1 -lvl 3 -y 130
+preplace inst sys.master_0.timing_adt -pg 1
+preplace inst sys.jtag_uart_0 -pg 1 -lvl 3 -y 30
+preplace inst sys.master_0.b2p -pg 1
+preplace inst sys.GPIO_0 -pg 1 -lvl 3 -y 370
+preplace inst sys.GPIO_1 -pg 1 -lvl 3 -y 590
+preplace inst sys.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst sys.master_0 -pg 1 -lvl 2 -y 260
+preplace inst sys.pio_out -pg 1 -lvl 3 -y 830
+preplace inst sys.master_0.transacto -pg 1
+preplace inst sys.master_0.p2b -pg 1
+preplace inst sys.master_0.b2p_adapter -pg 1
+preplace inst sys.master_0.clk_src -pg 1
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pio_in.external_connection,(SLAVE)sys.pio_in_external_connection) 1 0 3 NJ 220 NJ 220 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>sys</net_container>(MASTER)pulpino_0.avalon_master_lsu,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)timer_0.s1,(SLAVE)pulpino_0.avalon_slave_debug,(SLAVE)GPIO_0.s1,(SLAVE)GPIO_EXTRA.s1,(MASTER)master_0.master,(SLAVE)GPIO_1.s1,(SLAVE)onchip_memory2_0.s2,(SLAVE)pio_in.s1,(SLAVE)pio_out.s1) 1 1 2 410 30 860
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pulpino_0.config,(SLAVE)sys.pulpino_0_config) 1 0 2 NJ 90 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.gpio_0_external_connection,(SLAVE)GPIO_0.external_connection) 1 0 3 NJ 400 NJ 400 NJ
+preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)GPIO_0.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)pio_in.irq,(SLAVE)GPIO_EXTRA.irq,(MASTER)pulpino_0.interrupt_receiver,(SLAVE)timer_0.irq,(SLAVE)GPIO_1.irq) 1 2 1 920
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)pio_out.external_connection,(SLAVE)sys.pio_out_external_connection) 1 0 3 NJ 860 NJ 860 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)GPIO_EXTRA.external_connection,(SLAVE)sys.gpio_extra_external_connection) 1 0 3 NJ 480 NJ 480 NJ
+preplace netloc EXPORT<net_container>sys</net_container>(SLAVE)sys.gpio_1_external_connection,(SLAVE)GPIO_1.external_connection) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)master_0.clk_reset,(SLAVE)pio_out.reset,(SLAVE)GPIO_1.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)pio_in.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)GPIO_0.reset,(SLAVE)pulpino_0.reset_sink,(SLAVE)timer_0.reset,(SLAVE)GPIO_EXTRA.reset,(MASTER)clk_0.clk_reset) 1 1 2 430 880 940
+preplace netloc POINT_TO_POINT<net_container>sys</net_container>(SLAVE)onchip_memory2_0.s1,(MASTER)pulpino_0.avalon_master_instr) 1 2 1 840
+preplace netloc EXPORT<net_container>sys</net_container>(MASTER)master_0.master_reset,(MASTER)sys.master_0_master_reset) 1 2 2 NJ 240 NJ
+preplace netloc FAN_OUT<net_container>sys</net_container>(SLAVE)master_0.clk,(SLAVE)GPIO_1.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)timer_0.clk,(SLAVE)GPIO_EXTRA.clk,(MASTER)clk_0.clk,(SLAVE)pio_out.clk,(SLAVE)pio_in.clk,(SLAVE)GPIO_0.clk,(SLAVE)pulpino_0.clk_sink,(SLAVE)onchip_memory2_0.clk1) 1 1 2 410 500 900
+levelinfo -pg 1 0 200 1320
+levelinfo -hier sys 210 240 550 1010 1160

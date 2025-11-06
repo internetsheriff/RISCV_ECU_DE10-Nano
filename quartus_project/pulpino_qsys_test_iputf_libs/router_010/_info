@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
+vsys_mm_interconnect_1_router_010
+Z1 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1762450362
+!i10b 1
+!s100 1`i^3C0XJ=7>Ig_D7S=EA0
+IBG9N7h^g9[JG@jiP61U<T3
+S1
+R0
+Z4 w1762450062
+Z5 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv
+Z6 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv
+!i122 13
+L0 84 134
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1762450362.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv|
+Z10 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv|-work|router_010|
+!i113 0
+Z11 o-sv -work router_010 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vsys_mm_interconnect_1_router_010_default_decode
+R1
+R2
+R3
+!i10b 1
+!s100 N821:NlIh_hjHPgCR`[jH3
+I@jEe`_WTOC]<4kN:JgJ;_2
+S1
+R0
+R4
+R5
+R6
+!i122 13
+L0 45 37
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z13 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_mm_interconnect_1_router_010.sv|
+R10
+!i113 0
+R11
+R12

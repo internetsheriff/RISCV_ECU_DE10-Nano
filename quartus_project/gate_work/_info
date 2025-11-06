@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/jvctr/0/POLIno_qsys/quartus_project
+T_opt
+!s110 1761748516
+VhE0bEUZd]B45E?`SeA==W1
+04 6 4 work tbench fast 0
+=1-e02e0b7e2f6b-69022623-53da4-fa89
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vpulpino_qsys_test
+2/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test.vo
+Z3 !s110 1761748515
+!i10b 1
+!s100 O7:HCM9kjgES^dg:NdkTI3
+IVl;a:eh4zz?TmRkT4RQ=A3
+R1
+w1761747066
+8/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test.vo
+F/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test.vo
+!i122 0
+L0 32 226850
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1761748514.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa/pulpino_qsys_test.vo|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtbench
+2/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R3
+!i10b 1
+!s100 Zb9>fd:oCGzIJfOd5@0Fd3
+I?_kPVTOOF[Ibf`5DY[>6W0
+S1
+R1
+w1761745880
+8/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv
+F/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv
+!i122 1
+L0 3 81
+R4
+R5
+r1
+!s85 0
+31
+!s108 1761748515.000000
+!s107 /home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb|/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb/tbench.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+/home/jvctr/0/POLIno_qsys/quartus_project/rtl/tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

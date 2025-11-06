@@ -1,68 +1,87 @@
-Pulpino Qsys integration example
-==============
+# POLIno Qsys Project
 
-Overview
---------------------------
-This is an example project demonstrating integration of Pulpino zero-riscy RISC-V core into Altera Platform Designer platform (formerly called Qsys or SOPC). HW integration code/scripts are on its own submodule under ip subdirectory, and sw subdirectory contains an example application that prints "Hello World" and lights up a few LEDs using other Altera platform IP (jtag_uart and pio). The code is targeted for DE2-115 development board, but it can be simulated on Modelsim-Altera without real HW or easily ported to other Altera FPGAs. The instructions below are mainly made with *nix systems in mind but everthing should work with Cygwin on Windows as well.
+Development of a PULPino-based processor. Right now the processor is unespecialized and can be adapted to other uses, more akin to a development plataform, but the goal is to specialize it into a fuel injection ECU.
 
-Prequisites
---------------------------
-* [Quartus Lite](http://fpgasoftware.intel.com/?edition=lite) including Cyclone IV device support, Nios II EDS and ModelSim-Intel FPGA Edition.
-* [RISC-V GNU Compiler Toolchain](https://github.com/riscv/riscv-gnu-toolchain)
-* (Optional) [DE2-115](http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=139&No=502) development board
+## Overview
 
-SW build procedure
---------------------------
-1. Download, configure, build and install RISC-V toolchain with Newlib + multilib support:
-~~~~
-git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
-cd riscv-gnu-toolchain
-./configure --prefix=/opt/riscv --enable-multilib
+This project integrates the [PULPino (zero-riscy)](https://github.com/pulp-platform/pulpino) RISC-V core into an Intel/Altera FPGA using the Platform Designer (Qsys). The project is configured for a Terasic DE1-SoC board, but it can also be simulated using QuestaSim.
+
+The project is structured to automate the build process as much as possible using a modular `Makefile` system. It includes both the hardware source design in verilog an Altera formats and the software that runs on the RISC-V core.
+
+## Prerequisites
+
+*   Intel Quartus Prime (tested with 24.1std.0 Lite Edition)
+*   Questa Intel FPGA Edition
+*   A RISC-V GCC toolchain. The project includes a submodule to build one automatically.
+
+## Project Structure
+
+*   `Makefile`: The main entry point for all build and simulation tasks.
+*   `.make_utils/`: Contains `Makefile` fragments that define the build system logic.
+*   `quartus_project/`: Contains the Quartus project, Qsys system, RTL source files, and software source code.
+    *   `quartus_project/rtl/`: Contains the top-level Verilog file and testbench.
+    *   `quartus_project/sw/`: Contains the C and Assembly source code for the RISC-V core.
+    *   `quartus_project/sys.qsys`: The Qsys system definition.
+*   `riscv-gnu-toolchain/`: A git submodule for building the RISC-V GCC toolchain.
+
+## Build Procedure
+
+The entire project, including the RISC-V toolchain, hardware, and software, can be built by running a single command from the root of the project:
+
+```bash
 make
-make install
-~~~~
-2. Compile custom binary to IHEX converter:
-~~~~
-cd pulpino_qsys_test
-gcc tools/bin2hex.c -o tools/bin2hex
-~~~~
-3. Compile example application image
-~~~~
-cd sw
-make
-~~~~
+```
 
-RTL (bitstream) buid procedure
---------------------------
-1. Load the project (pulpino_qsys_test.qpf) in Quartus
-2. Generate QSYS output files
-    * Open Platform Designer (Tools -> Platform Designer)
-    * Load platform configuration (sys.qsys)
-    * Generate output (Generate -> Generate HDL, Generate)
-    * Close Platform Designer
-3. Generate FPGA bitstream (Processing -> Start Compilation)
+This will perform the following steps:
 
+1.  **Build the RISC-V GCC toolchain:** The `riscv-gnu-toolchain` submodule will be compiled.
+2.  **Compile the software:** The C/Assembly code in `quartus_project/sw/` will be compiled into a memory initialization file (`.hex`).
+3.  **Synthesize the hardware:** The Qsys system will be generated, and the Quartus project will be compiled to create an FPGA bitstream (`.sof`).
 
-Run testbench on simulator
---------------------------
-1. Tools -> Run Simulation Tool -> RTL Simulation
-2. Check that "Hello World" is printed on simulator console and "led" on waveform window changes into "11110000"
+### Individual Build Steps
 
-Run test on DE2-115
---------------------------
-1. Program bitstream (output_files/pulpino_qsys_test.sof) on the board
-2. Ensure that LEDG[7:4] are turned on
-3. Open nios2-terminal and check that "Hello World" is printed out
+It is also possible to run the build steps individually:
 
-Reprogram RISC-V dynamically (on DE2-115)
---------------------------
-1. Modify sw/hello.c (e.g. change LED output from 0xf0 to 0xff)
-2. Run "make rv-reprogram" on sw subdirectory
-3. Ensure that board is reset and updated LED pattern is shown
-4. (Optional) If you want to update bitstream with the new RISC-V code (no RTL changes), just run "Processing->Update Memory Initialization File" and "Processing->Start->Start Assembler" in Quartus
+*   **Build the toolchain:** `make toolchain`
+*   **Compile the software:** `make sw`
+*   **Compile the Quartus project:** `make compile-quartus`
 
-TODO
---------------------------
-* Better linker script
-* Get rid of hard-coded address map values
-* Adapt Altera BSP/HAL system
+## Simulation
+
+### RTL Simulation
+
+To run an RTL simulation of the design, use the following command:
+
+```bash
+make rtl-sim
+```
+
+This will launch QuestaSim in command-line mode, run the simulation, and exit. To open the GUI, use:
+
+```bash
+make rtl-sim-gui
+```
+
+### Gate-Level Simulation
+
+To run a gate-level simulation, use the following command:
+
+```bash
+make gate-sim
+```
+
+To open the GUI, use:
+
+```bash
+make gate-sim-gui
+```
+
+## Running on Hardware
+
+To program the FPGA, use the following command:
+
+```bash
+make program-sof
+```
+
+This will program the `.sof` file located in `quartus_project/output_files/` to the connected FPGA.
