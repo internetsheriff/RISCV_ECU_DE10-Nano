@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 24.1 1077 linux 2025.11.04.17:47:38
+# ACDS 24.1 1077 linux 2025.11.06.14:27:42
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -185,12 +185,12 @@ ensure_lib                                          ./libraries/rsp_mux_001
 vmap       rsp_mux_001                              ./libraries/rsp_mux_001                             
 ensure_lib                                          ./libraries/rsp_mux                                 
 vmap       rsp_mux                                  ./libraries/rsp_mux                                 
-ensure_lib                                          ./libraries/rsp_demux_007                           
-vmap       rsp_demux_007                            ./libraries/rsp_demux_007                           
+ensure_lib                                          ./libraries/rsp_demux_008                           
+vmap       rsp_demux_008                            ./libraries/rsp_demux_008                           
 ensure_lib                                          ./libraries/rsp_demux                               
 vmap       rsp_demux                                ./libraries/rsp_demux                               
-ensure_lib                                          ./libraries/cmd_mux_007                             
-vmap       cmd_mux_007                              ./libraries/cmd_mux_007                             
+ensure_lib                                          ./libraries/cmd_mux_008                             
+vmap       cmd_mux_008                              ./libraries/cmd_mux_008                             
 ensure_lib                                          ./libraries/cmd_mux                                 
 vmap       cmd_mux                                  ./libraries/cmd_mux                                 
 ensure_lib                                          ./libraries/cmd_demux_001                           
@@ -199,10 +199,10 @@ ensure_lib                                          ./libraries/cmd_demux
 vmap       cmd_demux                                ./libraries/cmd_demux                               
 ensure_lib                                          ./libraries/pulpino_0_avalon_master_lsu_limiter     
 vmap       pulpino_0_avalon_master_lsu_limiter      ./libraries/pulpino_0_avalon_master_lsu_limiter     
+ensure_lib                                          ./libraries/router_011                              
+vmap       router_011                               ./libraries/router_011                              
 ensure_lib                                          ./libraries/router_010                              
 vmap       router_010                               ./libraries/router_010                              
-ensure_lib                                          ./libraries/router_009                              
-vmap       router_009                               ./libraries/router_009                              
 ensure_lib                                          ./libraries/router_002                              
 vmap       router_002                               ./libraries/router_002                              
 ensure_lib                                          ./libraries/router_001                              
@@ -259,6 +259,8 @@ ensure_lib                                          ./libraries/GPIO_EXTRA
 vmap       GPIO_EXTRA                               ./libraries/GPIO_EXTRA                              
 ensure_lib                                          ./libraries/GPIO_0                                  
 vmap       GPIO_0                                   ./libraries/GPIO_0                                  
+ensure_lib                                          ./libraries/DEBUG                                   
+vmap       DEBUG                                    ./libraries/DEBUG                                   
 
 # ----------------------------------------
 # Compile device library files
@@ -288,10 +290,10 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                -work rsp_mux_001                             
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_rsp_mux.sv"                           -work rsp_mux                                 
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                -work rsp_mux                                 
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_rsp_demux_007.sv"                     -work rsp_demux_007                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_rsp_demux_008.sv"                     -work rsp_demux_008                           
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_rsp_demux.sv"                         -work rsp_demux                               
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_cmd_mux_007.sv"                       -work cmd_mux_007                             
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux_007                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_cmd_mux_008.sv"                       -work cmd_mux_008                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux_008                             
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_cmd_mux.sv"                           -work cmd_mux                                 
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                -work cmd_mux                                 
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_cmd_demux_001.sv"                     -work cmd_demux_001                           
@@ -300,8 +302,8 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv"                            -work pulpino_0_avalon_master_lsu_limiter     
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                    -work pulpino_0_avalon_master_lsu_limiter     
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                           -work pulpino_0_avalon_master_lsu_limiter     
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router_011.sv"                        -work router_011                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router_010.sv"                        -work router_010                              
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router_009.sv"                        -work router_009                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router_002.sv"                        -work router_002                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router_001.sv"                        -work router_001                              
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/sys_mm_interconnect_1_router.sv"                            -work router                                  
@@ -373,6 +375,7 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv"                    -work jtag_uart_0                             
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/sys_GPIO_EXTRA.v"                                           -work GPIO_EXTRA                              
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/sys_GPIO_0.v"                                               -work GPIO_0                                  
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/sys_DEBUG.v"                                                -work DEBUG                                   
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/sys.v"                                                                                                               
 }
 
@@ -380,14 +383,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_007 -L rsp_demux -L cmd_mux_007 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_010 -L router_009 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -L GPIO_EXTRA -L GPIO_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_008 -L rsp_demux -L cmd_mux_008 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_011 -L router_010 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -L GPIO_EXTRA -L GPIO_0 -L DEBUG -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_007 -L rsp_demux -L cmd_mux_007 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_010 -L router_009 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -L GPIO_EXTRA -L GPIO_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_008 -L rsp_demux -L cmd_mux_008 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L pulpino_0_avalon_master_lsu_limiter -L router_011 -L router_010 -L router_002 -L router_001 -L router -L jtag_uart_0_avalon_jtag_slave_agent -L pulpino_0_avalon_master_lsu_agent -L onchip_memory2_0_s1_translator -L pulpino_0_avalon_master_instr_translator -L p2b_adapter -L b2p_adapter -L transacto -L p2b -L b2p -L fifo -L timing_adt -L jtag_phy_embedded_in_jtag_master -L rst_controller -L irq_mapper -L mm_interconnect_1 -L mm_interconnect_0 -L timer_0 -L pulpino_0 -L pio_out -L pio_in -L onchip_memory2_0 -L master_0 -L jtag_uart_0 -L GPIO_EXTRA -L GPIO_0 -L DEBUG -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

@@ -7,7 +7,7 @@
 
 // Qsys Defined
 
-#define JTAG_BASE \
+#define JTAG \
 	0x00100010
 
 #define PIO_OUT \
@@ -16,8 +16,19 @@
 #define PIO_IN \
 	0x00200020
 
-#define TIMER \
+#define GPIO_0 \
 	0x00200040
+
+#define GPIO_1 \
+	0x00200060
+
+#define GPIO_E \
+	0x00200060
+
+#define TIMER \
+	0x002000A0
+
+
 
 
 // Pulpino fixed

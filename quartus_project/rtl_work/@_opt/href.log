@@ -1,6 +1,9 @@
-BEGIN 1:zeroriscy_id_stage:fast:pulpino_0
-    pc_id_i :  1:zeroriscy_controller:fast:pulpino_0
-END 
 BEGIN 1:zeroriscy_core:fast:pulpino_0
     core_id_i :  1:zeroriscy_controller:fast:pulpino_0
+END 
+BEGIN 1:pulpino_qsys_test:fast:work
+    debug_wire :  1:tbench:fast:work
+END 
+BEGIN 1:zeroriscy_id_stage:fast:pulpino_0
+    pc_id_i :  1:zeroriscy_controller:fast:pulpino_0
 END 

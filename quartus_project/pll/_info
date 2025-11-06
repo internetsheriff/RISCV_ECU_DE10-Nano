@@ -12,7 +12,7 @@ Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
 vpll_0002
 2/home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1762289511
+!s110 1762450365
 !i10b 1
 !s100 NNJRK4Ei@1RXL;m?4@4a31
 II_@9O:TQL;d^PG9@j]mRP2
@@ -21,14 +21,14 @@ R0
 w1762287560
 8/home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v
-!i122 3
+!i122 11
 L0 2 85
 VDg1SIo80bB@j0V0VzS_@n1
 OL;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1762289510.000000
+!s108 1762450365.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v|
 !s90 -reportprogress|300|-sv|-work|pll|+incdir+/home/jvctr/0/POLIno_qsys/quartus_project/pll|/home/jvctr/0/POLIno_qsys/quartus_project/pll/pll_0002.v|
 !i113 0

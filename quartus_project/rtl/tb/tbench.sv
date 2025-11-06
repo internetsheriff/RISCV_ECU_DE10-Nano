@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
 module tbench(
-	//so empty :3
+	// so empty :3
 );
 
 //==================================================
@@ -22,11 +22,11 @@ module tbench(
 	
 	
 	// changing during the simulation
-	reg tb_clk;
-	reg jtag_reset;
-	reg key_reset; //KEY[0]
-	reg [2:0] KEY_r; //remaining KEY[*]
-	reg [9:0] sw_in;
+	reg  tb_clk;
+	reg  jtag_reset;
+	reg  key_reset; //KEY[0]
+	reg  [2:0] KEY_r; //remaining KEY[*]
+	reg  [9:0] sw_in;
 	wire [9:0] ledr_out;
 
 
@@ -36,13 +36,13 @@ module tbench(
 
 	//first bank delcarations
 	wire [35:0] gpio_0;
-	reg [35:0] gpio_0_drive;
-	reg [35:0] gpio_0_en;
+	reg  [35:0] gpio_0_drive;
+	reg  [35:0] gpio_0_en;
 
 	//second bank delcarations
 	wire [35:0] gpio_1;
-	reg [35:0] gpio_1_drive;
-	reg [35:0] gpio_1_en;
+	reg  [35:0] gpio_1_drive;
+	reg  [35:0] gpio_1_en;
 
 
 	// Tristate logic
@@ -56,26 +56,16 @@ module tbench(
 //==================================================
 
 	pulpino_qsys_test dut (
-		.CLOCK_50
-			(tb_clk),
-
-		.KEY
-			({KEY_r[2:0], key_reset}),
-		
-		.SW
-			(sw_in),
-	
-		.LEDR
-			(ledr_out),
-		
-		.GPIO_0
-			(gpio_0),
-		
-		.GPIO_1
-			(gpio_1)
+		.CLOCK_50  (tb_clk),
+		.KEY       ({KEY_r[2:0], key_reset}),
+		.SW        (sw_in),
+		.LEDR      (ledr_out),
+		.GPIO_0    (gpio_0),
+		.GPIO_1    (gpio_1)
 	);
 
-
+	wire [31:0] debug_wire;
+	assign debug_wire = dut.pulpino_qsys_test.debug_wire;
 
 //==================================================
 //                   SIMULATION

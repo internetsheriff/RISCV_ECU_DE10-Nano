@@ -1,10 +1,10 @@
 module pulpino_qsys_test (
 	input CLOCK_50,
-	input [3:0] KEY,
-	input [9:0] SW,
-	output [9:0] LEDR,
-	inout [35:0] GPIO_0,
-	inout [35:0] GPIO_1
+	input  [3:0]  KEY,
+	input  [9:0]  SW,
+	output [9:0]  LEDR,
+	inout  [35:0] GPIO_0,
+	inout  [35:0] GPIO_1
 );
 
 
@@ -45,20 +45,22 @@ assign gpio_in [13:4] = SW [9:0];
 assign gpio_in [31:14] = 18'b0;
 
 
+// Wire to debug only in waveforms
+wire [31:0] debug_wire;
 
 
 //============ Component Instantiation ============
 
 // PLL Instantiation
 pll clock_conversion(
-	.refclk(CLOCK_50),
-	.rst(~reset_n),
-	.outclk_0(clk25)
+	.refclk   (CLOCK_50),
+	.rst      (~reset_n),
+	.outclk_0 (clk25)
 );
 
 // Core Instantiation
 sys u0 (
-		.clk_clk                             (clk25),
+	.clk_clk                               (clk25),
 	.master_0_master_reset_reset           (jtag_reset),
 	.pio_out_external_connection_export    (gpio_out),
 	.pio_in_external_connection_export     (gpio_in),
@@ -69,7 +71,8 @@ sys u0 (
 	.reset_reset_n                         (reset_n),
 	.gpio_0_external_connection_export     (GPIO_0[31:0]),
 	.gpio_1_external_connection_export     (GPIO_1[31:0]),
-	.gpio_extra_external_connection_export ({GPIO_1[35:32], GPIO_0[35:32]})
+	.gpio_extra_external_connection_export ({GPIO_1[35:32], GPIO_0[35:32]}),
+	.debug_external_connection_export      (debug_wire)
 );
 
 endmodule

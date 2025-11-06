@@ -4,13 +4,10 @@
 #include <stdint.h>
 
 // Cast address to uint_32 register
-#define REG(addr) \
-	(*((volatile uint32_t*) (addr)))
-
+#define REG(addr)            (*((volatile uint32_t*) (addr)))
 
 // memory region for counting "variable"
-#define COUNT \
-	(*((volatile uint32_t*) (0x02000000)))
+#define COUNT                (REG(0x02000000))
 
 
 /* 

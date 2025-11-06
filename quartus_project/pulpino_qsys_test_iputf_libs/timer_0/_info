@@ -11,22 +11,22 @@ cModel Technology
 Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
 vsys_timer_0
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v
-!s110 1762289509
+!s110 1762450363
 !i10b 1
 !s100 aWiJ8zcd2VTBeJfgHE5=R0
 IE>bQ9ZE04ABGiZ<=f`35h0
 R0
-w1762289256
+w1762450060
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v
-!i122 21
+!i122 31
 L0 21 190
 VDg1SIo80bB@j0V0VzS_@n1
 OL;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1762289509.000000
+!s108 1762450363.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v|
 !s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/sys_timer_0.v|-work|timer_0|
 !i113 0

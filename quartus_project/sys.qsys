@@ -9,6 +9,22 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element DEBUG
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element DEBUG.s1
+   {
+      datum baseAddress
+      {
+         value = "3145728";
+         type = "String";
+      }
+   }
    element GPIO_0
    {
       datum _sortIndex
@@ -196,6 +212,11 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
+   name="debug_external_connection"
+   internal="DEBUG.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="gpio_0_external_connection"
    internal="GPIO_0.external_connection"
    type="conduit"
@@ -232,6 +253,20 @@
    dir="end" />
  <interface name="pulpino_0_jtag" internal="pulpino_0.jtag" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module name="DEBUG" kind="altera_avalon_pio" version="24.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="true" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
  <module name="GPIO_0" kind="altera_avalon_pio" version="24.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="true" />
   <parameter name="bitModifyingOutReg" value="true" />
@@ -474,6 +509,15 @@
    kind="avalon"
    version="24.1"
    start="pulpino_0.avalon_master_lsu"
+   end="DEBUG.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00300000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="24.1"
+   start="pulpino_0.avalon_master_lsu"
    end="onchip_memory2_0.s2">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x8000" />
@@ -505,6 +549,7 @@
  <connection kind="clock" version="24.1" start="clk_0.clk" end="GPIO_0.clk" />
  <connection kind="clock" version="24.1" start="clk_0.clk" end="GPIO_1.clk" />
  <connection kind="clock" version="24.1" start="clk_0.clk" end="GPIO_EXTRA.clk" />
+ <connection kind="clock" version="24.1" start="clk_0.clk" end="DEBUG.clk" />
  <connection
    kind="clock"
    version="24.1"
@@ -597,6 +642,7 @@
    version="24.1"
    start="clk_0.clk_reset"
    end="GPIO_EXTRA.reset" />
+ <connection kind="reset" version="24.1" start="clk_0.clk_reset" end="DEBUG.reset" />
  <connection
    kind="reset"
    version="24.1"

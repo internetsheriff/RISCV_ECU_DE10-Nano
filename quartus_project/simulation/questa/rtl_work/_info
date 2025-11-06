@@ -42,7 +42,7 @@ OL;O;2024.3;79
 R2
 vpll
 2/home/jvctr/0/POLIno_qsys/quartus_project/pll_sim/pll.vo
-Z4 !s110 1762287883
+Z4 !s110 1762443415
 !i10b 1
 !s100 h4ig=K7<>JOkMd?S;WWYg1
 I6ZkBV2ae:eGgVHoS=CmS23
@@ -57,7 +57,7 @@ Z6 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z7 !s108 1762287883.000000
+Z7 !s108 1762443415.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/pll_sim/pll.vo|
 !s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/pll_sim/pll.vo|
 !i113 0
@@ -67,14 +67,14 @@ vsys
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v
 R4
 !i10b 1
-!s100 H[=d[Ec[DjGJ5Z3GQY>Xi1
-IA?cJXBBN;C9cJ1[5dizLm3
+!s100 KF<I@80?_;Nf[a2`=jB>?0
+I8`_idLZUT@Al@nQXaiZON3
 R2
-w1762287448
+w1762442318
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/sys.v
 !i122 0
-L0 6 454
+L0 6 476
 R5
 R6
 r1

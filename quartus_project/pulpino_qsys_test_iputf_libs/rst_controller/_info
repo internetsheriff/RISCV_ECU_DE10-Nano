@@ -11,22 +11,22 @@ cModel Technology
 Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
 valtera_reset_controller
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
-Z1 !s110 1762289509
+Z1 !s110 1762450363
 !i10b 1
 !s100 gEiOZd1;;=B0SiCd?HUG`0
 IWQBDDIQAGU^eZMS@H`oGB2
 R0
-Z2 w1762289257
+Z2 w1762450062
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v
-!i122 70
+!i122 90
 L0 42 278
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z5 !s108 1762289509.000000
+Z5 !s108 1762450363.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 0
@@ -42,7 +42,7 @@ R0
 R2
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_reset_synchronizer.v
-!i122 71
+!i122 91
 L0 24 63
 R3
 R4

@@ -12,7 +12,7 @@
   </columns>
  </systemtable>
  <library expandedCategories="Project,Library" />
- <window width="1428" height="933" x="87" y="23" />
+ <window width="1428" height="933" x="433" y="54" />
  <hdlexample language="VERILOG" />
  <generation simulation="VERILOG" greybox="0" />
 </preferences>

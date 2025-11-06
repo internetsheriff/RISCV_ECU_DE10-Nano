@@ -12,23 +12,23 @@ Z0 d/home/jvctr/0/POLIno_qsys/quartus_project
 valtera_avalon_jtag_uart
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1762289510
+Z2 !s110 1762450364
 !i10b 1
 !s100 VmzlWO3FNngB7T4c4jIKV1
 I24ZdlYZ<[Q0]3gz2VL=7Q2
 S1
 R0
-Z3 w1762289256
+Z3 w1762450060
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv
-!i122 210
+!i122 258
 L0 22 269
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z6 !s108 1762289510.000000
+Z6 !s108 1762450364.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv|
 !s90 -reportprogress|300|-sv|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart.sv|-work|jtag_uart_0|
 !i113 0
@@ -46,7 +46,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_log_module.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_log_module.sv
-!i122 211
+!i122 259
 L0 22 38
 R4
 R5
@@ -71,7 +71,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv
-!i122 212
+!i122 260
 L0 22 91
 R4
 R5
@@ -96,7 +96,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv
-!i122 213
+!i122 261
 L0 22 90
 R4
 R5
@@ -121,7 +121,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv
-!i122 214
+!i122 262
 L0 22 73
 R4
 R5
@@ -146,7 +146,7 @@ R0
 R3
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv
-!i122 215
+!i122 263
 L0 22 95
 R4
 R5

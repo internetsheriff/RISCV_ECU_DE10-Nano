@@ -11,22 +11,22 @@ cModel Technology
 Z0 d/home/jvctr/0/POLIno_qsys/quartus_project/simulation/questa
 valtera_avalon_sc_fifo
 2/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
-!s110 1762287881
+!s110 1762443413
 !i10b 1
 !s100 5BK1b[bhL0>Ei=h=H:bmS0
 I=MGmk3:0jEUO4@BZRINU01
 R0
-w1762287450
+w1762442320
 8/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
 F/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v
-!i122 28
+!i122 29
 L0 21 895
 VDg1SIo80bB@j0V0VzS_@n1
 OL;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1762287881.000000
+!s108 1762443413.000000
 !s107 /home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|/home/jvctr/0/POLIno_qsys/quartus_project/sys/simulation/submodules/altera_avalon_sc_fifo.v|-work|fifo|
 !i113 0

@@ -13,15 +13,15 @@ DEFINE error_adapter_0                          ./libraries/error_adapter_0/
 DEFINE avalon_st_adapter                        ./libraries/avalon_st_adapter/                       
 DEFINE rsp_mux_001                              ./libraries/rsp_mux_001/                             
 DEFINE rsp_mux                                  ./libraries/rsp_mux/                                 
-DEFINE rsp_demux_007                            ./libraries/rsp_demux_007/                           
+DEFINE rsp_demux_008                            ./libraries/rsp_demux_008/                           
 DEFINE rsp_demux                                ./libraries/rsp_demux/                               
-DEFINE cmd_mux_007                              ./libraries/cmd_mux_007/                             
+DEFINE cmd_mux_008                              ./libraries/cmd_mux_008/                             
 DEFINE cmd_mux                                  ./libraries/cmd_mux/                                 
 DEFINE cmd_demux_001                            ./libraries/cmd_demux_001/                           
 DEFINE cmd_demux                                ./libraries/cmd_demux/                               
 DEFINE pulpino_0_avalon_master_lsu_limiter      ./libraries/pulpino_0_avalon_master_lsu_limiter/     
+DEFINE router_011                               ./libraries/router_011/                              
 DEFINE router_010                               ./libraries/router_010/                              
-DEFINE router_009                               ./libraries/router_009/                              
 DEFINE router_002                               ./libraries/router_002/                              
 DEFINE router_001                               ./libraries/router_001/                              
 DEFINE router                                   ./libraries/router/                                  
@@ -50,6 +50,7 @@ DEFINE master_0                                 ./libraries/master_0/
 DEFINE jtag_uart_0                              ./libraries/jtag_uart_0/                             
 DEFINE GPIO_EXTRA                               ./libraries/GPIO_EXTRA/                              
 DEFINE GPIO_0                                   ./libraries/GPIO_0/                                  
+DEFINE DEBUG                                    ./libraries/DEBUG/                                   
 DEFINE altera_ver                               ./libraries/altera_ver/                              
 DEFINE lpm_ver                                  ./libraries/lpm_ver/                                 
 DEFINE sgate_ver                                ./libraries/sgate_ver/                               

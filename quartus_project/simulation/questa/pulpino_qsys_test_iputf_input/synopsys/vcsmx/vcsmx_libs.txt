@@ -2,15 +2,15 @@ error_adapter_0
 avalon_st_adapter
 rsp_mux_001
 rsp_mux
-rsp_demux_007
+rsp_demux_008
 rsp_demux
-cmd_mux_007
+cmd_mux_008
 cmd_mux
 cmd_demux_001
 cmd_demux
 pulpino_0_avalon_master_lsu_limiter
+router_011
 router_010
-router_009
 router_002
 router_001
 router
@@ -39,3 +39,4 @@ master_0
 jtag_uart_0
 GPIO_EXTRA
 GPIO_0
+DEBUG
