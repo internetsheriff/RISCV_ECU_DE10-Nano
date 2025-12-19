@@ -1,4 +1,4 @@
-# POLIno Qsys Project
+# ECU Qsys Project
 
 Development of a PULPino-based processor. Right now the processor is unespecialized and can be adapted to other uses, more akin to a development plataform, but the goal is to specialize it into a fuel injection ECU.
 
