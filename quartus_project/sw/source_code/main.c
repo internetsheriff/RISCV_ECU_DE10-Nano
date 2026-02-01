@@ -135,7 +135,7 @@ void __attribute__((interrupt)) interrupt_test_handler(void){
 
 	REG(PIO_OUT) = COUNT;
 	
-	if(COUNT==10){
+	if(COUNT==7){
 		COUNT = 0;
 	} else {
 		COUNT ++;

@@ -95,7 +95,7 @@ else \
 		
 
 program-sof: $(END_SOF)
-	quartus_pgm -m JTAG -o "p;$(Q_DIR)/output_files/$(PROJECT_NAME).sof"
+	quartus_pgm -m JTAG -o "p;$(Q_DIR)/output_files/$(PROJECT_NAME).sof@2"
 
 
 

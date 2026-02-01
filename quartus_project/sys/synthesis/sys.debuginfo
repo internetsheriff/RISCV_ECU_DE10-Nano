@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EnsembleReport name="sys" kind="system" version="24.1" fabric="QSYS">
- <!-- Format version 24.1 1077 (Future versions may contain additional information.) -->
- <!-- 2025.11.06.14:27:46 -->
+<EnsembleReport name="sys" kind="system" version="25.1" fabric="QSYS">
+ <!-- Format version 25.1 1129 (Future versions may contain additional information.) -->
+ <!-- 2026.01.06.11:22:00 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -13,7 +13,7 @@
  </parameter>
  <parameter name="device">
   <type>java.lang.String</type>
-  <value>5CSEMA5F31C6</value>
+  <value>5CSEBA6U23I7</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -29,7 +29,7 @@
  </parameter>
  <parameter name="deviceSpeedGrade">
   <type>java.lang.String</type>
-  <value>6</value>
+  <value>7</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1762450062</value>
+  <value>1767709315</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -147,7 +147,7 @@
   <visible>false</visible>
   <valid>true</valid>
  </parameter>
- <module name="DEBUG" kind="altera_avalon_pio" version="24.1" path="DEBUG">
+ <module name="DEBUG" kind="altera_avalon_pio" version="25.1" path="DEBUG">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -404,7 +404,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -465,7 +465,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -510,7 +510,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -875,7 +875,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -921,7 +921,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="GPIO_0" kind="altera_avalon_pio" version="24.1" path="GPIO_0">
+ <module name="GPIO_0" kind="altera_avalon_pio" version="25.1" path="GPIO_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -1194,7 +1194,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1255,7 +1255,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1300,7 +1300,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1665,7 +1665,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1710,7 +1710,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1792,7 +1792,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="GPIO_1" kind="altera_avalon_pio" version="24.1" path="GPIO_1">
+ <module name="GPIO_1" kind="altera_avalon_pio" version="25.1" path="GPIO_1">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -2065,7 +2065,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2126,7 +2126,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2171,7 +2171,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2536,7 +2536,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2581,7 +2581,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2666,7 +2666,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="GPIO_EXTRA"
    kind="altera_avalon_pio"
-   version="24.1"
+   version="25.1"
    path="GPIO_EXTRA">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -2940,7 +2940,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3001,7 +3001,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3046,7 +3046,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3411,7 +3411,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3456,7 +3456,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3538,7 +3538,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="clk_0" kind="clock_source" version="24.1" path="clk_0">
+ <module name="clk_0" kind="clock_source" version="25.1" path="clk_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="clockFrequency">
@@ -3591,7 +3591,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_in" kind="clock_sink" version="24.1">
+  <interface name="clk_in" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3656,7 +3656,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_in_reset" kind="reset_sink" version="24.1">
+  <interface name="clk_in_reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3705,7 +3705,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="clk" kind="clock_source" version="24.1">
+  <interface name="clk" kind="clock_source" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3870,7 +3870,7 @@ parameters are a RESULT of the module parameters. -->
     <name>rst_translator.clk</name>
    </clockDomainMember>
   </interface>
-  <interface name="clk_reset" kind="reset_source" version="24.1">
+  <interface name="clk_reset" kind="reset_source" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3935,7 +3935,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="jtag_uart_0"
    kind="altera_avalon_jtag_uart"
-   version="24.1"
+   version="25.1"
    path="jtag_uart_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -4182,7 +4182,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4243,7 +4243,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4288,7 +4288,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="avalon_jtag_slave" kind="avalon_slave" version="24.1">
+  <interface name="avalon_jtag_slave" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4665,7 +4665,7 @@ parameters are a RESULT of the module parameters. -->
     <role>waitrequest</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4746,7 +4746,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="master_0"
    kind="altera_jtag_avalon_master"
-   version="24.1"
+   version="25.1"
    path="master_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -4807,7 +4807,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>5CSEMA5F31C6</value>
+   <value>5CSEBA6U23I7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4816,7 +4816,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE_SPEEDGRADE">
    <type>java.lang.String</type>
-   <value>6</value>
+   <value>7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4840,7 +4840,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4885,7 +4885,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_reset" kind="reset_sink" version="24.1">
+  <interface name="clk_reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4930,7 +4930,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="master" kind="avalon_master" version="24.1">
+  <interface name="master" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5257,7 +5257,7 @@ parameters are a RESULT of the module parameters. -->
     <span>4294967296</span>
    </memoryBlock>
   </interface>
-  <interface name="master_reset" kind="reset_source" version="24.1">
+  <interface name="master_reset" kind="reset_source" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -5322,7 +5322,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="onchip_memory2_0"
    kind="altera_avalon_onchip_memory2"
-   version="24.1"
+   version="25.1"
    path="onchip_memory2_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -5642,7 +5642,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="deviceFeatures">
    <type>java.lang.String</type>
-   <value>COMPILER_SUPPORT 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 ANY_QFP 0 ADDRESS_STALL 1 ADVANCED_INFO 0 ALLOWS_COMPILING_OTHER_FAMILY_IP 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 0 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 ENABLE_PIN_PLANNER 0 ENGINEERING_SAMPLE 0 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 0 FASTEST 0 FINAL_TIMING_MODEL 0 FITTER_USE_FALLING_EDGE_DELAY 1 FPP_COMPLETELY_PLACES_AND_ROUTES_PERIPHERY 0 HARDCOPY 0 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NADDER_STYLE_CLOCKING 0 HAS_NADDER_STYLE_FF 0 HAS_NADDER_STYLE_LCELL_COMB 0 HAS_NEW_CDB_NAME_FOR_M20K_SCLR 0 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 0 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_ACE_SUPPORT 1 HAS_ACTIVE_PARALLEL_FLASH_SUPPORT 0 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 1 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 1 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 1 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 0 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 1 HAS_CDB_RE_NETWORK_PRESERVATION_SUPPORT 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 1 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 1 HAS_DDB_FDI_SUPPORT 1 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 0 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 0 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 1 HAS_ERROR_DETECTION_SUPPORT 1 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 0 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 1 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 1 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HARDCOPYII_SUPPORT 0 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_IBISO_WRITER_SUPPORT 0 HAS_ICD_DATA_IP 0 HAS_IDB_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 1 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_PLACEMENT_USING_GEOMETRY_RULE 0 HAS_IO_PLACEMENT_USING_PHYSIC_RULE 0 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LOGIC_LOCK_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PASSIVE_PARALLEL_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 1 HAS_PDN_MODEL_STATUS 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_DESIGN_PLANNER_SUPPORT 0 HAS_PHYSICAL_ROUTING_SUPPORT 1 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 0 HAS_POWER_BINNING_LIMITS_DATA 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 1 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 1 HAS_PVA_SUPPORT 1 HAS_QUARTUS_HIERARCHICAL_DESIGN_SUPPORT 0 HAS_RAPID_RECOMPILE_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 0 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_STRICT_PRESERVATION_SUPPORT 1 HAS_SYNTHESIS_ON_ATOMS 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 0 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 0 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 1 HAS_U2B2_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_VCCPD_POWER_RAIL 1 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 1 HAS_XIBISO2_WRITER_SUPPORT 0 HAS_18_BIT_MULTS 1 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 0 INSTALLED 0 INTERNAL_POF_SUPPORT_ENABLED 0 INTERNAL_USE_ONLY 0 IFP_USE_LEGACY_IO_CHECKER 1 ISSUE_MILITARY_TEMPERATURE_WARNING 0 IS_CONFIG_ROM 0 IS_BARE_DIE 0 IS_DEFAULT_FAMILY 0 IS_FOR_INTERNAL_TESTING_ONLY 0 IS_HARDCOPY_FAMILY 0 IS_HBGA_PACKAGE 0 IS_HIGH_CURRENT_PART 0 IS_JW_NEW_BINNING_PLAN 0 IS_JZ_NEW_BINNING_PLAN 0 IS_LOW_POWER_PART 0 IS_LTH_485_PIN 0 IS_SMI_PART 0 IS_SDM_ONLY_PACKAGE 0 IS_REVE_SILICON 0 LOAD_BLK_TYPE_DATA_FROM_ATOM_WYS_INFO 0 LVDS_IO 1 M144K_MEMORY 0 M10K_MEMORY 1 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 0 MLAB_MEMORY 1 MRAM_MEMORY 0 NOT_MIGRATABLE 0 NOT_LISTED 0 NO_FITTER_DELAY_CACHE_GENERATED 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_POF 0 NO_PIN_OUT 0 NO_RPE_SUPPORT 0 NO_TDC_SUPPORT 0 SHOW_HIDDEN_FAMILY_IN_PROGRAMMER 0 STRICT_TIMING_DB_CHECKS 0 SUPPORT_HIGH_SPEED_HPS 0 SUPPORTS_1P0V_IOSTD 0 SUPPORTS_CRC 1 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 1 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_HIPI_RETIMING 0 SUPPORTS_LICENSE_FREE_PARTIAL_RECONFIG 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 1 SUPPORTS_NEW_BINNING_PLAN 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 SUPPORTS_VID 0 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_ONLY 0 PROGRAMMER_SUPPORT 1 PVA_SUPPORTS_ONLY_SUBSET_OF_ATOMS 0 QMAP_IN_DEVELOPMENT 0 QFIT_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRE_QUARTUS_HIERARCHICAL_DESIGN 0 REQUIRE_SPECIAL_HANDLING_FOR_LOCAL_LABLINE 0 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RESTRICT_PARTIAL_RECONFIG 0 RISEFALL_SUPPORT_IS_HIDDEN 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 1 TRANSCEIVER_6G_BLOCK 1 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_NETWORK_ROUTING_POWER_CALCULATOR 0 USES_PART_INFO_FOR_DISPLAYING_CORE_VOLTAGE_VALUE 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_PVAFAM2 0 USES_SECOND_GENERATION_PART_INFO 0 USES_SECOND_GENERATION_POWER_ANALYZER 0 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USES_XML_FORMAT_FOR_EMIF_PIN_MAP_FILE 0 USE_OCT_AUTO_CALIBRATION 1 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_RELAX_IO_ASSIGNMENT_RULES 0 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 1 USING_28NM_OR_OLDER_TIMING_METHODOLOGY 1</value>
+   <value>COMPILER_SUPPORT 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 ANY_QFP 0 ADDRESS_STALL 1 ADVANCED_INFO 0 ALLOWS_COMPILING_OTHER_FAMILY_IP 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 0 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 ENABLE_PIN_PLANNER 0 ENGINEERING_SAMPLE 0 ECCN_3A991 0 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 0 FASTEST 0 FINAL_TIMING_MODEL 0 FITTER_USE_FALLING_EDGE_DELAY 1 FPP_COMPLETELY_PLACES_AND_ROUTES_PERIPHERY 0 HARDCOPY 0 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NADDER_STYLE_CLOCKING 0 HAS_NADDER_STYLE_FF 0 HAS_NADDER_STYLE_LCELL_COMB 0 HAS_NEW_CDB_NAME_FOR_M20K_SCLR 0 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 0 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_ACE_SUPPORT 1 HAS_ACTIVE_PARALLEL_FLASH_SUPPORT 0 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 1 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 1 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 1 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 0 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 1 HAS_CDB_RE_NETWORK_PRESERVATION_SUPPORT 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 1 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 1 HAS_DDB_FDI_SUPPORT 1 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 0 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 0 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 1 HAS_ERROR_DETECTION_SUPPORT 1 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 0 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 1 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 1 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HARDCOPYII_SUPPORT 0 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_IBISO_WRITER_SUPPORT 0 HAS_ICD_DATA_IP 0 HAS_IDB_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 1 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_PLACEMENT_USING_GEOMETRY_RULE 0 HAS_IO_PLACEMENT_USING_PHYSIC_RULE 0 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LOGIC_LOCK_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PASSIVE_PARALLEL_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 1 HAS_PDN_MODEL_STATUS 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_DESIGN_PLANNER_SUPPORT 0 HAS_PHYSICAL_ROUTING_SUPPORT 1 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 0 HAS_POWER_BINNING_LIMITS_DATA 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 1 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 1 HAS_PVA_SUPPORT 1 HAS_QUARTUS_HIERARCHICAL_DESIGN_SUPPORT 0 HAS_RAPID_RECOMPILE_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 0 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_STRICT_PRESERVATION_SUPPORT 1 HAS_SYNTHESIS_ON_ATOMS 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 0 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 0 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 1 HAS_U2B2_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_VCCPD_POWER_RAIL 1 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 1 HAS_XIBISO2_WRITER_SUPPORT 0 HAS_18_BIT_MULTS 1 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 0 INSTALLED 0 INTERNAL_POF_SUPPORT_ENABLED 0 INTERNAL_USE_ONLY 0 IFP_USE_LEGACY_IO_CHECKER 1 ISSUE_MILITARY_TEMPERATURE_WARNING 0 IS_CONFIG_ROM 0 IS_BARE_DIE 0 IS_DEFAULT_FAMILY 0 IS_FOR_INTERNAL_TESTING_ONLY 0 IS_HARDCOPY_FAMILY 0 IS_HBGA_PACKAGE 0 IS_HIGH_CURRENT_PART 0 IS_JW_NEW_BINNING_PLAN 0 IS_JZ_NEW_BINNING_PLAN 0 IS_LOW_POWER_PART 0 IS_LTH_485_PIN 0 IS_SMI_PART 0 IS_SDM_ONLY_PACKAGE 0 IS_REVE_SILICON 0 LOAD_BLK_TYPE_DATA_FROM_ATOM_WYS_INFO 0 LVDS_IO 1 M144K_MEMORY 0 M10K_MEMORY 1 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 0 MLAB_MEMORY 1 MRAM_MEMORY 0 NOT_MIGRATABLE 0 NOT_LISTED 0 NO_FITTER_DELAY_CACHE_GENERATED 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_POF 0 NO_PIN_OUT 0 NO_RPE_SUPPORT 0 NO_TDC_SUPPORT 0 SHOW_HIDDEN_FAMILY_IN_PROGRAMMER 0 STRICT_TIMING_DB_CHECKS 0 SUPPORT_HIGH_SPEED_HPS 0 SUPPORTS_1P0V_IOSTD 0 SUPPORTS_CRC 1 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 1 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_HIPI_RETIMING 0 SUPPORTS_LICENSE_FREE_PARTIAL_RECONFIG 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 1 SUPPORTS_NEW_BINNING_PLAN 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 SUPPORTS_VID 0 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_ONLY 0 PROGRAMMER_SUPPORT 1 PVA_SUPPORTS_ONLY_SUBSET_OF_ATOMS 0 QMAP_IN_DEVELOPMENT 0 QFIT_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRE_QUARTUS_HIERARCHICAL_DESIGN 0 REQUIRE_SPECIAL_HANDLING_FOR_LOCAL_LABLINE 0 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RESTRICT_PARTIAL_RECONFIG 0 RISEFALL_SUPPORT_IS_HIDDEN 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 1 TRANSCEIVER_6G_BLOCK 1 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_NETWORK_ROUTING_POWER_CALCULATOR 0 USES_PART_INFO_FOR_DISPLAYING_CORE_VOLTAGE_VALUE 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_PVAFAM2 0 USES_SECOND_GENERATION_PART_INFO 0 USES_SECOND_GENERATION_POWER_ANALYZER 0 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USES_XML_FORMAT_FOR_EMIF_PIN_MAP_FILE 0 USE_OCT_AUTO_CALIBRATION 1 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_RELAX_IO_ASSIGNMENT_RULES 0 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 1 USING_28NM_OR_OLDER_TIMING_METHODOLOGY 1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5713,7 +5713,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6090,7 +6090,7 @@ parameters are a RESULT of the module parameters. -->
     <role>byteenable</role>
    </port>
   </interface>
-  <interface name="s2" kind="avalon_slave" version="24.1">
+  <interface name="s2" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6467,7 +6467,7 @@ parameters are a RESULT of the module parameters. -->
     <role>byteenable</role>
    </port>
   </interface>
-  <interface name="clk1" kind="clock_sink" version="24.1">
+  <interface name="clk1" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6512,7 +6512,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset1" kind="reset_sink" version="24.1">
+  <interface name="reset1" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6564,7 +6564,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="pio_in" kind="altera_avalon_pio" version="24.1" path="pio_in">
+ <module name="pio_in" kind="altera_avalon_pio" version="25.1" path="pio_in">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -6837,7 +6837,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6898,7 +6898,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -6943,7 +6943,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7308,7 +7308,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7353,7 +7353,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7435,7 +7435,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="pio_out" kind="altera_avalon_pio" version="24.1" path="pio_out">
+ <module name="pio_out" kind="altera_avalon_pio" version="25.1" path="pio_out">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -7692,7 +7692,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7753,7 +7753,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -7798,7 +7798,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8163,7 +8163,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdata</role>
    </port>
   </interface>
-  <interface name="external_connection" kind="conduit_end" version="24.1">
+  <interface name="external_connection" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8310,7 +8310,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="reset_sink" kind="reset_sink" version="24.1">
+  <interface name="reset_sink" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8355,7 +8355,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="config" kind="conduit_end" version="24.1">
+  <interface name="config" kind="conduit_end" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8418,7 +8418,7 @@ parameters are a RESULT of the module parameters. -->
     <role>boot_addr_i</role>
    </port>
   </interface>
-  <interface name="clk_sink" kind="clock_sink" version="24.1">
+  <interface name="clk_sink" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8463,7 +8463,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="interrupt_receiver" kind="interrupt_receiver" version="24.1">
+  <interface name="interrupt_receiver" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8539,7 +8539,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="avalon_master_instr" kind="avalon_master" version="24.1">
+  <interface name="avalon_master_instr" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -8840,7 +8840,7 @@ parameters are a RESULT of the module parameters. -->
     <span>4294967296</span>
    </memoryBlock>
   </interface>
-  <interface name="avalon_master_lsu" kind="avalon_master" version="24.1">
+  <interface name="avalon_master_lsu" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -9171,7 +9171,7 @@ parameters are a RESULT of the module parameters. -->
     <span>4294967296</span>
    </memoryBlock>
   </interface>
-  <interface name="avalon_slave_debug" kind="avalon_slave" version="24.1">
+  <interface name="avalon_slave_debug" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -9552,7 +9552,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="timer_0"
    kind="altera_avalon_timer"
-   version="24.1"
+   version="25.1"
    path="timer_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -9782,7 +9782,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -9843,7 +9843,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset" kind="reset_sink" version="24.1">
+  <interface name="reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -9888,7 +9888,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="s1" kind="avalon_slave" version="24.1">
+  <interface name="s1" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -10257,7 +10257,7 @@ parameters are a RESULT of the module parameters. -->
     <role>write_n</role>
    </port>
   </interface>
-  <interface name="irq" kind="interrupt_sender" version="24.1">
+  <interface name="irq" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -10338,7 +10338,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="mm_interconnect_0"
    kind="altera_mm_interconnect"
-   version="24.1"
+   version="25.1"
    path="mm_interconnect_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -10369,7 +10369,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>5CSEMA5F31C6</value>
+   <value>5CSEBA6U23I7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -10402,7 +10402,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_0_clk" kind="clock_sink" version="24.1">
+  <interface name="clk_0_clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -10450,7 +10450,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="pulpino_0_reset_sink_reset_bridge_in_reset"
      kind="reset_sink"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -10498,7 +10498,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="pulpino_0_avalon_master_instr"
      kind="avalon_slave"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -10867,7 +10867,7 @@ parameters are a RESULT of the module parameters. -->
     <role>readdatavalid</role>
    </port>
   </interface>
-  <interface name="onchip_memory2_0_s1" kind="avalon_master" version="24.1">
+  <interface name="onchip_memory2_0_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -11184,7 +11184,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="mm_interconnect_1"
    kind="altera_mm_interconnect"
-   version="24.1"
+   version="25.1"
    path="mm_interconnect_1">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -11338,7 +11338,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>5CSEMA5F31C6</value>
+   <value>5CSEBA6U23I7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -11371,7 +11371,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_0_clk" kind="clock_sink" version="24.1">
+  <interface name="clk_0_clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -11419,7 +11419,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="master_0_clk_reset_reset_bridge_in_reset"
      kind="reset_sink"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -11467,7 +11467,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="pulpino_0_reset_sink_reset_bridge_in_reset"
      kind="reset_sink"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -11512,7 +11512,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="master_0_master" kind="avalon_slave" version="24.1">
+  <interface name="master_0_master" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -11899,7 +11899,7 @@ parameters are a RESULT of the module parameters. -->
     <role>writedata</role>
    </port>
   </interface>
-  <interface name="pulpino_0_avalon_master_lsu" kind="avalon_slave" version="24.1">
+  <interface name="pulpino_0_avalon_master_lsu" kind="avalon_slave" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -12298,7 +12298,7 @@ parameters are a RESULT of the module parameters. -->
     <role>writeresponsevalid</role>
    </port>
   </interface>
-  <interface name="DEBUG_s1" kind="avalon_master" version="24.1">
+  <interface name="DEBUG_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -12599,7 +12599,7 @@ parameters are a RESULT of the module parameters. -->
     <span>32</span>
    </memoryBlock>
   </interface>
-  <interface name="GPIO_0_s1" kind="avalon_master" version="24.1">
+  <interface name="GPIO_0_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -12900,7 +12900,7 @@ parameters are a RESULT of the module parameters. -->
     <span>32</span>
    </memoryBlock>
   </interface>
-  <interface name="GPIO_1_s1" kind="avalon_master" version="24.1">
+  <interface name="GPIO_1_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -13201,7 +13201,7 @@ parameters are a RESULT of the module parameters. -->
     <span>32</span>
    </memoryBlock>
   </interface>
-  <interface name="GPIO_EXTRA_s1" kind="avalon_master" version="24.1">
+  <interface name="GPIO_EXTRA_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -13505,7 +13505,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="jtag_uart_0_avalon_jtag_slave"
      kind="avalon_master"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -13818,7 +13818,7 @@ parameters are a RESULT of the module parameters. -->
     <span>8</span>
    </memoryBlock>
   </interface>
-  <interface name="onchip_memory2_0_s2" kind="avalon_master" version="24.1">
+  <interface name="onchip_memory2_0_s2" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -14131,7 +14131,7 @@ parameters are a RESULT of the module parameters. -->
     <span>32768</span>
    </memoryBlock>
   </interface>
-  <interface name="pio_in_s1" kind="avalon_master" version="24.1">
+  <interface name="pio_in_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -14432,7 +14432,7 @@ parameters are a RESULT of the module parameters. -->
     <span>16</span>
    </memoryBlock>
   </interface>
-  <interface name="pio_out_s1" kind="avalon_master" version="24.1">
+  <interface name="pio_out_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -14736,7 +14736,7 @@ parameters are a RESULT of the module parameters. -->
   <interface
      name="pulpino_0_avalon_slave_debug"
      kind="avalon_master"
-     version="24.1">
+     version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15049,7 +15049,7 @@ parameters are a RESULT of the module parameters. -->
     <span>32768</span>
    </memoryBlock>
   </interface>
-  <interface name="timer_0_s1" kind="avalon_master" version="24.1">
+  <interface name="timer_0_s1" kind="avalon_master" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15354,7 +15354,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="irq_mapper"
    kind="altera_irq_mapper"
-   version="24.1"
+   version="25.1"
    path="irq_mapper">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -15408,7 +15408,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15453,7 +15453,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_reset" kind="reset_sink" version="24.1">
+  <interface name="clk_reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15498,7 +15498,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="receiver0" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver0" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15574,7 +15574,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="receiver1" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver1" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15650,7 +15650,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="receiver2" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver2" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15726,7 +15726,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="receiver3" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver3" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15802,7 +15802,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="receiver4" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver4" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15878,7 +15878,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="receiver5" kind="interrupt_receiver" version="24.1">
+  <interface name="receiver5" kind="interrupt_receiver" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15954,7 +15954,7 @@ parameters are a RESULT of the module parameters. -->
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
-  <interface name="sender" kind="interrupt_sender" version="24.1">
+  <interface name="sender" kind="interrupt_sender" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16035,7 +16035,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="rst_controller"
    kind="altera_reset_controller"
-   version="24.1"
+   version="25.1"
    path="rst_controller">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -16255,7 +16255,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="reset_in0" kind="reset_sink" version="24.1">
+  <interface name="reset_in0" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16300,7 +16300,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16345,7 +16345,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset_out" kind="reset_source" version="24.1">
+  <interface name="reset_out" kind="reset_source" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16416,7 +16416,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="rst_translator"
    kind="altera_reset_translator"
-   version="24.1"
+   version="25.1"
    path="rst_translator">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -16460,7 +16460,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk" kind="clock_sink" version="24.1">
+  <interface name="clk" kind="clock_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16505,7 +16505,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="in_reset" kind="reset_sink" version="24.1">
+  <interface name="in_reset" kind="reset_sink" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16556,7 +16556,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_req</role>
    </port>
   </interface>
-  <interface name="out_reset" kind="reset_source" version="24.1">
+  <interface name="out_reset" kind="reset_source" version="25.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -16621,7 +16621,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/master_0.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="master_0.clk">
   <parameter name="deviceFamily">
@@ -16648,7 +16648,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/pio_out.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="pio_out.clk">
   <parameter name="deviceFamily">
@@ -16675,7 +16675,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/jtag_uart_0.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="jtag_uart_0.clk">
   <parameter name="deviceFamily">
@@ -16702,7 +16702,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/pio_in.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="pio_in.clk">
   <parameter name="deviceFamily">
@@ -16729,7 +16729,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/timer_0.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="timer_0.clk">
   <parameter name="deviceFamily">
@@ -16756,7 +16756,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/GPIO_0.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="GPIO_0.clk">
   <parameter name="deviceFamily">
@@ -16783,7 +16783,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/GPIO_1.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="GPIO_1.clk">
   <parameter name="deviceFamily">
@@ -16810,7 +16810,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/GPIO_EXTRA.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="GPIO_EXTRA.clk">
   <parameter name="deviceFamily">
@@ -16837,7 +16837,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/DEBUG.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="DEBUG.clk">
   <parameter name="deviceFamily">
@@ -16864,7 +16864,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/onchip_memory2_0.clk1"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="onchip_memory2_0.clk1">
   <parameter name="deviceFamily">
@@ -16891,7 +16891,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/pulpino_0.clk_sink"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="pulpino_0.clk_sink">
   <parameter name="deviceFamily">
@@ -16918,7 +16918,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk_reset/master_0.clk_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk_reset"
    end="master_0.clk_reset">
   <parameter name="deviceFamily">
@@ -16945,7 +16945,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="pulpino_0.avalon_master_instr/mm_interconnect_0.pulpino_0_avalon_master_instr"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="pulpino_0.avalon_master_instr"
    end="mm_interconnect_0.pulpino_0_avalon_master_instr">
   <parameter name="arbitrationPriority">
@@ -16996,7 +16996,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/mm_interconnect_0.clk_0_clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="mm_interconnect_0.clk_0_clk">
   <parameter name="deviceFamily">
@@ -17023,7 +17023,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_0.onchip_memory2_0_s1/onchip_memory2_0.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_0.onchip_memory2_0_s1"
    end="onchip_memory2_0.s1">
   <parameter name="arbitrationPriority">
@@ -17074,7 +17074,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="pulpino_0.avalon_master_lsu/mm_interconnect_1.pulpino_0_avalon_master_lsu"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="pulpino_0.avalon_master_lsu"
    end="mm_interconnect_1.pulpino_0_avalon_master_lsu">
   <parameter name="arbitrationPriority">
@@ -17125,7 +17125,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/mm_interconnect_1.clk_0_clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="mm_interconnect_1.clk_0_clk">
   <parameter name="deviceFamily">
@@ -17152,7 +17152,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="master_0.master/mm_interconnect_1.master_0_master"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="master_0.master"
    end="mm_interconnect_1.master_0_master">
   <parameter name="arbitrationPriority">
@@ -17203,7 +17203,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.jtag_uart_0_avalon_jtag_slave/jtag_uart_0.avalon_jtag_slave"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.jtag_uart_0_avalon_jtag_slave"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority">
@@ -17254,7 +17254,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.pio_out_s1/pio_out.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.pio_out_s1"
    end="pio_out.s1">
   <parameter name="arbitrationPriority">
@@ -17305,7 +17305,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.pio_in_s1/pio_in.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.pio_in_s1"
    end="pio_in.s1">
   <parameter name="arbitrationPriority">
@@ -17356,7 +17356,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.timer_0_s1/timer_0.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.timer_0_s1"
    end="timer_0.s1">
   <parameter name="arbitrationPriority">
@@ -17407,7 +17407,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.GPIO_0_s1/GPIO_0.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.GPIO_0_s1"
    end="GPIO_0.s1">
   <parameter name="arbitrationPriority">
@@ -17458,7 +17458,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.GPIO_1_s1/GPIO_1.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.GPIO_1_s1"
    end="GPIO_1.s1">
   <parameter name="arbitrationPriority">
@@ -17509,7 +17509,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.GPIO_EXTRA_s1/GPIO_EXTRA.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.GPIO_EXTRA_s1"
    end="GPIO_EXTRA.s1">
   <parameter name="arbitrationPriority">
@@ -17560,7 +17560,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.DEBUG_s1/DEBUG.s1"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.DEBUG_s1"
    end="DEBUG.s1">
   <parameter name="arbitrationPriority">
@@ -17611,7 +17611,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.onchip_memory2_0_s2/onchip_memory2_0.s2"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.onchip_memory2_0_s2"
    end="onchip_memory2_0.s2">
   <parameter name="arbitrationPriority">
@@ -17662,7 +17662,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="mm_interconnect_1.pulpino_0_avalon_slave_debug/pulpino_0.avalon_slave_debug"
    kind="avalon"
-   version="24.1"
+   version="25.1"
    start="mm_interconnect_1.pulpino_0_avalon_slave_debug"
    end="pulpino_0.avalon_slave_debug">
   <parameter name="arbitrationPriority">
@@ -17713,7 +17713,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver0/jtag_uart_0.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver0"
    end="jtag_uart_0.irq">
   <parameter name="irqNumber">
@@ -17748,7 +17748,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver1/pio_in.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver1"
    end="pio_in.irq">
   <parameter name="irqNumber">
@@ -17783,7 +17783,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver2/timer_0.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver2"
    end="timer_0.irq">
   <parameter name="irqNumber">
@@ -17818,7 +17818,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver3/GPIO_0.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver3"
    end="GPIO_0.irq">
   <parameter name="irqNumber">
@@ -17853,7 +17853,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver4/GPIO_1.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver4"
    end="GPIO_1.irq">
   <parameter name="irqNumber">
@@ -17888,7 +17888,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="irq_mapper.receiver5/GPIO_EXTRA.irq"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="irq_mapper.receiver5"
    end="GPIO_EXTRA.irq">
   <parameter name="irqNumber">
@@ -17923,7 +17923,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="pulpino_0.interrupt_receiver/irq_mapper.sender"
    kind="interrupt"
-   version="24.1"
+   version="25.1"
    start="pulpino_0.interrupt_receiver"
    end="irq_mapper.sender">
   <parameter name="irqNumber">
@@ -17958,7 +17958,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/irq_mapper.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="irq_mapper.clk">
   <parameter name="deviceFamily">
@@ -17985,7 +17985,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18012,7 +18012,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/DEBUG.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="DEBUG.reset">
   <parameter name="deviceFamily">
@@ -18039,7 +18039,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18066,7 +18066,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/GPIO_0.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="GPIO_0.reset">
   <parameter name="deviceFamily">
@@ -18093,7 +18093,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18120,7 +18120,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/GPIO_1.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="GPIO_1.reset">
   <parameter name="deviceFamily">
@@ -18147,7 +18147,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18174,7 +18174,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/GPIO_EXTRA.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="GPIO_EXTRA.reset">
   <parameter name="deviceFamily">
@@ -18201,7 +18201,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18228,7 +18228,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/jtag_uart_0.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="jtag_uart_0.reset">
   <parameter name="deviceFamily">
@@ -18255,7 +18255,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/onchip_memory2_0.reset1"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="onchip_memory2_0.reset1">
   <parameter name="deviceFamily">
@@ -18282,7 +18282,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18309,7 +18309,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/pio_in.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="pio_in.reset">
   <parameter name="deviceFamily">
@@ -18336,7 +18336,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18363,7 +18363,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/pio_out.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="pio_out.reset">
   <parameter name="deviceFamily">
@@ -18390,7 +18390,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18417,7 +18417,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/pulpino_0.reset_sink"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="pulpino_0.reset_sink">
   <parameter name="deviceFamily">
@@ -18444,7 +18444,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18471,7 +18471,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/timer_0.reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="timer_0.reset">
   <parameter name="deviceFamily">
@@ -18498,7 +18498,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18525,7 +18525,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/mm_interconnect_0.pulpino_0_reset_sink_reset_bridge_in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="mm_interconnect_0.pulpino_0_reset_sink_reset_bridge_in_reset">
   <parameter name="deviceFamily">
@@ -18552,7 +18552,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18579,7 +18579,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/mm_interconnect_1.master_0_clk_reset_reset_bridge_in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="mm_interconnect_1.master_0_clk_reset_reset_bridge_in_reset">
   <parameter name="deviceFamily">
@@ -18606,7 +18606,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18633,7 +18633,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/mm_interconnect_1.pulpino_0_reset_sink_reset_bridge_in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="mm_interconnect_1.pulpino_0_reset_sink_reset_bridge_in_reset">
   <parameter name="deviceFamily">
@@ -18660,7 +18660,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_controller.reset_out/rst_translator.in_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_controller.reset_out"
    end="rst_translator.in_reset">
   <parameter name="deviceFamily">
@@ -18687,7 +18687,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="rst_translator.out_reset/irq_mapper.clk_reset"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="rst_translator.out_reset"
    end="irq_mapper.clk_reset">
   <parameter name="deviceFamily">
@@ -18714,7 +18714,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk_reset/rst_controller.reset_in0"
    kind="reset"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk_reset"
    end="rst_controller.reset_in0">
   <parameter name="deviceFamily">
@@ -18741,7 +18741,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/rst_controller.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="rst_controller.clk">
   <parameter name="deviceFamily">
@@ -18768,7 +18768,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_0.clk/rst_translator.clk"
    kind="clock"
-   version="24.1"
+   version="25.1"
    start="clk_0.clk"
    end="rst_translator.clk">
   <parameter name="deviceFamily">
@@ -18797,8 +18797,8 @@ parameters are a RESULT of the module parameters. -->
   <name>altera_avalon_pio</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>PIO (Parallel I/O) Intel FPGA IP</displayName>
-  <version>24.1</version>
+  <displayName>PIO (Parallel I/O) IP</displayName>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>16</instanceCount>
@@ -18806,7 +18806,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>17</instanceCount>
@@ -18814,7 +18814,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>14</instanceCount>
@@ -18822,7 +18822,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Memory Mapped Slave</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>7</instanceCount>
@@ -18830,7 +18830,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Conduit</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>7</instanceCount>
@@ -18838,7 +18838,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Interrupt Sender</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18846,7 +18846,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Clock Source</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18854,7 +18854,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18862,7 +18862,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18870,7 +18870,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Output</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18878,15 +18878,15 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
   <name>altera_avalon_jtag_uart</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>JTAG UART Intel FPGA IP</displayName>
-  <version>24.1</version>
+  <displayName>JTAG UART IP</displayName>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18894,7 +18894,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>JTAG to Avalon Master Bridge</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>14</instanceCount>
@@ -18902,7 +18902,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Memory Mapped Master</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>3</instanceCount>
@@ -18910,15 +18910,15 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
   <name>altera_avalon_onchip_memory2</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>On-Chip Memory (RAM or ROM) Intel FPGA IP</displayName>
-  <version>24.1</version>
+  <displayName>On-Chip Memory (RAM or ROM) IP</displayName>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18934,15 +18934,15 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Interrupt Receiver</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
   <name>altera_avalon_timer</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>Interval Timer Intel FPGA IP</displayName>
-  <version>24.1</version>
+  <displayName>Interval Timer IP</displayName>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -18950,7 +18950,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>MM Interconnect</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18958,7 +18958,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Merlin IRQ Mapper</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18966,7 +18966,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Merlin Reset Controller</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18974,7 +18974,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Reset Translator</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>11</instanceCount>
@@ -18982,7 +18982,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Clock Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -18990,7 +18990,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Reset Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>14</instanceCount>
@@ -18998,7 +18998,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Avalon Memory Mapped Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>5</instanceCount>
@@ -19006,7 +19006,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Clock Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>7</instanceCount>
@@ -19014,7 +19014,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Interrupt Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
  <plugin>
   <instanceCount>28</instanceCount>
@@ -19022,8 +19022,8 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Reset Connection</displayName>
-  <version>24.1</version>
+  <version>25.1</version>
  </plugin>
- <reportVersion>24.1 1077</reportVersion>
- <uniqueIdentifier>6E37E016DD550000019A5A35C164</uniqueIdentifier>
+ <reportVersion>25.1 1129</reportVersion>
+ <uniqueIdentifier>94BB4396E2250000019B93AF96ED</uniqueIdentifier>
 </EnsembleReport>

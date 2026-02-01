@@ -1,12 +1,12 @@
-# system info sys on 2025.11.06.14:27:42
+# system info sys on 2026.01.06.11:21:54
 system_info:
 name,value
-DEVICE,5CSEMA5F31C6
+DEVICE,5CSEBA6U23I7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1762450058
+GENERATION_ID,1767709307
 #
 #
-# Files generated for sys on 2025.11.06.14:27:42
+# Files generated for sys on 2026.01.06.11:21:54
 files:
 filepath,kind,attributes,module,is_top
 simulation/sys.v,VERILOG,,sys,true

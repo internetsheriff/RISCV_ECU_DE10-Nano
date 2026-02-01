@@ -11,8 +11,8 @@
    <inputclock preferredWidth="30" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1428" height="933" x="433" y="54" />
+ <library expandedCategories="Library,Project" />
+ <window width="1854" height="1011" x="66" y="69" />
  <hdlexample language="VERILOG" />
  <generation simulation="VERILOG" greybox="0" />
 </preferences>

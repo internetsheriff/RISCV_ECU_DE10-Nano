@@ -1,0 +1,123 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys.qsys --synthesis=VERILOG --output-directory=/home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading quartus_project/sys.qsys
+Progress: Reading input file
+Progress: Adding DEBUG [altera_avalon_pio 25.1]
+Progress: Parameterizing module DEBUG
+Progress: Adding GPIO_0 [altera_avalon_pio 25.1]
+Progress: Parameterizing module GPIO_0
+Progress: Adding GPIO_1 [altera_avalon_pio 25.1]
+Progress: Parameterizing module GPIO_1
+Progress: Adding GPIO_EXTRA [altera_avalon_pio 25.1]
+Progress: Parameterizing module GPIO_EXTRA
+Progress: Adding clk_0 [clock_source 25.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 25.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding master_0 [altera_jtag_avalon_master 25.1]
+Progress: Parameterizing module master_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 25.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_in [altera_avalon_pio 25.1]
+Progress: Parameterizing module pio_in
+Progress: Adding pio_out [altera_avalon_pio 25.1]
+Progress: Parameterizing module pio_out
+Progress: Adding pulpino_0 [pulpino 1.0]
+Progress: Parameterizing module pulpino_0
+Progress: Adding timer_0 [altera_avalon_timer 25.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sys.GPIO_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sys.GPIO_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sys.GPIO_EXTRA: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sys.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: sys.pio_in: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: sys: Generating "sys" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has address signal 32 bit wide, but the slave is 13 bit wide.
+Info: Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: DEBUG: Starting RTL generation for module 'sys_DEBUG'
+Info: DEBUG:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_DEBUG --dir=/tmp/alt0461_2456829675162606237.dir/0002_DEBUG_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0002_DEBUG_gen//sys_DEBUG_component_configuration.pl  --do_build_sim=0  ]
+Info: DEBUG: Done RTL generation for module 'sys_DEBUG'
+Info: DEBUG: "sys" instantiated altera_avalon_pio "DEBUG"
+Info: GPIO_0: Starting RTL generation for module 'sys_GPIO_0'
+Info: GPIO_0:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_0 --dir=/tmp/alt0461_2456829675162606237.dir/0003_GPIO_0_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0003_GPIO_0_gen//sys_GPIO_0_component_configuration.pl  --do_build_sim=0  ]
+Info: GPIO_0: Done RTL generation for module 'sys_GPIO_0'
+Info: GPIO_0: "sys" instantiated altera_avalon_pio "GPIO_0"
+Info: GPIO_EXTRA: Starting RTL generation for module 'sys_GPIO_EXTRA'
+Info: GPIO_EXTRA:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_EXTRA --dir=/tmp/alt0461_2456829675162606237.dir/0004_GPIO_EXTRA_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0004_GPIO_EXTRA_gen//sys_GPIO_EXTRA_component_configuration.pl  --do_build_sim=0  ]
+Info: GPIO_EXTRA: Done RTL generation for module 'sys_GPIO_EXTRA'
+Info: GPIO_EXTRA: "sys" instantiated altera_avalon_pio "GPIO_EXTRA"
+Info: jtag_uart_0: "sys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: master_0: "sys" instantiated altera_jtag_avalon_master "master_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'sys_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_onchip_memory2_0 --dir=/tmp/alt0461_2456829675162606237.dir/0006_onchip_memory2_0_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0006_onchip_memory2_0_gen//sys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'sys_onchip_memory2_0'
+Info: onchip_memory2_0: "sys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_in: Starting RTL generation for module 'sys_pio_in'
+Info: pio_in:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_in --dir=/tmp/alt0461_2456829675162606237.dir/0007_pio_in_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0007_pio_in_gen//sys_pio_in_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_in: Done RTL generation for module 'sys_pio_in'
+Info: pio_in: "sys" instantiated altera_avalon_pio "pio_in"
+Info: pio_out: Starting RTL generation for module 'sys_pio_out'
+Info: pio_out:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64/perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64/perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_out --dir=/tmp/alt0461_2456829675162606237.dir/0008_pio_out_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0008_pio_out_gen//sys_pio_out_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_out: Done RTL generation for module 'sys_pio_out'
+Info: pio_out: "sys" instantiated altera_avalon_pio "pio_out"
+Info: pulpino_0: "sys" instantiated pulpino "pulpino_0"
+Info: timer_0: Starting RTL generation for module 'sys_timer_0'
+Info: timer_0:   Generation command is [exec /home/aline/altera_standard/25.1std/quartus/linux64//perl/bin/perl -I /home/aline/altera_standard/25.1std/quartus/linux64//perl/lib -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin/europa -I /home/aline/altera_standard/25.1std/quartus/sopc_builder/bin -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/aline/altera_standard/25.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=sys_timer_0 --dir=/tmp/alt0461_2456829675162606237.dir/0010_timer_0_gen/ --quartus_dir=/home/aline/altera_standard/25.1std/quartus --verilog --config=/tmp/alt0461_2456829675162606237.dir/0010_timer_0_gen//sys_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'sys_timer_0'
+Info: timer_0: "sys" instantiated altera_avalon_timer "timer_0"
+Info: mm_interconnect_0: "sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "sys" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "sys" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: pulpino_0_avalon_master_instr_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "pulpino_0_avalon_master_instr_translator"
+Info: onchip_memory2_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_memory2_0_s1_translator"
+Info: pulpino_0_avalon_master_lsu_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "pulpino_0_avalon_master_lsu_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: router_010: "mm_interconnect_1" instantiated altera_merlin_router "router_010"
+Info: router_011: "mm_interconnect_1" instantiated altera_merlin_router "router_011"
+Info: pulpino_0_avalon_master_lsu_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "pulpino_0_avalon_master_lsu_limiter"
+Info: Reusing file /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_008: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_008"
+Info: Reusing file /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_008: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_008"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys: Done "sys" with 43 modules, 91 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
