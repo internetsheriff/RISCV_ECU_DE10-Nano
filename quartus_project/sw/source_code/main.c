@@ -9,6 +9,58 @@
 // memory region for counting "variable"
 #define COUNT                (REG(0x02000000))
 
+#define JTAG_UART_DATA        (JTAG + 0x0)
+#define JTAG_UART_CONTROL     (JTAG + 0x4)
+#define JTAG_UART_WSPACE_MASK 0xFFFF0000u
+
+static void jtag_putc(char c){
+	while ((REG(JTAG_UART_CONTROL) & JTAG_UART_WSPACE_MASK) == 0u) { }
+	REG(JTAG_UART_DATA) = (uint32_t)c;
+}
+
+// Slow write: small delay between characters to avoid FIFO overruns.
+static void jtag_puts_slow(const char *s){
+	while (*s) {
+		jtag_putc(*s++);
+		for (volatile uint32_t i = 0; i < 2000u; ++i) { }
+	}
+}
+
+static void jtag_put_dec(uint32_t value){
+	char buf[11];
+	int idx = 10;
+	buf[idx--] = '\0';
+
+	if (value == 0u) {
+		jtag_putc('0');
+		return;
+	}
+
+	while (value > 0u && idx >= 0) {
+		buf[idx--] = (char)('0' + (value % 10u));
+		value /= 10u;
+	}
+
+	jtag_puts_slow(&buf[idx + 1]);
+}
+
+static void timer_start_period(uint32_t period_ticks){
+	// Stop timer
+	REG(TIMER + 0x4) = 0u;
+	// Load period
+	REG(TIMER + 0x8) = (uint32_t)(period_ticks & 0xFFFFu);
+	REG(TIMER + 0xC) = (uint32_t)((period_ticks >> 16) & 0xFFFFu);
+	// Clear timeout status
+	REG(TIMER) = 0u;
+	// Start in continuous mode (START=1, CONT=1)
+	REG(TIMER + 0x4) = 0x5u;
+}
+
+static void wait_timeout(void){
+	while ((REG(TIMER) & 0x1u) == 0u) { }
+	REG(TIMER) = 0u;
+}
+
 
 /* 
   ======= Comments about Debbuging with LEDs =======
@@ -20,7 +72,6 @@
 	Example: step 4 of snippet A is indicated by 0x0A4
 	==================================================
 */
-
 
 /* 
   Function to setup 32TIMER for interruptions:
@@ -39,8 +90,8 @@ void setup_timer_interruption(void){
 	DEBUG(0x0A1);
 
 
-	// set time period
-	uint32_t period_full = MS2CYCLES(1);
+	// set time period (very slow so LEDs are visible)
+	uint32_t period_full = MS2CYCLES(1000000);
 	REG(TIMER+0x8) =  (  period_full & 0xFFFF );
 	REG(TIMER+0xC) =  (( period_full >> 16 ) & 0xFFFF );
 	DEBUG(0x0A2);
@@ -77,7 +128,7 @@ void enable_irq(void){
 	DEBUG(0x0B1);
 
 
-	// Set IRP mask for interrupt 2
+	// Set IRP mask for interrupt 2 (timer)
 	REG(IRP)     = (1<< 2);
 	DEBUG(0x0B2);
 
@@ -116,10 +167,7 @@ void __attribute__((interrupt)) jtag_interrupt_handler(void){
 
 /*
 	Interrupt handler betng tested, timer interrupts
-	INT_NUM = 1
-
-	Debbuging LEDs format : 0x20-
-	(Leading 2 and 3 turns LEDR[9] on, so it's easy to see in waveform)
+	INT_NUM = 2
 */
 void __attribute__((interrupt)) interrupt_test_handler(void){
 	DEBUG(0x200);
@@ -134,7 +182,6 @@ void __attribute__((interrupt)) interrupt_test_handler(void){
 	DEBUG(0x202);
 
 	REG(PIO_OUT) = COUNT;
-	
 	if(COUNT==7){
 		COUNT = 0;
 	} else {
@@ -148,13 +195,20 @@ int main(int argc, char **argv){
 	COUNT = 0;
 
 	DEBUG(0x0D0);
-	enable_irq();
+	// Disable interrupts and timer for a clear image-check pattern
+	REG(IRP) = 0x0;
 	DEBUG(0x0D1);
-	setup_timer_interruption();
 	DEBUG(0x0FF);
 	
+	// Configure timer for ~1s period (50 MHz clock)
+	timer_start_period(50000000u - 1u);
+
 	// infinite loop
 	while (1){
+		REG(PIO_OUT) = 0xF0u;
+		wait_timeout();
+		REG(PIO_OUT) = 0x0Fu;
+		wait_timeout();
 		DEBUG(0x3FF);
 	}
 	return 0;

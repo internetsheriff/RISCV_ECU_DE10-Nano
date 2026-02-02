@@ -1,5 +1,5 @@
 Assembler report for pulpino_qsys_test
-Sun Feb  1 17:45:39 2026
+Mon Feb  2 00:57:55 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 
 
@@ -39,7 +39,7 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Feb  1 17:45:39 2026 ;
+; Assembler Status      ; Successful - Mon Feb  2 00:57:55 2026 ;
 ; Revision Name         ; pulpino_qsys_test                     ;
 ; Top-level Entity Name ; pulpino_qsys_test                     ;
 ; Family                ; Cyclone V                             ;
@@ -105,8 +105,8 @@ on the Quartus Prime software download page.
 +----------------+--------------------------------+
 ; Option         ; Setting                        ;
 +----------------+--------------------------------+
-; JTAG usercode  ; 0x01DD5D01                     ;
-; Checksum       ; 0x01DD5D01                     ;
+; JTAG usercode  ; 0x01DD731F                     ;
+; Checksum       ; 0x01DD731F                     ;
 +----------------+--------------------------------+
 
 
@@ -130,14 +130,14 @@ Info: Running Quartus Prime Assembler
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Sun Feb  1 17:45:28 2026
+    Info: Processing started: Mon Feb  2 00:57:47 2026
 Info: Command: quartus_asm pulpino_qsys_test -c pulpino_qsys_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 566 megabytes
-    Info: Processing ended: Sun Feb  1 17:45:39 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 578 megabytes
+    Info: Processing ended: Mon Feb  2 00:57:55 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
