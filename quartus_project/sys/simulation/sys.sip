@@ -1,5 +1,5 @@
 set_global_assignment -entity "sys" -library "lib_sys" -name IP_TOOL_NAME "Qsys"
-set_global_assignment -entity "sys" -library "lib_sys" -name IP_TOOL_VERSION "25.1"
+set_global_assignment -entity "sys" -library "lib_sys" -name IP_TOOL_VERSION "23.1"
 set_global_assignment -entity "sys" -library "lib_sys" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "lib_sys" -name SPD_FILE [file join $::quartus(sip_path) "../sys.spd"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "../../sys.qsys"]
@@ -86,12 +86,7 @@ set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(s
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_st_idle_inserter.v"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_st_pipeline_stage.sv"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_st_jtag_interface.sdc"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart.sv"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart_log_module.sv"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart_scfifo_r.sv"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart_scfifo_w.sv"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv"]
-set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv"]
+set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/sys_jtag_uart_0.v"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/sys_GPIO_EXTRA.v"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/sys_GPIO_0.v"]
 set_global_assignment -library "lib_sys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/sys_DEBUG.v"]

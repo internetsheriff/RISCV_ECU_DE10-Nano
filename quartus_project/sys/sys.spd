@@ -345,28 +345,8 @@
    type="VERILOG"
    library="master_0" />
  <file
-   path="simulation/submodules/altera_avalon_jtag_uart.sv"
-   type="SYSTEM_VERILOG"
-   library="jtag_uart_0" />
- <file
-   path="simulation/submodules/altera_avalon_jtag_uart_log_module.sv"
-   type="SYSTEM_VERILOG"
-   library="jtag_uart_0" />
- <file
-   path="simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv"
-   type="SYSTEM_VERILOG"
-   library="jtag_uart_0" />
- <file
-   path="simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv"
-   type="SYSTEM_VERILOG"
-   library="jtag_uart_0" />
- <file
-   path="simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv"
-   type="SYSTEM_VERILOG"
-   library="jtag_uart_0" />
- <file
-   path="simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv"
-   type="SYSTEM_VERILOG"
+   path="simulation/submodules/sys_jtag_uart_0.v"
+   type="VERILOG"
    library="jtag_uart_0" />
  <file
    path="simulation/submodules/sys_GPIO_EXTRA.v"

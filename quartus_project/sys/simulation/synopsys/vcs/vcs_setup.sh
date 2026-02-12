@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 25.1 1129 linux 2026.02.01.22:44:16
+# ACDS 23.1 993 linux 2026.02.12.10:04:56
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,12 +94,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 25.1 1129 linux 2026.02.01.22:44:16
+# ACDS 23.1 993 linux 2026.02.12.10:04:56
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="sys"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="/home/aline/altera_standard/25.1std/quartus/"
+QUARTUS_INSTALL_DIR="/home/aline/intelFPGA_lite/23.1std/quartus/"
 SKIP_FILE_COPY=0
 SKIP_SIM=0
 USER_DEFINED_ELAB_OPTIONS=""
@@ -224,12 +224,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/sys_pio_in.v \
   $QSYS_SIMDIR/submodules/sys_onchip_memory2_0.v \
   $QSYS_SIMDIR/submodules/sys_master_0.v \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_log_module.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_scfifo_r.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_scfifo_w.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv \
-  $QSYS_SIMDIR/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv \
+  $QSYS_SIMDIR/submodules/sys_jtag_uart_0.v \
   $QSYS_SIMDIR/submodules/sys_GPIO_EXTRA.v \
   $QSYS_SIMDIR/submodules/sys_GPIO_0.v \
   $QSYS_SIMDIR/submodules/sys_DEBUG.v \

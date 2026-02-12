@@ -1,24 +1,19 @@
-# system info sys on 2026.02.01.22:44:16
+# system info sys on 2026.02.12.10:04:55
 system_info:
 name,value
 DEVICE,5CSEBA6U23I7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1769996648
+GENERATION_ID,1770901488
 #
 #
-# Files generated for sys on 2026.02.01.22:44:16
+# Files generated for sys on 2026.02.12.10:04:55
 files:
 filepath,kind,attributes,module,is_top
 simulation/sys.v,VERILOG,,sys,true
 simulation/submodules/sys_DEBUG.v,VERILOG,,sys_DEBUG,false
 simulation/submodules/sys_GPIO_0.v,VERILOG,,sys_GPIO_0,false
 simulation/submodules/sys_GPIO_EXTRA.v,VERILOG,,sys_GPIO_EXTRA,false
-simulation/submodules/altera_avalon_jtag_uart.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
-simulation/submodules/altera_avalon_jtag_uart_log_module.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
-simulation/submodules/altera_avalon_jtag_uart_scfifo_r.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
-simulation/submodules/altera_avalon_jtag_uart_scfifo_w.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
-simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_r.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
-simulation/submodules/altera_avalon_jtag_uart_sim_scfifo_w.sv,SYSTEM_VERILOG,,altera_avalon_jtag_uart,false
+simulation/submodules/sys_jtag_uart_0.v,VERILOG,,sys_jtag_uart_0,false
 simulation/submodules/sys_master_0.v,VERILOG,,sys_master_0,false
 simulation/submodules/sys_onchip_memory2_0.hex,HEX,,sys_onchip_memory2_0,false
 simulation/submodules/sys_onchip_memory2_0.v,VERILOG,,sys_onchip_memory2_0,false
@@ -113,7 +108,7 @@ sys.DEBUG,sys_DEBUG
 sys.GPIO_0,sys_GPIO_0
 sys.GPIO_1,sys_GPIO_0
 sys.GPIO_EXTRA,sys_GPIO_EXTRA
-sys.jtag_uart_0,altera_avalon_jtag_uart
+sys.jtag_uart_0,sys_jtag_uart_0
 sys.master_0,sys_master_0
 sys.master_0.jtag_phy_embedded_in_jtag_master,altera_avalon_st_jtag_interface
 sys.master_0.timing_adt,sys_master_0_timing_adt

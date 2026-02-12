@@ -182,4 +182,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name EDA_TEST_BENCH_FILE rtl/tb/tbench.sv -section_id tbench -hdl_version SystemVerilog_2005
 
 # Quartus version
-set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
