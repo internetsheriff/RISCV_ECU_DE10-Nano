@@ -31,7 +31,15 @@ QSYS_SRC=$(Q_DIR)/$(QSYS_NAME).qsys
 QIP_FILES := $(wildcard $(Q_DIR)/*.qip)
 
 # Verilog sources
-VERILOG_SOURCES := $(shell find $(Q_DIR) -type f \( -name '*.v' -o -name '*.sv' \) -a ! -name "tbench.sv" )
+VERILOG_SOURCES := $(shell find $(Q_DIR) -type f \( -name '*.v' -o -name '*.sv' \) \
+	-a ! -name "tbench.sv" \
+	-a ! -path '$(Q_DIR)/db/*' \
+	-a ! -path '$(Q_DIR)/incremental_db/*' \
+	-a ! -path '$(Q_DIR)/output_files/*' \
+	-a ! -path '$(Q_DIR)/sys/*' \
+	-a ! -path '$(Q_DIR)/simulation/*' \
+	-a ! -path '$(Q_DIR)/rtl_work/*' \
+	-a ! -path '$(Q_DIR)/gate_work/*' )
 TESTBENCH=$(Q_DIR)/rtl/tb/tbench.sv
 
 # Other Quartus/Questa Related sources

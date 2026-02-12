@@ -78,6 +78,7 @@ $(RELOAD_STAMP): $(MEM_STAMP) $(DESIGN_COMPILE_STAMP)
 		QUARTUS_PROJECT_FILE=$$(find ./sys/synthesis/submodules/ -name "$(MEM_NAME)*.hex" | head -n 1) ; \
 		CACHED_FILE=$$(find ./db -name "$(MEM_NAME)*.hex" | head -n 1) ; \
 		SIM_FILE=$$(find ./sys/simulation/submodules/ -name "$(MEM_NAME)*.hex" | head -n 1) ; \
+		ROOT_FILE=./$(MEM_NAME).hex ; \
 		echo "Using $(MEM).hex to override memory files" ; \
 		echo "Overwriting $$CACHED_FILE" ; \
 		cat $(MEM).hex > $$CACHED_FILE ; \
@@ -85,6 +86,10 @@ $(RELOAD_STAMP): $(MEM_STAMP) $(DESIGN_COMPILE_STAMP)
 		cat $(MEM).hex > $$QUARTUS_PROJECT_FILE ; \
 		echo "Overwriting $$SIM_FILE" ; \
 		cat $(MEM).hex > $$SIM_FILE ; \
+		if [ -f "$$ROOT_FILE" ]; then \
+			echo "Overwriting $$ROOT_FILE" ; \
+			cat $(MEM).hex > $$ROOT_FILE ; \
+		fi ; \
 		echo "Removing stale .vo files to force regeneration" ; \
 		rm -f ./simulation/questa/*.vo ; \
 else \
@@ -95,7 +100,24 @@ else \
 		
 
 program-sof: $(END_SOF)
-	quartus_pgm -m JTAG -o "p;$(Q_DIR)/output_files/$(PROJECT_NAME).sof@2"
+	@if [ -f "$(Q_DIR)/output_files/$(PROJECT_NAME).sof" ]; then \
+		quartus_pgm -m JTAG -o "p;$(Q_DIR)/output_files/$(PROJECT_NAME).sof@2" ; \
+	elif [ -f "$(Q_DIR)/$(PROJECT_NAME).sof" ]; then \
+		quartus_pgm -m JTAG -o "p;$(Q_DIR)/$(PROJECT_NAME).sof@2" ; \
+	else \
+		echo "Error: $(PROJECT_NAME).sof not found in output_files or project root" ; \
+		exit 1 ; \
+	fi
+
+# Force one-shot program: rebuild SW, regenerate Qsys/Quartus, reload memory, program
+force-program: clean-program-files \
+	compile-source-code link-executable generate-binary generate-memory \
+	clean-hardware-stamps compile-qsys compile-quartus reload-memory program-sof-retry
+
+# Retry programming once to handle transient JTAG contention
+program-sof-retry:
+	@$(MAKE) program-sof || (echo "Retrying program-sof..." ; sleep 1 ; $(MAKE) program-sof)
+
 
 
 
@@ -169,4 +191,4 @@ clean-hardware-stamps:
 	timing-analysis compile-qsys reload-memory \
 	qsys-gui clean-qsys clean-hardware-stamps archive \
 	clean-simulation clean-qsys clean-synthesis \
-	list-devices clean-all-project clean-project
+	list-devices clean-all-project clean-project force-program program-sof-retry
