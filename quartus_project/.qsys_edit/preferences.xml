@@ -5,10 +5,10 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
-   <name preferredWidth="96" />
-   <description preferredWidth="30" />
-   <export preferredWidth="30" />
-   <inputclock preferredWidth="30" />
+   <name preferredWidth="166" />
+   <description preferredWidth="271" />
+   <export preferredWidth="150" />
+   <inputclock preferredWidth="65" />
   </columns>
  </systemtable>
  <library expandedCategories="Library,Project" />
