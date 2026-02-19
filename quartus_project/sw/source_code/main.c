@@ -13,6 +13,9 @@
 #define JTAG_UART_CONTROL     (JTAG + 0x4)
 #define JTAG_UART_WSPACE_MASK 0xFFFF0000u
 
+#define GPIO_0_DATA           (GPIO_0 + 0x0)
+#define GPIO_0_DIR            (GPIO_0 + 0x4)
+
 
 static void jtag_putc(char c){
 	while ((REG(JTAG_UART_CONTROL) & JTAG_UART_WSPACE_MASK) == 0u) { }
@@ -79,7 +82,7 @@ static void timer_start_period(uint32_t period_ticks){
 	REG(TIMER + 0x4) = 0x5u;
 }
 
-/*
+/* 
  * Debugging with LEDs
  *
  * Timer interrupt is configured for interrupt number 2.
@@ -87,9 +90,9 @@ static void timer_start_period(uint32_t period_ticks){
  * followed by a step number 0x0-X.
  *
  * Example: step 4 of snippet A is indicated by 0x0A4.
- */
+*/
 
-/*
+/* 
  * Setup 32TIMER for interrupts:
  * - Uses bit 3 in the CONTROL register (offset 0x04).
  * - Writes time to 16-bit regions PERIODL (0x08) and PERIODH (0x0C).
@@ -97,7 +100,7 @@ static void timer_start_period(uint32_t period_ticks){
  * - Activates counting (START=1) in single-shot mode (CONT=0) with ITO=1.
  *
  * Debugging LED format: 0x0A-
- */
+*/
 void setup_timer_interruption(void){
 	DEBUG(0x0A0);
 
@@ -125,14 +128,14 @@ void setup_timer_interruption(void){
 }
 
 
-/*
+/* 
  * Enable interrupts in the interrupt controller:
  * - Clears enabled interrupts.
  * - Sets IRP mask for interrupt 2 (timer).
  * - Sets mstatus to enable global interrupts.
  *
  * Debugging LED format: 0x0B-
- */
+*/
 void enable_irq(void){
 	DEBUG(0x0B0);
 
@@ -159,7 +162,7 @@ void enable_irq(void){
 /*
  * Interrupt handler for unexpected I/O interrupts (INT_NUM = 2).
  * Lights up all LEDs and clears interrupts.
- */
+*/
 void __attribute__((interrupt)) null_handler(void){
 	REG(ICP) = 0xFFFFFFFF;
 	set_leds_with_jtag(0x3FFu, "null");
@@ -169,7 +172,7 @@ void __attribute__((interrupt)) null_handler(void){
 /*
  * Interrupt handler for JTAG (INT_NUM = 0).
  * Clears the JTAG interrupt signal.
- */
+*/
 void __attribute__((interrupt)) jtag_interrupt_handler(void){
 	// Clear the interrupt.
 	REG(ICP) = (1 << 0);
@@ -179,7 +182,7 @@ void __attribute__((interrupt)) jtag_interrupt_handler(void){
 
 /*
  * Timer interrupt handler under test (INT_NUM = 2).
- */
+*/
 void __attribute__((interrupt)) interrupt_test_handler(void){
 	DEBUG(0x200);
 	
@@ -215,6 +218,16 @@ int main(int argc, char **argv){
 	// Configure timer for ~1s period (50 MHz clock).
 	timer_start_period(50000000u - 1u);
 
+	// Configure GPIO_0[1] and GPIO_0[5] as outputs to select adapter mode.
+	uint32_t gpio0_dir = REG(GPIO_0_DIR);
+	gpio0_dir |= (1u << 1) | (1u << 5);
+	REG(GPIO_0_DIR) = gpio0_dir;
+
+	// Enable adapter mode for both TDCs (GPIO_0[1] and GPIO_0[5] high).
+	uint32_t gpio0_data = REG(GPIO_0_DATA);
+	gpio0_data |= (1u << 1) | (1u << 5);
+	REG(GPIO_0_DATA) = gpio0_data;
+
 	// Infinite loop.
 	while (1){
 		timer_start_period(25000000u - 1u);
@@ -222,10 +235,13 @@ int main(int argc, char **argv){
 		REG(TIMER) = 0u;
 
 		uint32_t tdc_raw = REG(PIO_IN);
-		uint32_t tdc_value = (tdc_raw >> 2) & 0x7FFFu;
+		uint32_t tdc_value = (tdc_raw >> 2) & 0xFFFFu;
+		uint32_t daniel_value = (tdc_raw >> 18) & 0x3FFFu;
 
-		jtag_puts_slow("TDC: ");
+		jtag_puts_slow("TDC1: ");
 		jtag_put_dec(tdc_value);
+		jtag_puts_slow(" | TDC2: ");
+		jtag_put_dec(daniel_value);
 		jtag_puts_slow("\r\n");
 	}
 	return 0;
