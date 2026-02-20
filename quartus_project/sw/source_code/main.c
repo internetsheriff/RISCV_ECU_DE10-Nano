@@ -13,6 +13,7 @@
 #define JTAG_UART_CONTROL     (JTAG + 0x4)
 #define JTAG_UART_WSPACE_MASK 0xFFFF0000u
 
+#define GPIO_0_DATA           (GPIO_0 + 0x0)
 #define GPIO_0_DIR            (GPIO_0 + 0x4)
 
 
@@ -79,6 +80,31 @@ static void timer_start_period(uint32_t period_ticks){
 	REG(TIMER) = 0u;
 	// Start in continuous mode (START=1, CONT=1)
 	REG(TIMER + 0x4) = 0x5u;
+}
+
+static void gpio_0_set_input_bit0(void){
+	uint32_t dir = REG(GPIO_0_DIR);
+	dir &= ~0x1u;
+	REG(GPIO_0_DIR) = dir;
+}
+
+static uint32_t count_gpio_0_bit0_rising_edges(uint32_t gate_ticks){
+	uint32_t count = 0;
+	uint32_t prev = REG(GPIO_0_DATA) & 0x1u;
+
+	timer_start_period(gate_ticks);
+	while ((REG(TIMER) & 0x1u) == 0u) {
+		uint32_t cur = REG(GPIO_0_DATA) & 0x1u;
+		if (cur != prev) {
+			if (cur != 0u) {
+				count++;
+			}
+			prev = cur;
+		}
+	}
+	REG(TIMER) = 0u;
+
+	return count;
 }
 
 /* 
@@ -217,21 +243,16 @@ int main(int argc, char **argv){
 	// Configure timer for ~1s period (50 MHz clock).
 	timer_start_period(50000000u - 1u);
 
-	// Ensure GPIO_0 pins are inputs so external signals are not driven.
-	REG(GPIO_0_DIR) = 0u;
+	// Configure GPIO_0[0] as input for frequency counting.
+	gpio_0_set_input_bit0();
 
 	// Infinite loop.
 	while (1){
-		timer_start_period(25000000u - 1u);
-		while ((REG(TIMER) & 0x1u) == 0u) { }
-		REG(TIMER) = 0u;
-
-		uint32_t tdc_raw = REG(PIO_IN);
-		uint32_t tdc_value = (tdc_raw >> 2) & 0x7FFFu;
-
-		jtag_puts_slow("TDC: ");
-		jtag_put_dec(tdc_value);
-		jtag_puts_slow("\r\n");
+		uint32_t edges = count_gpio_0_bit0_rising_edges(50000000u - 1u);
+		jtag_puts_slow("GPIO_0[0] frequency: ");
+		jtag_put_dec(edges);
+		jtag_puts_slow(" Hz\r\n");
+		set_leds_with_jtag(edges & 0x3FFu, "freq");
 	}
 	return 0;
 }
