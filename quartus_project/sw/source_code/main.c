@@ -13,7 +13,6 @@
 #define JTAG_UART_CONTROL     (JTAG + 0x4)
 #define JTAG_UART_WSPACE_MASK 0xFFFF0000u
 
-#define GPIO_0_DATA           (GPIO_0 + 0x0)
 #define GPIO_0_DIR            (GPIO_0 + 0x4)
 
 
@@ -218,15 +217,8 @@ int main(int argc, char **argv){
 	// Configure timer for ~1s period (50 MHz clock).
 	timer_start_period(50000000u - 1u);
 
-	// Configure GPIO_0[1] and GPIO_0[5] as outputs to select adapter mode.
-	uint32_t gpio0_dir = REG(GPIO_0_DIR);
-	gpio0_dir |= (1u << 1) | (1u << 5);
-	REG(GPIO_0_DIR) = gpio0_dir;
-
-	// Enable adapter mode for both TDCs (GPIO_0[1] and GPIO_0[5] high).
-	uint32_t gpio0_data = REG(GPIO_0_DATA);
-	gpio0_data |= (1u << 1) | (1u << 5);
-	REG(GPIO_0_DATA) = gpio0_data;
+	// Ensure GPIO_0 pins are inputs so external signals are not driven.
+	REG(GPIO_0_DIR) = 0u;
 
 	// Infinite loop.
 	while (1){
@@ -235,13 +227,10 @@ int main(int argc, char **argv){
 		REG(TIMER) = 0u;
 
 		uint32_t tdc_raw = REG(PIO_IN);
-		uint32_t tdc_value = (tdc_raw >> 2) & 0xFFFFu;
-		uint32_t daniel_value = (tdc_raw >> 18) & 0x3FFFu;
+		uint32_t tdc_value = (tdc_raw >> 2) & 0x7FFFu;
 
-		jtag_puts_slow("TDC1: ");
+		jtag_puts_slow("TDC: ");
 		jtag_put_dec(tdc_value);
-		jtag_puts_slow(" | TDC2: ");
-		jtag_put_dec(daniel_value);
 		jtag_puts_slow("\r\n");
 	}
 	return 0;

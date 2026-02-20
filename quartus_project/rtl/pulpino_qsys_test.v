@@ -41,43 +41,20 @@ assign LED [7:0] = gpio_out [7:0];
 // PIO_IN setup - DE10-Nano has 2 keys, no switches
 wire [31:0] gpio_in;
 assign gpio_in [1:0] = KEY [1:0];
-assign gpio_in [17:2] = tdc_end;
-assign gpio_in [31:18] = daniel_packed;
+assign gpio_in [16:2] = tdc_end;
+assign gpio_in [31:17] = 15'b0;  // No switches, pad with zeros
 
 
 // Wire to debug only in waveforms
 wire [31:0] debug_wire;
 
-// TDC wiring (inputs from GPIO_0, output exposed on gpio_in[17:2])
-wire [15:0] tdc_end;
+// TDC wiring (inputs from GPIO_0, output exposed on gpio_in[16:2])
+wire [14:0] tdc_end;
 wire tdc_pulse_a;
 wire tdc_pulse_b;
 wire signal;
-wire tdc_adapter_pulse_a;
-wire tdc_adapter_pulse_b;
-wire tdc_use_adapter;
-
-// Daniel TDC wiring (outputs packed into gpio_in[31:18])
-wire [6:0] daniel_coarse;
-wire [6:0] daniel_fine;
-wire [13:0] daniel_packed;
-wire daniel_pulse_a;
-wire daniel_pulse_b;
-wire daniel_signal;
-wire daniel_adapter_pulse_a;
-wire daniel_adapter_pulse_b;
-wire daniel_use_adapter;
 
 assign signal = GPIO_0[0];
-assign tdc_use_adapter = GPIO_0[1];
-assign tdc_pulse_a = tdc_use_adapter ? tdc_adapter_pulse_a : GPIO_0[2];
-assign tdc_pulse_b = tdc_use_adapter ? tdc_adapter_pulse_b : GPIO_0[3];
-
-assign daniel_signal = GPIO_0[4];
-assign daniel_use_adapter = GPIO_0[5];
-assign daniel_pulse_a = daniel_use_adapter ? daniel_adapter_pulse_a : GPIO_0[6];
-assign daniel_pulse_b = daniel_use_adapter ? daniel_adapter_pulse_b : GPIO_0[7];
-assign daniel_packed = {daniel_coarse, daniel_fine};
 
 //============ Component Instantiation ============
 
@@ -96,33 +73,13 @@ tdc_linux128 u_tdc (
 	.end_soma(tdc_end)
 );
 
-// Adapter Instantiation (TDC1 square-wave -> alternating pulses)
+// Adapter Instantiation (square-wave -> alternating pulses)
 adapter AD (
 	.clock (CLOCK_50),
 	.reset_n (reset_n),
 	.signal (signal),
-	.pulse1 (tdc_adapter_pulse_a),
-	.pulse2 (tdc_adapter_pulse_b)
-);
-
-// Daniel TDC Instantiation
-daniel_tdc u_daniel_tdc (
-	.clk        (CLOCK_50),
-	.rst        (~reset_n),
-	.start      (daniel_pulse_a),
-	.stop       (daniel_pulse_b),
-	.coarse_out (daniel_coarse),
-	.fine_out   (daniel_fine),
-	.valid      ()
-);
-
-// Adapter Instantiation (TDC2 square-wave -> alternating pulses)
-adapter AD2 (
-	.clock (CLOCK_50),
-	.reset_n (reset_n),
-	.signal (daniel_signal),
-	.pulse1 (daniel_adapter_pulse_a),
-	.pulse2 (daniel_adapter_pulse_b)
+	.pulse1 (tdc_pulse_a),
+	.pulse2 (tdc_pulse_b)
 );
 
 

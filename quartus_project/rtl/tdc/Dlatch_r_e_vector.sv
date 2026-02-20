@@ -5,12 +5,12 @@
 // Coder      : Deepak Kumar Tala - wrmelo
 //-----------------------------------------------------
 module dlatch_r_e_vector (
-input  logic [15:0] data   , // Data Input
+input  logic [14:0] data   , // Data Input
 input  wire en     , // LatchInput enable
 input  wire reset  , // Reset input
 input  wire clk    , // CLK input
 output wire rst_sync, // reset sincrono
-output reg [15:0]  q        // Q output
+output reg [14:0]  q        // Q output
 );
 
 //-------------Code Starts Here---------
@@ -129,13 +129,6 @@ if (~reset) begin
   q[14] <= 1'b0;
 end else if (en) begin
   q[14] <= data[14];
-end
-
-always_ff @(posedge clk)
-if (~reset) begin
-  q[15] <= 1'b0;
-end else if (en) begin
-  q[15] <= data[15];
 end
 
 endmodule //End Of Module dlatch_reset

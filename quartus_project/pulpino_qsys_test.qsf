@@ -178,7 +178,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/single_pulse.sv
 set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/mux1to2.v 
 set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/commuter.v
 set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/sq_wave_adapter.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/alternative_tdc/daniel_tdc.v
 
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name SIP_FILE pll.sip
