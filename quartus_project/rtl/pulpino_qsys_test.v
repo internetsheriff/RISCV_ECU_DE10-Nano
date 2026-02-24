@@ -41,12 +41,27 @@ assign LED [7:0] = gpio_out [7:0];
 // PIO_IN setup - DE10-Nano has 2 keys, no switches
 wire [31:0] gpio_in;
 assign gpio_in [1:0] = KEY [1:0];
-assign gpio_in [31:2] = 30'b0;  // No switches, pad with zeros
+assign gpio_in [16:2] = tdc_end;
+assign gpio_in [31:17] = 15'b0;  // No switches, pad with zeros
 
 
 // Wire to debug only in waveforms
 wire [31:0] debug_wire;
 
+// TDC wiring (GPIO_0[2]=adapter input, GPIO_0[3]=adapter enable,
+// GPIO_0[4]=PulseA direct, GPIO_0[5]=PulseB direct)
+wire [14:0] tdc_end;
+wire tdc_pulse_a;
+wire tdc_pulse_b;
+wire tdc_adapter_pulse_a;
+wire tdc_adapter_pulse_b;
+wire tdc_adapter_en;
+wire tdc_adapter_signal;
+
+assign tdc_adapter_signal = GPIO_0[2];
+assign tdc_adapter_en = GPIO_0[3];
+assign tdc_pulse_a = tdc_adapter_en ? tdc_adapter_pulse_a : GPIO_0[4];
+assign tdc_pulse_b = tdc_adapter_en ? tdc_adapter_pulse_b : GPIO_0[5];
 //============ Component Instantiation ============
 
 // PLL Instantiation
@@ -54,6 +69,23 @@ pll clock_conversion(
 	.refclk   (CLOCK_50),
 	.rst      (~reset_n),
 	.outclk_0 (clk25)
+);
+
+// TDC Instantiation
+tdc_linux128 u_tdc (
+	.reset  (reset_n),
+	.PulseA (tdc_pulse_a),
+	.PulseB (tdc_pulse_b),
+	.end_soma(tdc_end)
+);
+
+// Adapter Instantiation (square-wave -> alternating pulses)
+adapter AD (
+	.clock (CLOCK_50),
+	.reset_n (reset_n),
+	.signal (tdc_adapter_signal),
+	.pulse1 (tdc_adapter_pulse_a),
+	.pulse2 (tdc_adapter_pulse_b)
 );
 
 // Core Instantiation
