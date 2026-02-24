@@ -233,9 +233,12 @@ int main(int argc, char **argv){
 
 		uint32_t tdc_raw = REG(PIO_IN);
 		uint32_t tdc_value = (tdc_raw >> 2) & 0x7FFFu;
+		uint32_t daniel_value = (tdc_raw >> 18) & 0x3FFFu;
 
-		jtag_puts_slow("TDC: ");
+		jtag_puts_slow("TDC1: ");
 		jtag_put_dec(tdc_value);
+		jtag_puts_slow(" | TDC2: ");
+		jtag_put_dec(daniel_value);
 		jtag_puts_slow("\r\n");
 	}
 	return 0;

@@ -42,7 +42,8 @@ assign LED [7:0] = gpio_out [7:0];
 wire [31:0] gpio_in;
 assign gpio_in [1:0] = KEY [1:0];
 assign gpio_in [16:2] = tdc_end;
-assign gpio_in [31:17] = 15'b0;  // No switches, pad with zeros
+assign gpio_in [31:18] = daniel_packed;
+assign gpio_in [17] = 1'b0;  // pad
 
 
 // Wire to debug only in waveforms
@@ -58,10 +59,28 @@ wire tdc_adapter_pulse_b;
 wire tdc_adapter_en;
 wire tdc_adapter_signal;
 
+// Daniel TDC wiring (GPIO_0[6]=adapter input, GPIO_0[7]=adapter enable,
+// GPIO_0[8]=start direct, GPIO_0[9]=stop direct)
+wire [6:0] daniel_coarse;
+wire [6:0] daniel_fine;
+wire [13:0] daniel_packed;
+wire daniel_start;
+wire daniel_stop;
+wire daniel_adapter_start;
+wire daniel_adapter_stop;
+wire daniel_adapter_en;
+wire daniel_adapter_signal;
+
 assign tdc_adapter_signal = GPIO_0[2];
 assign tdc_adapter_en = GPIO_0[3];
 assign tdc_pulse_a = tdc_adapter_en ? tdc_adapter_pulse_a : GPIO_0[4];
 assign tdc_pulse_b = tdc_adapter_en ? tdc_adapter_pulse_b : GPIO_0[5];
+
+assign daniel_adapter_signal = GPIO_0[6];
+assign daniel_adapter_en = GPIO_0[7];
+assign daniel_start = daniel_adapter_en ? daniel_adapter_start : GPIO_0[8];
+assign daniel_stop = daniel_adapter_en ? daniel_adapter_stop : GPIO_0[9];
+assign daniel_packed = {daniel_coarse, daniel_fine};
 //============ Component Instantiation ============
 
 // PLL Instantiation
@@ -86,6 +105,26 @@ adapter AD (
 	.signal (tdc_adapter_signal),
 	.pulse1 (tdc_adapter_pulse_a),
 	.pulse2 (tdc_adapter_pulse_b)
+);
+
+// Daniel TDC Instantiation
+daniel_tdc u_daniel_tdc (
+	.clk        (CLOCK_50),
+	.rst        (~reset_n),
+	.start      (daniel_start),
+	.stop       (daniel_stop),
+	.coarse_out (daniel_coarse),
+	.fine_out   (daniel_fine),
+	.valid      ()
+);
+
+// Adapter Instantiation (square-wave -> alternating pulses)
+adapter AD2 (
+	.clock (CLOCK_50),
+	.reset_n (reset_n),
+	.signal (daniel_adapter_signal),
+	.pulse1 (daniel_adapter_start),
+	.pulse2 (daniel_adapter_stop)
 );
 
 // Core Instantiation
