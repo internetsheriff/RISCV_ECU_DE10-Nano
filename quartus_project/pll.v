@@ -8,14 +8,17 @@
 module pll (
 		input  wire  refclk,   //  refclk.clk
 		input  wire  rst,      //   reset.reset
-		output wire  outclk_0  // outclk0.clk
+		output wire  outclk_0, // outclk0.clk (25 MHz)
+		output wire  outclk_1, // outclk1.clk (200 MHz)
+		output wire  locked    // PLL locked
 	);
 
 	pll_0002 pll_inst (
 		.refclk   (refclk),   //  refclk.clk
 		.rst      (rst),      //   reset.reset
-		.outclk_0 (outclk_0), // outclk0.clk
-		.locked   ()          // (terminated)
+		.outclk_0 (outclk_0), // outclk0.clk (25 MHz)
+		.outclk_1 (outclk_1), // outclk1.clk (200 MHz)
+		.locked   (locked)    // PLL locked
 	);
 
 endmodule

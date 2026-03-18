@@ -25,6 +25,8 @@ assign clock_gating = 1'b0;
 //============ Synchronization ==============
 
 wire clk25;
+wire clk_200;
+wire pll_locked;
 wire jtag_reset;
 wire reset_n;
 
@@ -83,11 +85,13 @@ assign daniel_stop = daniel_adapter_en ? daniel_adapter_stop : GPIO_0[9];
 assign daniel_packed = {daniel_coarse, daniel_fine};
 //============ Component Instantiation ============
 
-// PLL Instantiation
+// PLL Instantiation (25 MHz for Pulpino, 200 MHz for DDS/TDC)
 pll clock_conversion(
 	.refclk   (CLOCK_50),
 	.rst      (~reset_n),
-	.outclk_0 (clk25)
+	.outclk_0 (clk25),
+	.outclk_1 (clk_200),
+	.locked   (pll_locked)
 );
 
 // TDC Instantiation

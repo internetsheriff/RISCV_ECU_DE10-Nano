@@ -195,3 +195,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE rtl/tb/tbench.sv -section_id tbe
 
 # Quartus version
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+# LVDS on GPIO_0[0] disabled - conflicts with bidir PIO usage by sys
+# set_instance_assignment -name IO_STANDARD LVDS_E_3R -to GPIO_0[0]
+# set_location_assignment PIN_W12 -to "GPIO_0[0](n)"

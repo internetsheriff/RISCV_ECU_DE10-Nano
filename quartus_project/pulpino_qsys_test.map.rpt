@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pulpino_qsys_test
-Mon Feb 23 21:39:24 2026
+Tue Mar 17 23:11:27 2026
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -266,10 +266,11 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 258. Port Connectivity Checks: "tdc_linux128:u_tdc|single_pulse:b2v_inst7"
 259. Port Connectivity Checks: "tdc_linux128:u_tdc|adder_128:b2v_inst5"
 260. Port Connectivity Checks: "tdc_linux128:u_tdc|osc3dlatch:b2v_inst2"
-261. Post-Synthesis Netlist Statistics for Top Partition
-262. Elapsed Time Per Partition
-263. Analysis & Synthesis Messages
-264. Analysis & Synthesis Suppressed Messages
+261. Port Connectivity Checks: "pll:clock_conversion"
+262. Post-Synthesis Netlist Statistics for Top Partition
+263. Elapsed Time Per Partition
+264. Analysis & Synthesis Messages
+265. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -296,7 +297,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 23 21:39:24 2026          ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 17 23:11:27 2026          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; pulpino_qsys_test                              ;
 ; Top-level Entity Name           ; pulpino_qsys_test                              ;
@@ -416,12 +417,12 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -3032,7 +3033,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; fractional_vco_multiplier            ; false                  ; String                                      ;
 ; pll_type                             ; General                ; String                                      ;
 ; pll_subtype                          ; General                ; String                                      ;
-; number_of_clocks                     ; 1                      ; Signed Integer                              ;
+; number_of_clocks                     ; 2                      ; Signed Integer                              ;
 ; operation_mode                       ; direct                 ; String                                      ;
 ; deserialization_factor               ; 4                      ; Signed Integer                              ;
 ; data_rate                            ; 0                      ; Signed Integer                              ;
@@ -3040,7 +3041,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; output_clock_frequency0              ; 25.000000 MHz          ; String                                      ;
 ; phase_shift0                         ; 0 ps                   ; String                                      ;
 ; duty_cycle0                          ; 50                     ; Signed Integer                              ;
-; output_clock_frequency1              ; 0 MHz                  ; String                                      ;
+; output_clock_frequency1              ; 200.000000 MHz         ; String                                      ;
 ; phase_shift1                         ; 0 ps                   ; String                                      ;
 ; duty_cycle1                          ; 50                     ; Signed Integer                              ;
 ; output_clock_frequency2              ; 0 MHz                  ; String                                      ;
@@ -7209,6 +7210,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-----------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pll:clock_conversion"                                                                   ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; outclk_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; locked   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -7262,7 +7273,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:34     ;
+; Top            ; 00:00:39     ;
 +----------------+--------------+
 
 
@@ -7272,52 +7283,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Feb 23 21:38:07 2026
+    Info: Processing started: Tue Mar 17 23:09:51 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pulpino_qsys_test -c pulpino_qsys_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12248): Elaborating Platform Designer system entity "sys.qsys"
-Info (12250): 2026.02.23.21:38:18 Progress: Loading quartus_project/sys.qsys
-Info (12250): 2026.02.23.21:38:18 Progress: Reading input file
-Info (12250): 2026.02.23.21:38:18 Progress: Adding DEBUG [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:07 Progress: Loading quartus_project/sys.qsys
+Info (12250): 2026.03.17.23:10:07 Progress: Reading input file
+Info (12250): 2026.03.17.23:10:07 Progress: Adding DEBUG [altera_avalon_pio 25.1]
 Warning (12251): DEBUG: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module DEBUG
-Info (12250): 2026.02.23.21:38:18 Progress: Adding GPIO_0 [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:07 Progress: Parameterizing module DEBUG
+Info (12250): 2026.03.17.23:10:07 Progress: Adding GPIO_0 [altera_avalon_pio 25.1]
 Warning (12251): GPIO_0: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module GPIO_0
-Info (12250): 2026.02.23.21:38:18 Progress: Adding GPIO_1 [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:07 Progress: Parameterizing module GPIO_0
+Info (12250): 2026.03.17.23:10:07 Progress: Adding GPIO_1 [altera_avalon_pio 25.1]
 Warning (12251): GPIO_1: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module GPIO_1
-Info (12250): 2026.02.23.21:38:18 Progress: Adding GPIO_EXTRA [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:07 Progress: Parameterizing module GPIO_1
+Info (12250): 2026.03.17.23:10:07 Progress: Adding GPIO_EXTRA [altera_avalon_pio 25.1]
 Warning (12251): GPIO_EXTRA: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module GPIO_EXTRA
-Info (12250): 2026.02.23.21:38:18 Progress: Adding clk_0 [clock_source 25.1]
+Info (12250): 2026.03.17.23:10:07 Progress: Parameterizing module GPIO_EXTRA
+Info (12250): 2026.03.17.23:10:07 Progress: Adding clk_0 [clock_source 25.1]
 Warning (12251): Clk_0: Used clock_source 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module clk_0
-Info (12250): 2026.02.23.21:38:18 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module clk_0
+Info (12250): 2026.03.17.23:10:08 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 25.1]
 Warning (12251): Jtag_uart_0: Used altera_avalon_jtag_uart 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2026.02.23.21:38:18 Progress: Adding master_0 [altera_jtag_avalon_master 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2026.03.17.23:10:08 Progress: Adding master_0 [altera_jtag_avalon_master 25.1]
 Warning (12251): Master_0: Used altera_jtag_avalon_master 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module master_0
-Info (12250): 2026.02.23.21:38:18 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module master_0
+Info (12250): 2026.03.17.23:10:08 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 25.1]
 Warning (12251): Onchip_memory2_0: Used altera_avalon_onchip_memory2 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2026.02.23.21:38:18 Progress: Adding pio_in [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2026.03.17.23:10:08 Progress: Adding pio_in [altera_avalon_pio 25.1]
 Warning (12251): Pio_in: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module pio_in
-Info (12250): 2026.02.23.21:38:18 Progress: Adding pio_out [altera_avalon_pio 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module pio_in
+Info (12250): 2026.03.17.23:10:08 Progress: Adding pio_out [altera_avalon_pio 25.1]
 Warning (12251): Pio_out: Used altera_avalon_pio 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:18 Progress: Parameterizing module pio_out
-Info (12250): 2026.02.23.21:38:18 Progress: Adding pulpino_0 [pulpino 1.0]
-Info (12250): 2026.02.23.21:38:19 Progress: Parameterizing module pulpino_0
-Info (12250): 2026.02.23.21:38:19 Progress: Adding timer_0 [altera_avalon_timer 25.1]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module pio_out
+Info (12250): 2026.03.17.23:10:08 Progress: Adding pulpino_0 [pulpino 1.0]
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module pulpino_0
+Info (12250): 2026.03.17.23:10:08 Progress: Adding timer_0 [altera_avalon_timer 25.1]
 Warning (12251): Timer_0: Used altera_avalon_timer 23.1 (instead of 25.1)
-Info (12250): 2026.02.23.21:38:19 Progress: Parameterizing module timer_0
-Info (12250): 2026.02.23.21:38:19 Progress: Building connections
-Info (12250): 2026.02.23.21:38:19 Progress: Parameterizing connections
-Info (12250): 2026.02.23.21:38:19 Progress: Validating
-Info (12250): 2026.02.23.21:38:19 Progress: Done reading input file
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing module timer_0
+Info (12250): 2026.03.17.23:10:08 Progress: Building connections
+Info (12250): 2026.03.17.23:10:08 Progress: Parameterizing connections
+Info (12250): 2026.03.17.23:10:08 Progress: Validating
+Info (12250): 2026.03.17.23:10:09 Progress: Done reading input file
 Info (12250): Sys.GPIO_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info (12250): Sys.GPIO_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info (12250): Sys.GPIO_EXTRA: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
@@ -7329,37 +7340,37 @@ Info (12250): Interconnect is inserted between master pulpino_0.avalon_master_in
 Info (12250): Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
 Info (12250): Interconnect is inserted between master pulpino_0.avalon_master_instr and slave onchip_memory2_0.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Info (12250): DEBUG: Starting RTL generation for module 'sys_DEBUG'
-Info (12250): DEBUG:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_DEBUG --dir=/tmp/alt0508_432400999931076723.dir/0002_DEBUG_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0002_DEBUG_gen//sys_DEBUG_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): DEBUG:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_DEBUG --dir=/tmp/alt0530_7918532400474233573.dir/0002_DEBUG_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0002_DEBUG_gen//sys_DEBUG_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): DEBUG: Done RTL generation for module 'sys_DEBUG'
 Info (12250): DEBUG: "sys" instantiated altera_avalon_pio "DEBUG"
 Info (12250): GPIO_0: Starting RTL generation for module 'sys_GPIO_0'
-Info (12250): GPIO_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_0 --dir=/tmp/alt0508_432400999931076723.dir/0003_GPIO_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0003_GPIO_0_gen//sys_GPIO_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): GPIO_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_0 --dir=/tmp/alt0530_7918532400474233573.dir/0003_GPIO_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0003_GPIO_0_gen//sys_GPIO_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): GPIO_0: Done RTL generation for module 'sys_GPIO_0'
 Info (12250): GPIO_0: "sys" instantiated altera_avalon_pio "GPIO_0"
 Info (12250): GPIO_EXTRA: Starting RTL generation for module 'sys_GPIO_EXTRA'
-Info (12250): GPIO_EXTRA:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_EXTRA --dir=/tmp/alt0508_432400999931076723.dir/0004_GPIO_EXTRA_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0004_GPIO_EXTRA_gen//sys_GPIO_EXTRA_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): GPIO_EXTRA:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_GPIO_EXTRA --dir=/tmp/alt0530_7918532400474233573.dir/0004_GPIO_EXTRA_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0004_GPIO_EXTRA_gen//sys_GPIO_EXTRA_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): GPIO_EXTRA: Done RTL generation for module 'sys_GPIO_EXTRA'
 Info (12250): GPIO_EXTRA: "sys" instantiated altera_avalon_pio "GPIO_EXTRA"
 Info (12250): Jtag_uart_0: Starting RTL generation for module 'sys_jtag_uart_0'
-Info (12250): Jtag_uart_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=sys_jtag_uart_0 --dir=/tmp/alt0508_432400999931076723.dir/0005_jtag_uart_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0005_jtag_uart_0_gen//sys_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=sys_jtag_uart_0 --dir=/tmp/alt0530_7918532400474233573.dir/0005_jtag_uart_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0005_jtag_uart_0_gen//sys_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Jtag_uart_0: Done RTL generation for module 'sys_jtag_uart_0'
 Info (12250): Jtag_uart_0: "sys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info (12250): Master_0: "sys" instantiated altera_jtag_avalon_master "master_0"
 Info (12250): Onchip_memory2_0: Starting RTL generation for module 'sys_onchip_memory2_0'
-Info (12250): Onchip_memory2_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_onchip_memory2_0 --dir=/tmp/alt0508_432400999931076723.dir/0006_onchip_memory2_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0006_onchip_memory2_0_gen//sys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_onchip_memory2_0 --dir=/tmp/alt0530_7918532400474233573.dir/0006_onchip_memory2_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0006_onchip_memory2_0_gen//sys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Onchip_memory2_0: Done RTL generation for module 'sys_onchip_memory2_0'
 Info (12250): Onchip_memory2_0: "sys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info (12250): Pio_in: Starting RTL generation for module 'sys_pio_in'
-Info (12250): Pio_in:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_in --dir=/tmp/alt0508_432400999931076723.dir/0007_pio_in_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0007_pio_in_gen//sys_pio_in_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_in:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_in --dir=/tmp/alt0530_7918532400474233573.dir/0007_pio_in_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0007_pio_in_gen//sys_pio_in_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_in: Done RTL generation for module 'sys_pio_in'
 Info (12250): Pio_in: "sys" instantiated altera_avalon_pio "pio_in"
 Info (12250): Pio_out: Starting RTL generation for module 'sys_pio_out'
-Info (12250): Pio_out:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_out --dir=/tmp/alt0508_432400999931076723.dir/0008_pio_out_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0008_pio_out_gen//sys_pio_out_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_out:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64/perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=sys_pio_out --dir=/tmp/alt0530_7918532400474233573.dir/0008_pio_out_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0008_pio_out_gen//sys_pio_out_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_out: Done RTL generation for module 'sys_pio_out'
 Info (12250): Pio_out: "sys" instantiated altera_avalon_pio "pio_out"
 Info (12250): Pulpino_0: "sys" instantiated pulpino "pulpino_0"
 Info (12250): Timer_0: Starting RTL generation for module 'sys_timer_0'
-Info (12250): Timer_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64//perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64//perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=sys_timer_0 --dir=/tmp/alt0508_432400999931076723.dir/0010_timer_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0508_432400999931076723.dir/0010_timer_0_gen//sys_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Timer_0:   Generation command is [exec /home/aline/intelFPGA_lite/23.1std/quartus/linux64//perl/bin/perl -I /home/aline/intelFPGA_lite/23.1std/quartus/linux64//perl/lib -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin/europa -I /home/aline/intelFPGA_lite/23.1std/quartus/sopc_builder/bin -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/aline/intelFPGA_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=sys_timer_0 --dir=/tmp/alt0530_7918532400474233573.dir/0010_timer_0_gen/ --quartus_dir=/home/aline/intelFPGA_lite/23.1std/quartus --verilog --config=/tmp/alt0530_7918532400474233573.dir/0010_timer_0_gen//sys_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Timer_0: Done RTL generation for module 'sys_timer_0'
 Info (12250): Timer_0: "sys" instantiated altera_avalon_timer "timer_0"
 Info (12250): Mm_interconnect_0: "sys" instantiated altera_mm_interconnect "mm_interconnect_0"
@@ -7920,20 +7931,20 @@ Info (12021): Found 0 design units, including 0 entities, in source file db/ip/s
 Info (15248): File "/home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sys/sys.v" is a duplicate of already analyzed file "/home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file db/ip/sys/sys.v
 Info (12127): Elaborating entity "pulpino_qsys_test" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:clock_conversion" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 91
-Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:clock_conversion|pll_0002:pll_inst" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll.v Line: 19
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 85
+Info (12128): Elaborating entity "pll" for hierarchy "pll:clock_conversion" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 95
+Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:clock_conversion|pll_0002:pll_inst" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll.v Line: 22
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 88
+Info (12133): Instantiated megafunction "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/pll/pll_0002.v Line: 88
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
-    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "number_of_clocks" = "2"
     Info (12134): Parameter "output_clock_frequency0" = "25.000000 MHz"
     Info (12134): Parameter "phase_shift0" = "0 ps"
     Info (12134): Parameter "duty_cycle0" = "50"
-    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "output_clock_frequency1" = "200.000000 MHz"
     Info (12134): Parameter "phase_shift1" = "0 ps"
     Info (12134): Parameter "duty_cycle1" = "50"
     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
@@ -7986,7 +7997,7 @@ Info (12133): Instantiated megafunction "pll:clock_conversion|pll_0002:pll_inst|
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "tdc_linux128" for hierarchy "tdc_linux128:u_tdc" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 99
+Info (12128): Elaborating entity "tdc_linux128" for hierarchy "tdc_linux128:u_tdc" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 103
 Info (12128): Elaborating entity "delta_medida" for hierarchy "tdc_linux128:u_tdc|delta_medida:b2v_inst" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/tdc_linux128.v Line: 304
 Info (12128): Elaborating entity "osc3dlatch" for hierarchy "tdc_linux128:u_tdc|osc3dlatch:b2v_inst2" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/tdc_linux128.v Line: 311
 Info (10041): Inferred latch for "q3" at osc3dlatch.sv(42) File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/osc3dlatch.sv Line: 42
@@ -7997,11 +8008,11 @@ Info (12128): Elaborating entity "counter128" for hierarchy "tdc_linux128:u_tdc|
 Info (12128): Elaborating entity "adder_128" for hierarchy "tdc_linux128:u_tdc|adder_128:b2v_inst5" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/tdc_linux128.v Line: 837
 Info (12128): Elaborating entity "dlatch_r_e_vector" for hierarchy "tdc_linux128:u_tdc|dlatch_r_e_vector:b2v_inst6" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/tdc_linux128.v Line: 846
 Info (12128): Elaborating entity "single_pulse" for hierarchy "tdc_linux128:u_tdc|single_pulse:b2v_inst7" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/tdc_linux128.v Line: 855
-Info (12128): Elaborating entity "adapter" for hierarchy "adapter:AD" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 108
+Info (12128): Elaborating entity "adapter" for hierarchy "adapter:AD" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 112
 Info (12128): Elaborating entity "commuter" for hierarchy "adapter:AD|commuter:COM" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/adapter/sq_wave_adapter.v Line: 17
 Info (12128): Elaborating entity "mux1to2" for hierarchy "adapter:AD|mux1to2:MUX" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/adapter/sq_wave_adapter.v Line: 24
-Info (12128): Elaborating entity "daniel_tdc" for hierarchy "daniel_tdc:u_daniel_tdc" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 119
-Info (12128): Elaborating entity "sys" for hierarchy "sys:u0" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 145
+Info (12128): Elaborating entity "daniel_tdc" for hierarchy "daniel_tdc:u_daniel_tdc" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 123
+Info (12128): Elaborating entity "sys" for hierarchy "sys:u0" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/pulpino_qsys_test.v Line: 149
 Info (12128): Elaborating entity "sys_DEBUG" for hierarchy "sys:u0|sys_DEBUG:debug" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v Line: 127
 Info (12128): Elaborating entity "sys_GPIO_0" for hierarchy "sys:u0|sys_GPIO_0:gpio_0" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v Line: 139
 Info (12128): Elaborating entity "sys_GPIO_EXTRA" for hierarchy "sys:u0|sys_GPIO_EXTRA:gpio_extra" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v Line: 163
@@ -8210,7 +8221,7 @@ Info (12128): Elaborating entity "sys_mm_interconnect_1_avalon_st_adapter_error_
 Info (12128): Elaborating entity "sys_irq_mapper" for hierarchy "sys:u0|sys_irq_mapper:irq_mapper" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v Line: 400
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "sys:u0|altera_reset_controller:rst_controller" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/sys/synthesis/sys.v Line: 463
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2026.02.23.21:38:38 Progress: Loading sld1d1a74eb/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2026.03.17.23:10:33 Progress: Loading sld1d1a74eb/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -8233,6 +8244,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sld1d1a74eb/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld1d1a74eb/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sld1d1a74eb/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "pll:clock_conversion|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[1]" File: /home/aline/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "sys:u0|sys_master_0:master_0|altera_avalon_sc_fifo:fifo|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -8543,11 +8557,11 @@ Info (21057): Implemented 10374 device resources after synthesis - the final res
     Info (21064): Implemented 40 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 155 warnings
-    Info: Peak virtual memory: 702 megabytes
-    Info: Processing ended: Mon Feb 23 21:39:24 2026
-    Info: Elapsed time: 00:01:17
-    Info: Total CPU time (on all processors): 00:02:04
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 158 warnings
+    Info: Peak virtual memory: 701 megabytes
+    Info: Processing ended: Tue Mar 17 23:11:27 2026
+    Info: Elapsed time: 00:01:36
+    Info: Total CPU time (on all processors): 00:02:40
 
 
 +------------------------------------------+
