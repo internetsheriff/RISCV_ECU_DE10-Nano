@@ -32,7 +32,7 @@ wire reset_n;
 
 assign reset_n = KEY[0] & ~jtag_reset;
 
-
+wire dds_out;
 
 //============ I/O Configuration ============
 
@@ -83,6 +83,10 @@ assign daniel_adapter_en = GPIO_0[7];
 assign daniel_start = daniel_adapter_en ? daniel_adapter_start : GPIO_0[8];
 assign daniel_stop = daniel_adapter_en ? daniel_adapter_stop : GPIO_0[9];
 assign daniel_packed = {daniel_coarse, daniel_fine};
+
+
+assign GPIO_0[10] = dds_out;  // DDS
+
 //============ Component Instantiation ============
 
 // PLL Instantiation (25 MHz for Pulpino, 200 MHz for DDS/TDC)
@@ -129,6 +133,14 @@ adapter AD2 (
 	.signal (daniel_adapter_signal),
 	.pulse1 (daniel_adapter_start),
 	.pulse2 (daniel_adapter_stop)
+);
+
+// DDS Instantiation
+dds_top u_dds (
+    .clk_200 (clk_200),
+    .rst     (~reset_n),
+    .start   (/* trigger: KEY[1] ou sinal do PIO */),
+    .dds_out (dds_out)
 );
 
 // Core Instantiation
