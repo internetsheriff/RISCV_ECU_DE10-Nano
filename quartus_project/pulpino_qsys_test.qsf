@@ -189,6 +189,14 @@ set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_core.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_sweep.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_top.sv
 
+# RX Frontend (SAW)
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/sync_2ff.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/edge_detect.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/tx_reference.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/phase_capture.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/event_fifo.v
+set_global_assignment -name VERILOG_FILE rtl/rx_frontend/rx_frontend_top.v
+
 # Partition assignments
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

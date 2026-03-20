@@ -25,7 +25,8 @@ module dds_sweep #(
 
     output reg  [PHASE_WIDTH-1:0]   ftw_out,
     output reg                      valid,
-    output reg                      done
+    output reg                      done,
+    output reg  signed [7:0]        step_index_out   // for RX: associates event with sweep frequency
 );
 
     reg signed [7:0] step_index;
@@ -40,16 +41,18 @@ module dds_sweep #(
 
     always_ff @(posedge clk) begin
         if (rst) begin
-            state      <= IDLE;
-            step_index <= -$signed((num_steps-1)>>1);
-            dwell_cnt  <= '0;
-            valid      <= 1'b0;
-            done       <= 1'b0;
+            state           <= IDLE;
+            step_index      <= -$signed((num_steps-1)>>1);
+            step_index_out  <= -$signed((num_steps-1)>>1);
+            dwell_cnt       <= '0;
+            valid           <= 1'b0;
+            done            <= 1'b0;
         end else begin
             case (state)
 
                 IDLE: begin
-                    done <= 1'b0;
+                    done            <= 1'b0;
+                    step_index_out  <= step_index;
                     if (start) begin
                         step_index <= -$signed(((num_steps-1)>>1));
                         state      <= RUN;
@@ -57,8 +60,9 @@ module dds_sweep #(
                 end
 
                 RUN: begin
-                    ftw_out   <= ftw_center + $signed(step_index) * ftw_step;
-                    valid     <= 1'b1;
+                    ftw_out        <= ftw_center + $signed(step_index) * ftw_step;
+                    step_index_out <= step_index;
+                    valid          <= 1'b1;
                     dwell_cnt <= dwell_cnt + 1;
 
                     if (dwell_cnt >= dwell_cycles) begin

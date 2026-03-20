@@ -138,3 +138,4 @@ Warning (10268): Verilog HDL information at counter128.sv(928): always construct
 Warning (10268): Verilog HDL information at counter128.sv(935): always construct contains both blocking and non-blocking assignments File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tdc/counter128.sv Line: 935
 Warning (10273): Verilog HDL warning at tbench.sv(49): extended using "x" or "z" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tb/tbench.sv Line: 49
 Warning (10273): Verilog HDL warning at tbench.sv(50): extended using "x" or "z" File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/tb/tbench.sv Line: 50
+Info (10281): Verilog HDL Declaration information at dds_sweep.sv(28): object "done" differs only in case from object "DONE" in the same scope File: /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/rtl/dds/dds_sweep.sv Line: 28

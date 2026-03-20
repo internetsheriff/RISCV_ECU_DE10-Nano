@@ -13,7 +13,10 @@ module dds_top (
     input  wire rst,
     input  wire start,
 
-    output wire dds_out
+    output wire         dds_out,
+    output wire [31:0]  phase,           // for RX phase capture
+    output wire signed [7:0] step_index, // for RX event association
+    output wire         dds_valid         // for RX/TX reference
 );
 
     wire [31:0] ftw;
@@ -30,16 +33,17 @@ module dds_top (
         .PHASE_WIDTH (32),
         .STEP_WIDTH  (32)
     ) u_sweep (
-        .clk         (clk_200),
-        .rst         (rst),
-        .start       (start),
-        .ftw_center  (FTW_CENTER),
-        .ftw_step    (FTW_STEP),
-        .num_steps   (6'd41),
-        .dwell_cycles(32'd20_000),   // 100 µs per step @ 200 MHz
-        .ftw_out     (ftw),
-        .valid       (valid),
-        .done        (done)
+        .clk            (clk_200),
+        .rst            (rst),
+        .start          (start),
+        .ftw_center     (FTW_CENTER),
+        .ftw_step       (FTW_STEP),
+        .num_steps      (6'd41),
+        .dwell_cycles   (32'd20_000),   // 100 µs per step @ 200 MHz
+        .ftw_out        (ftw),
+        .valid          (valid),
+        .done           (done),
+        .step_index_out (step_index)
     );
 
     dds_core #(
@@ -50,7 +54,9 @@ module dds_top (
         .ftw     (ftw),
         .enable  (valid),
         .dds_out (dds_out),
-        .phase   ()
+        .phase   (phase)
     );
+
+    assign dds_valid = valid;
 
 endmodule

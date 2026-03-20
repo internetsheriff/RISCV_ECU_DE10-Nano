@@ -33,6 +33,14 @@ wire reset_n;
 assign reset_n = KEY[0] & ~jtag_reset;
 
 wire dds_out;
+wire [31:0] dds_phase;
+wire signed [7:0] dds_step;
+wire dds_valid;
+wire rx_pulse_a, rx_pulse_b;
+wire [63:0] rx_fifo_data;
+wire rx_fifo_valid, rx_fifo_empty, rx_fifo_full;
+
+parameter RX_SAW_MODE = 1'b1;  // 1=SAW (rx_frontend), 0=manual (GPIO/adapter)
 
 //============ I/O Configuration ============
 
@@ -75,8 +83,8 @@ wire daniel_adapter_signal;
 
 assign tdc_adapter_signal = GPIO_0[2];
 assign tdc_adapter_en = GPIO_0[3];
-assign tdc_pulse_a = tdc_adapter_en ? tdc_adapter_pulse_a : GPIO_0[4];
-assign tdc_pulse_b = tdc_adapter_en ? tdc_adapter_pulse_b : GPIO_0[5];
+assign tdc_pulse_a = RX_SAW_MODE ? rx_pulse_a : (tdc_adapter_en ? tdc_adapter_pulse_a : GPIO_0[4]);
+assign tdc_pulse_b = RX_SAW_MODE ? rx_pulse_b : (tdc_adapter_en ? tdc_adapter_pulse_b : GPIO_0[5]);
 
 assign daniel_adapter_signal = GPIO_0[6];
 assign daniel_adapter_en = GPIO_0[7];
@@ -135,12 +143,34 @@ adapter AD2 (
 	.pulse2 (daniel_adapter_stop)
 );
 
-// DDS Instantiation
+// DDS Instantiation (phase, step, valid for RX frontend)
 dds_top u_dds (
-    .clk_200 (clk_200),
-    .rst     (~reset_n),
-    .start   (/* trigger: KEY[1] ou sinal do PIO */),
-    .dds_out (dds_out)
+    .clk_200    (clk_200),
+    .rst        (~reset_n),
+    .start      (KEY[1]),
+    .dds_out    (dds_out),
+    .phase      (dds_phase),
+    .step_index (dds_step),
+    .dds_valid  (dds_valid)
+);
+
+// RX Frontend (SAW interrogation)
+rx_frontend_top u_rx (
+    .clk           (clk_200),
+    .rst           (~reset_n),
+    .rx_in         (GPIO_0[11]),
+    .dds_phase     (dds_phase),
+    .dds_step      (dds_step),
+    .dds_out       (dds_out),
+    .dds_valid     (dds_valid),
+    .tdc_result    (tdc_end),
+    .pulse_a       (rx_pulse_a),
+    .pulse_b       (rx_pulse_b),
+    .fifo_rd_en    (1'b0),
+    .fifo_data_out (rx_fifo_data),
+    .fifo_valid    (rx_fifo_valid),
+    .fifo_empty    (rx_fifo_empty),
+    .fifo_full     (rx_fifo_full)
 );
 
 // Core Instantiation
