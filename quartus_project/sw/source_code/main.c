@@ -1,38 +1,104 @@
-#include "acess_structs.h"
-#include "debbuging.h"
+/*
+ * Pulpino SAW Interrogator - TDC readout via UART
+ *
+ * TDC linearity test: 5 pontos (40/80/120/160/200 ns), 5 s cada, média por segundo.
+ * Usa clock 25 MHz: 1/2/3/4/5 ciclos = 40/80/120/160/200 ns.
+ *
+ * PIO_IN mapping:
+ *   [1:0]    = KEY[1:0]
+ *   [16:2]   = tdc_end (15-bit ToF)
+ *   [17]     = saw_done
+ *   [27:18]  = rx_edge_count (edges in 2 µs, diagnostic)
+ *
+ * PIO_OUT (software):
+ *   [7:0]   = LED[7:0]
+ *   [14:8]  = tap_sel (0..127, phase shifter tap)
+ *   [15]    = phase_test_en (1 = 1.6 MHz + delay line)
+ *   [16]    = tdc_cal_mode (1 = PulseA/PulseB por ciclos 25 MHz)
+ *   [19:17] = delay_sel (cal: 0-4; min: 0-5)
+ *   [20]    = tdc_min_mode (1 = limites mínimos @ 160 MHz)
+ *   [21]    = tdc_phase_mode (1 = defasagem ~60 ps–6 ns, tap em [14:8])
+ *
+ * Scope debug: PulseA/PulseB em GPIO_1[34]/[35] (JP7)
+ */
+
 #include "mem_map.h"
+
+/* Stub handlers required by crt0.boot.S vector table (unused in polling mode) */
+void __attribute__((interrupt)) jtag_interrupt_handler(void) { }
+void __attribute__((interrupt)) null_handler(void) { }
+void __attribute__((interrupt)) interrupt_test_handler(void) { }
 #include <stdint.h>
 
-// Cast address to uint32 register.
-#define REG(addr)            (*((volatile uint32_t*) (addr)))
+#define REG(addr)  (*((volatile uint32_t*)(addr)))
 
-// Memory region used as a counting variable.
-#define COUNT                (REG(0x02000000))
+#define JTAG_UART_DATA     (JTAG + 0x0)
+#define JTAG_UART_CONTROL  (JTAG + 0x4)
+#define JTAG_UART_WSPACE_MASK  0xFFFF0000u
 
-#define JTAG_UART_DATA        (JTAG + 0x0)
-#define JTAG_UART_CONTROL     (JTAG + 0x4)
-#define JTAG_UART_WSPACE_MASK 0xFFFF0000u
+#define TDC_BIT_SHIFT  2
+#define TDC_BIT_MASK   0x7FFFu   /* 15 bits */
+#define RX_EDGE_SHIFT  18
+#define RX_EDGE_MASK   0x3FFu    /* 10 bits */
 
-#define GPIO_0_DATA           (GPIO_0 + 0x0)
-#define GPIO_0_DIR            (GPIO_0 + 0x4)
+#define PHASE_TEST_EN   (1u << 15)   /* PIO_OUT bit 15 */
+#define TDC_CAL_MODE    (1u << 16)   /* PIO_OUT bit 16 */
+#define TDC_MIN_MODE    (1u << 20)   /* PIO_OUT bit 20 */
+#define TDC_PHASE_MODE  (1u << 21)   /* PIO_OUT bit 21 */
+#define TAP_SHIFT       8            /* PIO_OUT[14:8] = tap_sel */
+#define DELAY_SEL_SHIFT 17           /* PIO_OUT[19:17] */
+#define TAP_MAX         127u
 
+static uint32_t pio_out_shadow;  /* shadow para merge com LED */
 
-static void jtag_putc(char c){
+/* Preserva LED, tap, phase_test; zera [20:16] antes de aplicar modo TDC (evita bit 20 preso). */
+#define PIO_KEEP_MASK  ((0xFFu) | (TAP_MAX << TAP_SHIFT) | PHASE_TEST_EN)
+
+/** Define delay_sel e enable tdc_cal (25 MHz). Desliga tdc_min (bit 20). */
+static void set_tdc_cal_delay(uint32_t delay_sel)
+{
+	pio_out_shadow = (pio_out_shadow & PIO_KEEP_MASK) | TDC_CAL_MODE |
+		((delay_sel & 7u) << DELAY_SEL_SHIFT);
+	REG(PIO_OUT) = pio_out_shadow;
+}
+
+/** Define delay_sel e enable tdc_min (160 MHz). Desliga tdc_cal (bit 16). */
+static void set_tdc_min_delay(uint32_t delay_sel)
+{
+	pio_out_shadow = (pio_out_shadow & PIO_KEEP_MASK) | TDC_MIN_MODE |
+		((delay_sel & 7u) << DELAY_SEL_SHIFT);
+	REG(PIO_OUT) = pio_out_shadow;
+}
+
+/** Modo fase: tap 0..127 na carry fina (~50 ps/estágio). Desliga cal/min. */
+static void set_tdc_phase_fine_tap(uint32_t tap)
+{
+	pio_out_shadow = (pio_out_shadow & ((0xFFu) | PHASE_TEST_EN)) |
+		((tap & 127u) << TAP_SHIFT) | TDC_PHASE_MODE;
+	REG(PIO_OUT) = pio_out_shadow;
+}
+
+/* Pulpino sys clock: 25 MHz. 25M cycles = 1 second. */
+#define CYCLES_PER_SEC  (25000000u)
+
+static void jtag_putc(char c)
+{
 	while ((REG(JTAG_UART_CONTROL) & JTAG_UART_WSPACE_MASK) == 0u) { }
 	REG(JTAG_UART_DATA) = (uint32_t)c;
 }
 
-// Slow write: small delay between characters to avoid FIFO overruns.
-static void jtag_puts_slow(const char *s){
+static void jtag_puts_slow(const char *s)
+{
 	while (*s) {
 		jtag_putc(*s++);
 		for (volatile uint32_t i = 0; i < 2000u; ++i) { }
 	}
 }
 
-static void jtag_put_dec(uint32_t value){
-	char buf[11];
-	int idx = 10;
+static void jtag_put_dec(uint32_t value)
+{
+	char buf[12];
+	int idx = 11;
 	buf[idx--] = '\0';
 
 	if (value == 0u) {
@@ -48,198 +114,144 @@ static void jtag_put_dec(uint32_t value){
 	jtag_puts_slow(&buf[idx + 1]);
 }
 
-static void jtag_put_hex32(uint32_t value){
-	static const char hex_digits[] = "0123456789ABCDEF";
-	for (int shift = 28; shift >= 0; shift -= 4) {
-		uint32_t nibble = (value >> shift) & 0xFu;
-		jtag_putc(hex_digits[nibble]);
-	}
-}
-
-static void set_leds_with_jtag(uint32_t value, const char *tag){
-	static uint32_t last_led = 0xFFFFFFFFu;
-
-	REG(PIO_OUT) = value;
-	if (value != last_led) {
-		last_led = value;
-		jtag_puts_slow("LED ");
-		jtag_puts_slow(tag);
-		jtag_puts_slow(": 0x");
-		jtag_put_hex32(value);
-		jtag_puts_slow("\r\n");
-	}
-}
-
-static void timer_start_period(uint32_t period_ticks){
-	// Stop timer
+static void timer_start_period(uint32_t period_ticks)
+{
 	REG(TIMER + 0x4) = 0u;
-	// Load period
 	REG(TIMER + 0x8) = (uint32_t)(period_ticks & 0xFFFFu);
 	REG(TIMER + 0xC) = (uint32_t)((period_ticks >> 16) & 0xFFFFu);
-	// Clear timeout status
 	REG(TIMER) = 0u;
-	// Start in continuous mode (START=1, CONT=1)
-	REG(TIMER + 0x4) = 0x5u;
+	REG(TIMER + 0x4) = 0x5u;  /* START=1, CONT=1 */
 }
 
-static void gpio_0_set_all_inputs(void){
-	REG(GPIO_0_DIR) = 0u;
+static void gpio_0_set_all_inputs(void)
+{
+	REG(GPIO_0 + 0x4) = 0u;
 }
 
-/* 
- * Debugging with LEDs
- *
- * Timer interrupt is configured for interrupt number 2.
- * Snippets of code are identified by their main number 0x0X,
- * followed by a step number 0x0-X.
- *
- * Example: step 4 of snippet A is indicated by 0x0A4.
-*/
+/* Linearidade: 40, 80, 120, 160, 200 ns (1..5 ciclos @ 25 MHz) */
+static const uint32_t CAL_DELAY_NS[5] = {40u, 80u, 120u, 160u, 200u};
 
-/* 
- * Setup 32TIMER for interrupts:
- * - Uses bit 3 in the CONTROL register (offset 0x04).
- * - Writes time to 16-bit regions PERIODL (0x08) and PERIODH (0x0C).
- * - Clears the first bit of the CONTROL register to clean interrupts.
- * - Activates counting (START=1) in single-shot mode (CONT=0) with ITO=1.
- *
- * Debugging LED format: 0x0A-
-*/
-void setup_timer_interruption(void){
-	DEBUG(0x0A0);
+/* Limites mínimos: ~6.25, 12.5, 18.75, 25, 31.25, 37.5 ns (1..6 ciclos @ 160 MHz) */
+static const uint32_t MIN_DELAY_NS[6] = {6u, 13u, 19u, 25u, 31u, 38u};  /* rounded */
 
-	// Stop counter
-	REG(TIMER+0x4) |= (1<<3);
-	DEBUG(0x0A1);
+/* Fase 160 MHz: 10 pontos ~60 ps a 6 ns (tap linear na carry fina ~50 ps/estágio) */
+static const uint8_t  PHASE_TAP[10]  = {1u, 14u, 28u, 41u, 54u, 67u, 80u, 94u, 107u, 120u};
+static const uint32_t PHASE_PS_NOM[10] = {60u, 720u, 1380u, 2040u, 2700u, 3360u, 4020u, 4680u, 5340u, 6000u};
 
+static void run_phase_interval(uint32_t tap, uint32_t nom_ps, uint32_t sec,
+	uint64_t tdc_sum, uint32_t tdc_count, uint32_t rx_sum)
+{
+	uint32_t tdc_avg = (tdc_count > 0u) ? (uint32_t)(tdc_sum / (uint64_t)tdc_count) : 0u;
+	uint32_t rx_avg  = (tdc_count > 0u) ? (rx_sum / tdc_count) : 0u;
 
-	// Set time period (very slow so LEDs are visible).
-	uint32_t period_full = MS2CYCLES(1000000);
-	REG(TIMER+0x8) =  (  period_full & 0xFFFF );
-	REG(TIMER+0xC) =  (( period_full >> 16 ) & 0xFFFF );
-	DEBUG(0x0A2);
-
-
-	// Clear old timer interrupts.
-	REG(TIMER) &= ~(1);
-	DEBUG(0x0A3);
-
-
-	// Activate counting in repeating mode: (START=1; CONT=1; ITO=1) => 5.
-	uint32_t cleaned_value = REG(TIMER+0x4) & (~ 5);
-	REG(TIMER+0x4) = cleaned_value | 5;
-	DEBUG(0x0A4);
+	jtag_puts_slow("phase tap=");
+	jtag_put_dec(tap);
+	jtag_puts_slow(" nom_ps=");
+	jtag_put_dec(nom_ps);
+	jtag_puts_slow(" sec=");
+	jtag_put_dec(sec);
+	jtag_puts_slow(" TDC=");
+	jtag_put_dec(tdc_avg);
+	jtag_puts_slow(" RXe=");
+	jtag_put_dec(rx_avg);
+	jtag_puts_slow("\r\n");
 }
 
+static void run_test_interval(uint32_t delay_ns, uint32_t sec,
+	uint64_t tdc_sum, uint32_t tdc_count, uint32_t rx_sum)
+{
+	uint32_t tdc_avg = (tdc_count > 0u) ? (uint32_t)(tdc_sum / (uint64_t)tdc_count) : 0u;
+	uint32_t rx_avg  = (tdc_count > 0u) ? (rx_sum / tdc_count) : 0u;
 
-/* 
- * Enable interrupts in the interrupt controller:
- * - Clears enabled interrupts.
- * - Sets IRP mask for interrupt 2 (timer).
- * - Sets mstatus to enable global interrupts.
- *
- * Debugging LED format: 0x0B-
-*/
-void enable_irq(void){
-	DEBUG(0x0B0);
-
-
-	// Clear enabled interrupts.
-	REG(ICP) = 0xFFFFFFFF;
-	DEBUG(0x0B1);
-
-
-	// Set IRP mask for interrupt 2 (timer).
-	REG(IRP)     = (1<< 2);
-	DEBUG(0x0B2);
-
-
-	// Set mstatus to 8.
-	__asm__(
-		"li x6, 0x00000008\n"
-		"csrs mstatus, x6"
-	);
-	DEBUG(0x0B3);
+	jtag_puts_slow("delay_ns: ");
+	jtag_put_dec(delay_ns);
+	jtag_puts_slow(" sec: ");
+	jtag_put_dec(sec);
+	jtag_puts_slow(" TDC: ");
+	jtag_put_dec(tdc_avg);
+	jtag_puts_slow(" RXe: ");
+	jtag_put_dec(rx_avg);
+	jtag_puts_slow("\r\n");
 }
 
-
-/*
- * Interrupt handler for unexpected I/O interrupts (INT_NUM = 2).
- * Lights up all LEDs and clears interrupts.
-*/
-void __attribute__((interrupt)) null_handler(void){
-	REG(ICP) = 0xFFFFFFFF;
-	set_leds_with_jtag(0x3FFu, "null");
-}
-
-
-/*
- * Interrupt handler for JTAG (INT_NUM = 0).
- * Clears the JTAG interrupt signal.
-*/
-void __attribute__((interrupt)) jtag_interrupt_handler(void){
-	// Clear the interrupt.
-	REG(ICP) = (1 << 0);
-}
-
-
-
-/*
- * Timer interrupt handler under test (INT_NUM = 2).
-*/
-void __attribute__((interrupt)) interrupt_test_handler(void){
-	DEBUG(0x200);
-	
-	// Clear interrupt on the interrupt controller.
-	REG(ICP) = (1 << 2);
-	REG(TIMER+4) |= ~1;
-	DEBUG(0x201);
-	
-	// Clear timeout bit in the timer.
-	REG(TIMER) |= ~1;
-	DEBUG(0x202);
-
-	set_leds_with_jtag(COUNT, "timer");
-	if(COUNT==7){
-		COUNT = 0;
-	} else {
-		COUNT ++;
-	}
-}
-
-
-int main(int argc, char **argv){
-	// Setup process.
-	COUNT = 0;
-
-	DEBUG(0x0D0);
-	// Disable interrupts and timer for a clear image-check pattern.
-	REG(IRP) = 0x0;
-
-	DEBUG(0x0D1);
-	DEBUG(0x0FF);
-	
-	// Configure timer for ~1s period (50 MHz clock).
-	timer_start_period(50000000u - 1u);
-
-	// Ensure GPIO_0 is input so external signals are not driven.
+int main(void)
+{
 	gpio_0_set_all_inputs();
+	pio_out_shadow = 0u;
 
-	// Infinite loop.
-	while (1){
-		timer_start_period(25000000u - 1u);
-		while ((REG(TIMER) & 0x1u) == 0u) { }
-		REG(TIMER) = 0u;
+	uint32_t sec;
 
-		uint32_t tdc_raw = REG(PIO_IN);
-		uint32_t tdc_value = (tdc_raw >> 2) & 0x7FFFu;
-		uint32_t daniel_value = (tdc_raw >> 18) & 0x3FFFu;
+	while (1) {
+		/* --- Defasagem sub-ns @ 160 MHz (10 pontos ~60 ps a 6 ns), 5 s cada --- */
+		jtag_puts_slow("=== TDC PHASE 160MHz (60ps-6ns) ===\r\n");
+		uint32_t ph_idx;
+		for (ph_idx = 0u; ph_idx < 10u; ph_idx++) {
+			set_tdc_phase_fine_tap((uint32_t)PHASE_TAP[ph_idx]);
+			for (sec = 1u; sec <= 5u; sec++) {
+				timer_start_period(CYCLES_PER_SEC - 1u);
+				uint64_t tdc_sum = 0u;
+				uint32_t tdc_count = 0u;
+				uint32_t rx_sum = 0u;
 
-		jtag_puts_slow("TDC1: ");
-		jtag_put_dec(tdc_value);
-		jtag_puts_slow(" | TDC2: ");
-		jtag_put_dec(daniel_value);
-		jtag_puts_slow("\r\n");
+				while ((REG(TIMER) & 0x1u) == 0u) {
+					uint32_t pio_in = REG(PIO_IN);
+					tdc_sum  += (uint64_t)((pio_in >> TDC_BIT_SHIFT) & TDC_BIT_MASK);
+					rx_sum   += (uint32_t)((pio_in >> RX_EDGE_SHIFT) & RX_EDGE_MASK);
+					tdc_count++;
+				}
+				REG(TIMER) = 0u;
+				run_phase_interval((uint32_t)PHASE_TAP[ph_idx], PHASE_PS_NOM[ph_idx],
+					sec, tdc_sum, tdc_count, rx_sum);
+			}
+		}
+
+		/* --- Teste de limites mínimos: 6 pontos, 5 s cada --- */
+		jtag_puts_slow("=== TDC MIN (6.25-37.5 ns) ===\r\n");
+		uint32_t min_idx;
+		for (min_idx = 0u; min_idx < 6u; min_idx++) {
+			uint32_t delay_ns = MIN_DELAY_NS[min_idx];
+			set_tdc_min_delay(min_idx);
+
+			for (sec = 1u; sec <= 5u; sec++) {
+				timer_start_period(CYCLES_PER_SEC - 1u);
+				uint64_t tdc_sum = 0u;
+				uint32_t tdc_count = 0u;
+				uint32_t rx_sum = 0u;
+
+				while ((REG(TIMER) & 0x1u) == 0u) {
+					uint32_t pio_in = REG(PIO_IN);
+					tdc_sum  += (uint64_t)((pio_in >> TDC_BIT_SHIFT) & TDC_BIT_MASK);
+					rx_sum   += (uint32_t)((pio_in >> RX_EDGE_SHIFT) & RX_EDGE_MASK);
+					tdc_count++;
+				}
+				REG(TIMER) = 0u;
+				run_test_interval(delay_ns, sec, tdc_sum, tdc_count, rx_sum);
+			}
+		}
+
+		/* --- Teste de linearidade: 5 pontos, 5 s cada --- */
+		jtag_puts_slow("=== TDC LIN (40-200 ns) ===\r\n");
+		uint32_t cal_idx;
+		for (cal_idx = 0u; cal_idx < 5u; cal_idx++) {
+			uint32_t delay_ns = CAL_DELAY_NS[cal_idx];
+			set_tdc_cal_delay(cal_idx);
+
+			for (sec = 1u; sec <= 5u; sec++) {
+				timer_start_period(CYCLES_PER_SEC - 1u);
+				uint64_t tdc_sum = 0u;
+				uint32_t tdc_count = 0u;
+				uint32_t rx_sum = 0u;
+
+				while ((REG(TIMER) & 0x1u) == 0u) {
+					uint32_t pio_in = REG(PIO_IN);
+					tdc_sum  += (uint64_t)((pio_in >> TDC_BIT_SHIFT) & TDC_BIT_MASK);
+					rx_sum   += (uint32_t)((pio_in >> RX_EDGE_SHIFT) & RX_EDGE_MASK);
+					tdc_count++;
+				}
+				REG(TIMER) = 0u;
+				run_test_interval(delay_ns, sec, tdc_sum, tdc_count, rx_sum);
+			}
+		}
 	}
 	return 0;
 }

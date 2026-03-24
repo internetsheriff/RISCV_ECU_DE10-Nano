@@ -5,10 +5,10 @@
 | Parâmetro            | Valor      | Descrição                          |
 |---------------------|-----------|------------------------------------|
 | Clock do sistema    | 200 MHz   | Proveniente do PLL (CLOCK_50 × 4)  |
-| Frequência central  | 60 MHz    | Centro do sweep para SAW            |
-| Span                | ±100 kHz  | Variação em torno do centro         |
-| Passo de frequência | 5 kHz     | Resolução do sweep                  |
-| Largura do acumulador | 32 bits | Resolução de fase                   |
+| Frequência central  | 60 MHz    | Centro do sweep para SAW           |
+| Span                | ±100 kHz  | Variação em torno do centro        |
+| Passo de frequência | 5 kHz     | Resolução do sweep                 |
+| Largura do acumulador | 32 bits | Resolução de fase                  |
 | Número de passos    | 41        | De 59,9 MHz a 60,1 MHz em 5 kHz    |
 
 ---

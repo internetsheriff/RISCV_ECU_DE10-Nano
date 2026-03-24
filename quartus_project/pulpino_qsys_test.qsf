@@ -80,44 +80,41 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
 
 # GPIO_1[0] through GPIO_1[35]
 # Example (replace with actual pins):
-set_location_assignment PIN_V12  -to GPIO_0[0]
-set_location_assignment PIN_E8   -to GPIO_0[1]
-set_location_assignment PIN_W12  -to GPIO_0[2]
-set_location_assignment PIN_D11  -to GPIO_0[3]
-set_location_assignment PIN_D8   -to GPIO_0[4]
-set_location_assignment PIN_AH13 -to GPIO_0[5]
-set_location_assignment PIN_AF7  -to GPIO_0[6]
-set_location_assignment PIN_AH14 -to GPIO_0[7]
-set_location_assignment PIN_AF4  -to GPIO_0[8]
-set_location_assignment PIN_AH3  -to GPIO_0[9]
-set_location_assignment PIN_AD5  -to GPIO_0[10]
-set_location_assignment PIN_AG14 -to GPIO_0[11]
+# GPIO_0[0] (PIN_V12) and GPIO_0[2] (PIN_W12) reassigned to saw_tx_p LVDS pair below
+# GPIO_0[5] (AH13) used by saw_rx_p
+set_location_assignment PIN_E8 -to GPIO_0[1]
+set_location_assignment PIN_D11 -to GPIO_0[3]
+set_location_assignment PIN_D8 -to GPIO_0[4]
+set_location_assignment PIN_AF7 -to GPIO_0[6]
+set_location_assignment PIN_AF4 -to GPIO_0[8]
+set_location_assignment PIN_AH3 -to GPIO_0[9]
+set_location_assignment PIN_AD5 -to GPIO_0[10]
 set_location_assignment PIN_AE23 -to GPIO_0[12]
-set_location_assignment PIN_AE6  -to GPIO_0[13]
+set_location_assignment PIN_AE6 -to GPIO_0[13]
 set_location_assignment PIN_AD23 -to GPIO_0[14]
 set_location_assignment PIN_AE24 -to GPIO_0[15]
-set_location_assignment PIN_D12  -to GPIO_0[16]
+set_location_assignment PIN_D12 -to GPIO_0[16]
 set_location_assignment PIN_AD20 -to GPIO_0[17]
-set_location_assignment PIN_C12  -to GPIO_0[18]
+set_location_assignment PIN_C12 -to GPIO_0[18]
 set_location_assignment PIN_AD17 -to GPIO_0[19]
 set_location_assignment PIN_AC23 -to GPIO_0[20]
 set_location_assignment PIN_AC22 -to GPIO_0[21]
-set_location_assignment PIN_Y19  -to GPIO_0[22]
+set_location_assignment PIN_Y19 -to GPIO_0[22]
 set_location_assignment PIN_AB23 -to GPIO_0[23]
 set_location_assignment PIN_AA19 -to GPIO_0[24]
-set_location_assignment PIN_W11  -to GPIO_0[25]
+set_location_assignment PIN_W11 -to GPIO_0[25]
 set_location_assignment PIN_AA18 -to GPIO_0[26]
-set_location_assignment PIN_W14  -to GPIO_0[27]
-set_location_assignment PIN_Y18  -to GPIO_0[28]
-set_location_assignment PIN_Y17  -to GPIO_0[29]
+set_location_assignment PIN_W14 -to GPIO_0[27]
+set_location_assignment PIN_Y18 -to GPIO_0[28]
+set_location_assignment PIN_Y17 -to GPIO_0[29]
 set_location_assignment PIN_AB25 -to GPIO_0[30]
 set_location_assignment PIN_AB26 -to GPIO_0[31]
-set_location_assignment PIN_Y11  -to GPIO_0[32]
+set_location_assignment PIN_Y11 -to GPIO_0[32]
 set_location_assignment PIN_AA26 -to GPIO_0[33]
 set_location_assignment PIN_AA13 -to GPIO_0[34]
 set_location_assignment PIN_AA11 -to GPIO_0[35]
 
-set_location_assignment PIN_Y15  -to GPIO_1[0]
+set_location_assignment PIN_Y15 -to GPIO_1[0]
 set_location_assignment PIN_AC24 -to GPIO_1[1]
 set_location_assignment PIN_AA15 -to GPIO_1[2]
 set_location_assignment PIN_AD26 -to GPIO_1[3]
@@ -158,6 +155,29 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[*]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[*]
 
 # =======================================================
+# SAW I/O Ports (DE10-Nano GPIO JP6, bank 4A = 3.3V VCCIO)
+# NOTE: LVDS requires 2.5V VCCIO; bank 4A is 3.3V. True LVDS not
+# supported on these pins. Use single-ended LVTTL; add external
+# comparator for small signals (e.g. 700 mV pp).
+# =======================================================
+# TX: PIN_V12  (JP6 pin 1)  – 160 MHz
+# RX: PIN_AH13 (JP6 pin 6) – single-ended, ~2V threshold
+# =======================================================
+
+# TX output (160 MHz, single-ended LVTTL)
+set_location_assignment PIN_V12 -to saw_tx_p
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to saw_tx_p
+
+# RX input (single-ended LVTTL; Vih ~2V – need external comparator for 700mV pp)
+set_location_assignment PIN_AH13 -to saw_rx_p
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to saw_rx_p
+
+# GPIO_0 (AG14 free for GPIO_0[11])
+set_location_assignment PIN_W12 -to GPIO_0[2]
+set_location_assignment PIN_AG14 -to GPIO_0[11]
+set_location_assignment PIN_AH14 -to GPIO_0[7]
+
+# =======================================================
 # File Assignments
 # =======================================================
 # These tell Quartus which source files to include
@@ -167,6 +187,10 @@ set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
 set_global_assignment -name SIP_FILE sys/simulation/sys.sip
 set_global_assignment -name VERILOG_FILE rtl/pulpino_qsys_test.v
 set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_linux128.v
+set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_cal_pulse_gen.v
+set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_min_pulse_gen.v
+set_global_assignment -name VERILOG_FILE rtl/saw/phase_shifter_fine.v
+set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_phase_delay_test.v
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/adder_128.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/counter128.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/delta_medida.sv
@@ -174,28 +198,21 @@ set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/Dlatch_r_e_vector.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/mphase128.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/osc3dlatch.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/single_pulse.sv
-set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/mux1to2.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/commuter.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/adapter/sq_wave_adapter.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/alternative_tdc/daniel_tdc.v
+# adapter and alternative TDC removed (not used in SAW experiment)
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name SIP_FILE pll.sip
 set_global_assignment -name QIP_FILE sw/mem_init/meminit.qip
 set_global_assignment -name SIP_FILE sw/mem_init/meminit.sip
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tb/tbench.sv
 
-# DDS (SAW interrogation)
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_core.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_sweep.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/dds/dds_top.sv
-
-# RX Frontend (SAW)
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/sync_2ff.v
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/edge_detect.v
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/tx_reference.v
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/phase_capture.v
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/event_fifo.v
-set_global_assignment -name VERILOG_FILE rtl/rx_frontend/rx_frontend_top.v
+# SAW Acquisition FSM
+set_global_assignment -name VERILOG_FILE rtl/saw/saw_acquisition_fsm.v
+# Continuous phase TDC triggers (edge-per-edge mode)
+set_global_assignment -name VERILOG_FILE rtl/saw/continuous_phase_triggers.v
+# RX edge counter (diagnostic: count edges in 2 µs window)
+set_global_assignment -name VERILOG_FILE rtl/saw/rx_edge_counter.v
+# Phase shifter (carry-chain delay for TDC self-test)
+set_global_assignment -name VERILOG_FILE rtl/saw/phase_shifter_carry.v
 
 # Partition assignments
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -208,6 +225,4 @@ set_global_assignment -name EDA_TEST_BENCH_FILE rtl/tb/tbench.sv -section_id tbe
 
 # Quartus version
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
-# LVDS on GPIO_0[0] disabled - conflicts with bidir PIO usage by sys
-# set_instance_assignment -name IO_STANDARD LVDS_E_3R -to GPIO_0[0]
-# set_location_assignment PIN_W12 -to "GPIO_0[0](n)"
+# GPIO_0[11] at AG14: 3.3-V LVTTL (bank 4A; LVDS not supported – see RX_LVDS_NOTE.md)
