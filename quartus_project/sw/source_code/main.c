@@ -241,14 +241,14 @@ int main(int argc, char **argv){
 	DEBUG(0x0FF);
 	
 	// Configure timer for ~1s period (50 MHz clock).
-	timer_start_period(50000000u - 1u);
+	timer_start_period(25000000u - 1u);
 
 	// Configure GPIO_0[0] as input for frequency counting.
 	gpio_0_set_input_bit0();
 
 	// Infinite loop.
 	while (1){
-		uint32_t edges = count_gpio_0_bit0_rising_edges(50000000u - 1u);
+		uint32_t edges = count_gpio_0_bit0_rising_edges(25000000u - 1u);
 		jtag_puts_slow("GPIO_0[0] frequency: ");
 		jtag_put_dec(edges);
 		jtag_puts_slow(" Hz\r\n");
