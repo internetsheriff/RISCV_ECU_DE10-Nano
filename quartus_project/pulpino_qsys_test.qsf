@@ -154,23 +154,8 @@ set_location_assignment PIN_AE17 -to GPIO_1[35]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[*]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[*]
 
-# =======================================================
-# SAW I/O Ports (DE10-Nano GPIO JP6, bank 4A = 3.3V VCCIO)
-# NOTE: LVDS requires 2.5V VCCIO; bank 4A is 3.3V. True LVDS not
-# supported on these pins. Use single-ended LVTTL; add external
-# comparator for small signals (e.g. 700 mV pp).
-# =======================================================
-# TX: PIN_V12  (JP6 pin 1)  – 160 MHz
-# RX: PIN_AH13 (JP6 pin 6) – single-ended, ~2V threshold
-# =======================================================
-
-# TX output (160 MHz, single-ended LVTTL)
-set_location_assignment PIN_V12 -to saw_tx_p
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to saw_tx_p
-
-# RX input (single-ended LVTTL; Vih ~2V – need external comparator for 700mV pp)
-set_location_assignment PIN_AH13 -to saw_rx_p
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to saw_rx_p
+# GPIO_0[0] (JP1) — neste projeto o sinal TDC é em [1]; [0] permanece no header
+set_location_assignment PIN_V12 -to GPIO_0[0]
 
 # GPIO_0 (AG14 free for GPIO_0[11])
 set_location_assignment PIN_W12 -to GPIO_0[2]
@@ -187,10 +172,6 @@ set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
 set_global_assignment -name SIP_FILE sys/simulation/sys.sip
 set_global_assignment -name VERILOG_FILE rtl/pulpino_qsys_test.v
 set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_linux128.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_cal_pulse_gen.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_min_pulse_gen.v
-set_global_assignment -name VERILOG_FILE rtl/saw/phase_shifter_fine.v
-set_global_assignment -name VERILOG_FILE rtl/tdc/tdc_phase_delay_test.v
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/adder_128.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/counter128.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tdc/delta_medida.sv
@@ -204,15 +185,6 @@ set_global_assignment -name SIP_FILE pll.sip
 set_global_assignment -name QIP_FILE sw/mem_init/meminit.qip
 set_global_assignment -name SIP_FILE sw/mem_init/meminit.sip
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/tb/tbench.sv
-
-# SAW Acquisition FSM
-set_global_assignment -name VERILOG_FILE rtl/saw/saw_acquisition_fsm.v
-# Continuous phase TDC triggers (edge-per-edge mode)
-set_global_assignment -name VERILOG_FILE rtl/saw/continuous_phase_triggers.v
-# RX edge counter (diagnostic: count edges in 2 µs window)
-set_global_assignment -name VERILOG_FILE rtl/saw/rx_edge_counter.v
-# Phase shifter (carry-chain delay for TDC self-test)
-set_global_assignment -name VERILOG_FILE rtl/saw/phase_shifter_carry.v
 
 # Partition assignments
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top

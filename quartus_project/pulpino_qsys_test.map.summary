@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Mar 24 10:22:59 2026
+Analysis & Synthesis Status : Successful - Wed Mar 25 08:58:14 2026
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : pulpino_qsys_test
 Top-level Entity Name : pulpino_qsys_test
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 5625
-Total pins : 85
+Total registers : 5451
+Total pins : 83
 Total virtual pins : 0
 Total block memory bits : 262,656
-Total DSP Blocks : 2
+Total DSP Blocks : 1
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
