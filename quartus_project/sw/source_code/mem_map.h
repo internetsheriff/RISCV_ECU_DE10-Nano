@@ -28,6 +28,18 @@
 #define TIMER \
 	0x002000A0
 
+/*
+ * Medidor recíproco: sem slave dedicado no Qsys — resultado em PIO_IN:
+ *   [17:2]  frequência (Hz), [18] ready
+ * PIO_OUT: pulso subida em [30] = iniciar medição; pulso em [29] = ack após leitura
+ * (FREQ_COUNTER_BASE é apenas etiqueta lógica; leitura real = PIO_IN)
+ */
+#define FREQ_COUNTER_BASE     0x02004000u
+#define FREQ_PIO_VALUE_SHIFT  2u
+#define FREQ_PIO_READY_SHIFT  18u
+#define FREQ_PIO_READY_MASK   (1u << FREQ_PIO_READY_SHIFT)
+#define FREQ_PIO_START_BIT    30u
+#define FREQ_PIO_ACK_BIT      29u
 
 
 

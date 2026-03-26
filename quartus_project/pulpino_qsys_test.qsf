@@ -166,6 +166,7 @@ set_global_assignment -name QSYS_FILE sys.qsys
 set_global_assignment -name QIP_FILE sys/synthesis/sys.qip
 set_global_assignment -name SIP_FILE sys/simulation/sys.sip
 set_global_assignment -name VERILOG_FILE rtl/pulpino_qsys_test.v
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/reciprocal_freq/simple_reciprocal_counter.sv
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name SIP_FILE pll.sip
 set_global_assignment -name QIP_FILE sw/mem_init/meminit.qip

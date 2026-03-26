@@ -16,6 +16,7 @@
 #define GPIO_0_DATA           (GPIO_0 + 0x0)
 #define GPIO_0_DIR            (GPIO_0 + 0x4)
 
+#define FREQ_VALUE_MASK       0xFFFFu
 
 static void jtag_putc(char c){
 	while ((REG(JTAG_UART_CONTROL) & JTAG_UART_WSPACE_MASK) == 0u) { }
@@ -59,13 +60,15 @@ static void jtag_put_hex32(uint32_t value){
 static void set_leds_with_jtag(uint32_t value, const char *tag){
 	static uint32_t last_led = 0xFFFFFFFFu;
 
-	REG(PIO_OUT) = value;
-	if (value != last_led) {
+	/* Preserva PIO_OUT[31:10] (start/ack em [30:29], etc.); só mexe nos bits dos LEDs [9:0]. */
+	uint32_t merged = (REG(PIO_OUT) & ~0x3FFu) | (value & 0x3FFu);
+	REG(PIO_OUT) = merged;
+	if ((value & 0x3FFu) != (last_led & 0x3FFu)) {
 		last_led = value;
 		jtag_puts_slow("LED ");
 		jtag_puts_slow(tag);
 		jtag_puts_slow(": 0x");
-		jtag_put_hex32(value);
+		jtag_put_hex32(value & 0x3FFu);
 		jtag_puts_slow("\r\n");
 	}
 }
@@ -88,7 +91,72 @@ static void gpio_0_set_input_bit0(void){
 	REG(GPIO_0_DIR) = dir;
 }
 
-static uint32_t count_gpio_0_bit0_rising_edges(uint32_t gate_ticks){
+static void freq_pulse_start(void)
+{
+	uint32_t w = REG(PIO_OUT);
+	REG(PIO_OUT) = w | (1u << FREQ_PIO_START_BIT);
+	for (volatile uint32_t d = 0; d < 50u; d++) { }
+	REG(PIO_OUT) = w & ~(1u << FREQ_PIO_START_BIT);
+}
+
+static void freq_ack(void)
+{
+	uint32_t w = REG(PIO_OUT);
+	REG(PIO_OUT) = w | (1u << FREQ_PIO_ACK_BIT);
+	for (volatile uint32_t d = 0; d < 50u; d++) { }
+	REG(PIO_OUT) = w & ~(1u << FREQ_PIO_ACK_BIT);
+}
+
+static uint8_t freq_is_ready(void)
+{
+	return (REG(PIO_IN) & FREQ_PIO_READY_MASK) ? 1u : 0u;
+}
+
+static uint16_t freq_get(void)
+{
+	return (uint16_t)((REG(PIO_IN) >> FREQ_PIO_VALUE_SHIFT) & FREQ_VALUE_MASK);
+}
+
+static uint16_t freq_measure(void)
+{
+	while (freq_is_ready()) {
+		freq_ack();
+		for (volatile uint32_t d = 0; d < 200u; d++) { }
+	}
+	freq_pulse_start();
+	/* Reserva: se o bitstream não tiver timeout HW, evita bloqueio infinito */
+	uint32_t spins = 0u;
+	while (!freq_is_ready()) {
+		if (++spins > 500000000u) {
+			return 0u;
+		}
+	}
+	uint16_t f = freq_get();
+	freq_ack();
+	return f;
+}
+
+static void jtag_hint_gpio0_vs_counter(uint16_t hz_from_counter)
+{
+	uint32_t a = REG(GPIO_0_DATA) & 0x1u;
+	for (volatile uint32_t i = 0; i < 400000u; i++) { }
+	uint32_t b = REG(GPIO_0_DATA) & 0x1u;
+	jtag_puts_slow("  [diag] Contador=");
+	jtag_put_dec((uint32_t)hz_from_counter);
+	jtag_puts_slow(" Hz; GPIO_0[0] leitura CPU: ");
+	jtag_putc((char)('0' + (a & 1u)));
+	jtag_puts_slow(" -> apos atraso: ");
+	jtag_putc((char)('0' + (b & 1u)));
+	if (a != b) {
+		jtag_puts_slow(" (mudou; entrada chega ao soft-GPIO)\r\n");
+	} else {
+		jtag_puts_slow(
+		    " (igual; se esperava onda, verifique nivel, polaridade ou pin/header)\r\n");
+	}
+}
+
+__attribute__((unused)) static uint32_t
+count_gpio_0_bit0_rising_edges(uint32_t gate_ticks){
 	uint32_t count = 0;
 	uint32_t prev = REG(GPIO_0_DATA) & 0x1u;
 
@@ -239,20 +307,25 @@ int main(int argc, char **argv){
 
 	DEBUG(0x0D1);
 	DEBUG(0x0FF);
-	
-	// Configure timer for ~1s period (50 MHz clock).
-	timer_start_period(25000000u - 1u);
 
-	// Configure GPIO_0[0] as input for frequency counting.
+	/* GPIO_0[0] = entrada (sinal a medir), mesmo net do contador recíproco */
 	gpio_0_set_input_bit0();
 
-	// Infinite loop.
-	while (1){
-		uint32_t edges = count_gpio_0_bit0_rising_edges(25000000u - 1u);
-		jtag_puts_slow("GPIO_0[0] frequency: ");
-		jtag_put_dec(edges);
-		jtag_puts_slow(" Hz\r\n");
-		set_leds_with_jtag(edges & 0x3FFu, "freq");
+	jtag_puts_slow("Reciprocal freq (GPIO_0[0]), 25 MHz ref, N=2000 periods\r\n");
+
+	while (1) {
+		uint16_t f = freq_measure();
+		if (f == 0u) {
+			jtag_puts_slow(
+			    "Sem sinal medido (0 Hz): timeout HW (~4 s 1.ª borda / ~10 s medição) ou SW. "
+			    "Verifique pin V12 (GPIO_0[0]), GND, 3v3 LVTTL.\r\n");
+			jtag_hint_gpio0_vs_counter(f);
+		} else {
+			jtag_puts_slow("Freq: ");
+			jtag_put_dec((uint32_t)f);
+			jtag_puts_slow(" Hz\r\n");
+		}
+		set_leds_with_jtag((uint32_t)f & 0x3FFu, "freq");
 	}
 	return 0;
 }
