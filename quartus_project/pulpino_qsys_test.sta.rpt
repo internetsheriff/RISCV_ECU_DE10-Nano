@@ -1,5 +1,5 @@
 Timing Analyzer report for pulpino_qsys_test
-Wed Mar 25 18:34:57 2026
+Thu Mar 26 00:30:46 2026
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -103,18 +103,18 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 3.27        ;
+; Average used               ; 3.22        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  41.7%      ;
-;     Processor 3            ;  40.4%      ;
-;     Processor 4            ;  40.3%      ;
-;     Processor 5            ;  26.2%      ;
-;     Processor 6            ;  26.2%      ;
-;     Processor 7            ;  26.2%      ;
-;     Processor 8            ;  26.2%      ;
+;     Processor 2            ;  41.1%      ;
+;     Processor 3            ;  39.9%      ;
+;     Processor 4            ;  39.8%      ;
+;     Processor 5            ;  25.4%      ;
+;     Processor 6            ;  25.4%      ;
+;     Processor 7            ;  25.4%      ;
+;     Processor 8            ;  25.4%      ;
 +----------------------------+-------------+
 
 
@@ -123,11 +123,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                                                                         ; Status ; Read at                  ;
 +-----------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; pulpino_qsys_test.sdc                                                                                                 ; OK     ; Wed Mar 25 18:34:37 2026 ;
-; sys/synthesis/submodules/altera_reset_controller.sdc                                                                  ; OK     ; Wed Mar 25 18:34:37 2026 ;
-; sys/synthesis/submodules/altera_avalon_st_jtag_interface.sdc                                                          ; OK     ; Wed Mar 25 18:34:37 2026 ;
-; /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sys/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Wed Mar 25 18:34:37 2026 ;
-; /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sys/submodules/altera_reset_controller.sdc         ; OK     ; Wed Mar 25 18:34:37 2026 ;
+; pulpino_qsys_test.sdc                                                                                                 ; OK     ; Thu Mar 26 00:30:28 2026 ;
+; sys/synthesis/submodules/altera_reset_controller.sdc                                                                  ; OK     ; Thu Mar 26 00:30:28 2026 ;
+; sys/synthesis/submodules/altera_avalon_st_jtag_interface.sdc                                                          ; OK     ; Thu Mar 26 00:30:28 2026 ;
+; /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sys/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Thu Mar 26 00:30:28 2026 ;
+; /home/aline/Documents/Mestrado/ECU/RISCV_ECU/quartus_project/db/ip/sys/submodules/altera_reset_controller.sdc         ; OK     ; Thu Mar 26 00:30:28 2026 ;
 +-----------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -1316,7 +1316,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Mar 25 18:34:35 2026
+    Info: Processing started: Thu Mar 26 00:30:26 2026
 Info: Command: quartus_sta pulpino_qsys_test -c pulpino_qsys_test
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1579,9 +1579,9 @@ Info (332114): Report Metastability: Found 27 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 1167 megabytes
-    Info: Processing ended: Wed Mar 25 18:34:57 2026
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Peak virtual memory: 1155 megabytes
+    Info: Processing ended: Thu Mar 26 00:30:46 2026
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:58
 
 

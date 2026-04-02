@@ -1,5 +1,5 @@
 Flow report for pulpino_qsys_test
-Wed Mar 25 18:35:08 2026
+Thu Mar 26 00:30:56 2026
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Mar 25 18:35:08 2026          ;
+; Flow Status                     ; Successful - Thu Mar 26 00:30:56 2026          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; pulpino_qsys_test                              ;
 ; Top-level Entity Name           ; pulpino_qsys_test                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2026 18:30:32 ;
+; Start date & time ; 03/26/2026 00:26:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pulpino_qsys_test   ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+--------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                                ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+--------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 163532013756965.177447423245060                                                      ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 163532013756965.177449559403716                                                      ; --            ; --          ; --         ;
 ; EDA_TEST_BENCH_FILE                 ; rtl/tb/tbench.sv                                                                     ; --            ; --          ; tbench     ;
 ; MISC_FILE                           ; sys/synthesis/../sys.cmp                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; sys/synthesis/../../sys.qsys                                                         ; --            ; --          ; --         ;
@@ -193,12 +193,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:14     ; 1.0                     ; 697 MB              ; 00:02:07                           ;
-; Fitter               ; 00:02:29     ; 1.5                     ; 2511 MB             ; 00:05:53                           ;
+; Analysis & Synthesis ; 00:01:13     ; 1.0                     ; 697 MB              ; 00:02:08                           ;
+; Fitter               ; 00:02:21     ; 1.5                     ; 2514 MB             ; 00:05:44                           ;
 ; Assembler            ; 00:00:09     ; 1.0                     ; 582 MB              ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:22     ; 3.3                     ; 1167 MB             ; 00:01:00                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 595 MB              ; 00:00:09                           ;
-; Total                ; 00:04:23     ; --                      ; --                  ; 00:09:18                           ;
+; Timing Analyzer      ; 00:00:20     ; 3.2                     ; 1155 MB             ; 00:00:58                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 595 MB              ; 00:00:09                           ;
+; Total                ; 00:04:11     ; --                      ; --                  ; 00:09:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
